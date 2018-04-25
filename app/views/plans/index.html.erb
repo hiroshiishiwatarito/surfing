@@ -1,0 +1,29 @@
+<div class="contents row">
+  <% @plans.each do |plan| %>
+    <div class="content_post" style="background-image: url(<%= plan.image %>);">
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+           <ul class="more_list">
+            <li>
+              <%= link_to '詳細', "/plans/#{plan.id}", method: :get %>
+            </li>
+            <% if guider_signed_in? && current_guider.id == plan.guider_id %>
+             <li>
+               <%= link_to '編集', "/plans/#{plan.id}/edit", method: :get %>
+             </li>
+             <li>
+               <%= link_to '削除', "/plans/#{plan.id}", method: :delete %>
+             </li>
+            <% end %>
+           </ul>
+        </div>
+        <%= simple_format(plan.title) %>
+      <span class="name">
+        <a href="/guiders/<%= plan.guider_id %>">
+          <span>投稿者</span><%= plan.guider.nickname %>
+        </a>
+      </span>
+    </div>
+  <% end %>
+  <%= paginate(@plans) %>
+</div>
