@@ -1,4 +1,5 @@
 <div class ="contents row">
+
   <div class="content_post" style="background-image: url(<%= @plan.image %>);">
     <% if guider_signed_in? && current_guider.id == @plan.guider_id %>
     <div class="more">
@@ -16,8 +17,76 @@
     <%= simple_format(@plan.title) %>
     <span class="name">
       <a href="/guiders/<%= @plan.guider.id %>">
-        <span>投稿者</span><%= @plan.guider.nickname %>
+        <span>guider</span><%= @plan.guider.nickname %>
       </a>
     </span>
   </div>
+  <form class="mogi" pt-charset="UTF-8" action=“/plan” method=“post”>
+    <h3 class="attributes"">
+      Plan
+    </h3>
+    <div class="superwave">
+     <p class="place" type="string" name="place" autofocus="true">Place: <%= @plan.place %></p>
+     <p class="meetingplace" type="string" name="meetingplace" autofocus="true">MeetingPlace: <%= @plan.meetingplace %></p>
+     <p class="date" type="text" name="datetimes" class="form-control" id='datetimepicker4'>Date: <%= @plan.datetimes %></p>
+     <p class="How many hour" type="integer" name="times" autofocus="true">How many hours: <%= @plan.times %></p>
+     <p>Contents: </p><%= simple_format(@plan.contents) %>
+    </div>
+  </form>
+
+  <div class="martin garrix">
+    <div class="clear"></div>
+    <div class="edm_post" style="background-image: url(<%= @plan.guider.Image %>);">
+        <div class="more">
+           <span><%= image_tag 'arrow_top.png' %></span>
+        </div>
+    </div>
+    
+    <form class="hori" pt-charset="UTF-8" action=“/plan” method=“post”>
+      <h3 class="wave">
+       Profile
+      </h3>
+      <div class="firebird">
+         <p>Name: </p><%= simple_format(@plan.guider.student_name) %>
+         <p>School: </p><%= simple_format(@plan.guider.university) %>
+         <p class="Year" type="string" name="year" autofocus="true">Year: <%= @plan.guider.year %></p>
+         <p class="Hometown" type="string" name="hometown" autofocus='true'>Hometown: <%= @plan.guider.hometown %></p>
+         <p>Message: </p><%= simple_format(@plan.guider.message) %>
+         <% if tourist_signed_in? %>
+          <p class="contact" type="text" name="contact" autofocus='true'>Gmail: <%= @plan.guider.contact %></p>
+         <% end %>
+      </div>
+    </form>
+  </div>
+
+
+
+  <form class="kenichiro" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="3AD3ZLCJE9D8S">
+    <table>
+      <tr><td><input type="hidden" name="on0" value="Guider Fee">Guider Fee</td></tr><tr><td><select name="os0">
+      <option value="3 hour">3 hour ¥3,000 JPY</option>
+      <option value="6 hour">6 hour ¥6,000 JPY</option>
+      <option value="9 hour">9 hour ¥9,000 JPY</option>
+      </select> </td></tr>
+    </table>
+    <% if tourist_signed_in? %>
+      <input type="hidden" name="currency_code" value="JPY">
+      <input class="image-size" type="image" src="https://www.paypalobjects.com/en_US/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    <% else %>
+     <div class="sign">
+       <%= link_to "Can you Sign up before payment? ", new_tourist_registration_path, class: 'post' %>
+
+     </div>
+    <% end %>
+
+  </form>
 </div>
+
+
+
+
+
+

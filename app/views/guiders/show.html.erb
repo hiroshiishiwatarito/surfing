@@ -1,0 +1,42 @@
+<div class="contents row" >
+
+   <div class="avicii">
+    <ul class="user__info">
+      <li>
+        <p> 個人情報:
+          <%= link_to '入力・編集', "/guiders/#{@guiders.id}/edit", method: :get %>
+        </p>
+      </li>
+    </ul>
+    
+    <div class="edm_post" style="background-image: url(<%= @guiders.Image %>);">
+        <div class="more">
+           <span><%= image_tag 'arrow_top.png' %></span>
+        </div>
+    </div>
+    <form pt-charset="UTF-8" action=“/guiders” method=“post”>
+      <h3 class="wave">
+       Information
+      </h3>
+      <div class="firebird">
+         <p>Name: </p><%= simple_format(@guiders.student_name) %>
+         <p class="School" type="string" name="university" autofocus="true">School: <%= @guiders.university %></p>
+         <p class="Year" type="string" name="year" autofocus="true">Year: <%= @guiders.year %></p>
+         <p class="Hometown" type="string" name="hometown" autofocus='true'>Hometown: <%= @guiders.hometown %></p>
+         <p>Message: </p><%= simple_format(@guiders.message) %>
+         <p class="contact" type="text" name="gmail" autofocus='true'>Gmail: <%= @guiders.contact %></p>
+      </div>
+    </form>
+  </div>
+  
+  <p><%= @nickname %>さんの一覧</p>
+    <% @plans.each do |plan| %>
+       <div class="plan_details">
+         <div class="content_post" style="background-image: url(<%= plan.image %>);">
+           <%= simple_format(plan.title) %>
+         </div>
+       </div>
+    <% end %>
+    <%= paginate(@plans) %>
+
+</div>

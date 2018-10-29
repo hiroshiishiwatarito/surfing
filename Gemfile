@@ -53,3 +53,8 @@ gem 'devise'
 gem 'paperclip'
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
+gem 'paypal-sdk-rest'
+gem 'websocket-rails'
+gem 'faye-websocket', '0.10.0'
+gem 'rails_12factor', group: :production
+

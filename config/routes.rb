@@ -13,7 +13,12 @@ Rails.application.routes.draw do
 
   root      'plans#index'
   resources :plans
-  resources :guiders, only: [:show]
+  resources :guiders
+  resources :tourists
+  resources :messages, only: [:index]
+  get '/done' => 'tourists#done'
+  get 'tourists/:id' => 'tourists#show'
+  get 'guiders/:id/go' => 'guiders#go'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

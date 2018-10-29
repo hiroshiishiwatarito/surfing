@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Chance to Chance</title>
+    <meta name="viewpoint" content="width=devise-width,initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -24,23 +26,35 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Chance To Chance</a></h1>
+        <h1 class="grid-6"><a href="/">Chance to Chance</a></h1>
         <% if guider_signed_in? %>
           <div class="user_nav grid-6">
            <span><%= current_guider.nickname %>
               <ul class="user__info">
                 <li>
                   <a href="/guiders/<%= current_guider.id %>">マイページ</a>
+                  <a href="/guiders/<%= current_guider.id %>/go">ヘルプ</a>
                   <%= link_to "ログアウト", destroy_guider_session_path, method: :delete %>
                 </li>
               </ul>
             </span>
-            <a class="post" href="/plans/new">world</a>
+            <a class="post" href="/plans/new">プラン</a>
           </div>
-        <% else %>
+        <% end %>
+
+        <% if tourist_signed_in? %>
+          <div class="user_nav grid-6">
+            <span><%= link_to "Logout", destroy_tourist_session_path, method: :delete %>
+            </span>
+            <a class="post" href="/tourists/show">Contact</a>
+          </div>
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+
           <div class="grid-6">
-            <%= link_to "ログイン", new_guider_session_path, class: 'post' %>
-            <%= link_to "新規登録", new_guider_registration_path, class: 'post' %>
+            <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
+            <%= link_to "guider", new_guider_session_path, class: 'post' %>
           </div>
         <% end %>
       </div>
@@ -50,7 +64,7 @@
 
     <footer>
       <p>
-        Copyright Chance to Chance 2018.
+        Copyright © 2018 Chance to Chance. All rights reserved.
       </p>
     </footer>
   </body>

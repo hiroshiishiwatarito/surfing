@@ -1,0 +1,15 @@
+<div class="contents row">
+  <form pt-charset="UTF-8" action=“/guiders” method=“post”>
+   <h3 class="superwave">
+       Information
+   </h3>
+   <div class="attributes">
+       <p class="School" type="string" name="university" autofocus="true">School: <%= @guiders.university %></p>
+       <p class="Year" type="string" name="year" autofocus="true">Year: <%= @guiders.year %></p>
+       <p class="Hometown" type="string" name="hometown" autofocus='true'>Hometown: <%= @guiders.hometown %></p>
+       <p class="Image" type="text" name="Image" autofocus="true">Image: <%= @guiders.Image %></p>
+       <p class="Message" type="text" name="message" cols="30" rows="10">Message: <%= @guiders.message %></p>
+       <p class="contact" type="text" name="gmail" autofocus='true'>gmail: <%= @guiders.contact %></p>
+   </div>
+  </form>
+</div>

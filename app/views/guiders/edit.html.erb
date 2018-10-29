@@ -1,0 +1,15 @@
+<div class="contents row">
+    <%= form_tag( "/guiders/#{@guiders.id}", method: :patch ) do %>
+      <h3>
+        information
+      </h3>
+      <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true">
+      <input placeholder="School" type="string" name="university" value="<%= @guiders.university %>" autofocus="true">
+      <input placeholder="Year" type="string" name="year" value="<%= @guiders.year %>" autofocus="true">
+      <input placeholder="Hometown" type="string" name="hometown" value="<%= @guiders.hometown %>" autofocus="true">
+      <input placeholder="ImageUrl" type="text" name="Image" value="<%= @guiders.Image %>" autofocus="true">
+      <input placeholder="Message" type="text" name="message" value="<%= @guiders.message %>" autofocus="true">
+      <input placeholder="Gmail" type="text" name="contact" value="<%= @guiders.contact %>" autofocus="true">
+      <input type="submit" value="SENT">
+    <% end %>
+</div>

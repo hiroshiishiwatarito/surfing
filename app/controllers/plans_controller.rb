@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
 
-	before_action :move_to_index, except: :index
+	before_action :move_to_index, except: [:index, :show]
 
 	def index
 		@plans = Plan.includes(:guider).page(params[:page]).per(5).order("created_at DESC")
@@ -10,7 +10,7 @@ class PlansController < ApplicationController
 	end
 
 	def create
-		Plan.create(image: params[:image], title: params[:title], contents: params[:contents], times: params[:times], datetimes: params[:datetimes], guider_id: current_guider.id)
+		Plan.create(place: params[:place], image: params[:image], title: params[:title], contents: params[:contents], times: params[:times], datetimes: params[:datetimes], guider_id: current_guider.id)
 	end
 
 	def destroy
@@ -35,7 +35,7 @@ class PlansController < ApplicationController
 
 	private
 	def plan_params
-		params.permit(:image, :title, :contents, :time, :datetimes,)
+		params.permit(:place, :image, :title, :contents, :times, :datetimes)
 	end
 
 	def move_to_index
