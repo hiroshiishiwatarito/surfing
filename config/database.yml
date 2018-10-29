@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: surfing_production
-  username: surfing
-  password: <%= ENV['SURFING_DATABASE_PASSWORD'] %>
+  database: [heroku_6fa1164ad3f8b1c]
+  username: [b20d6d7bfe65ba]
+  password: <%= ENV['DATABASE_PASSWORD'] %>
