@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.8'
 # Use mysql as the database for Active Record
 gem 'mysql2', '0.3.18'
 # Use SCSS for stylesheets
@@ -56,5 +56,7 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'paypal-sdk-rest'
 gem 'websocket-rails'
 gem 'faye-websocket', '0.10.0'
+#For Heroku
 gem 'rails_12factor', group: :production
+gem 'therubyracer', platforms: :ruby
 
