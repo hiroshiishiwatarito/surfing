@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :texts
   devise_for :tourists, controllers: {
     sessions:      'tourists/sessions',
     passwords:     'tourists/passwords',
