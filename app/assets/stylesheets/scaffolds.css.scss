@@ -1,14 +1,14 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: 'ほのか明朝';
+  font-size: 15px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 18px;
 }
 
@@ -24,8 +24,7 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #57C3E9;
   }
 }
 
@@ -63,7 +62,7 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 15px;
     list-style: square;
   }
 }
