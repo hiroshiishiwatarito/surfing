@@ -5,7 +5,7 @@
           <span><%= image_tag 'arrow_top.png' %></span>
            <ul class="more_list">
             <li>
-              <%= link_to '詳細', "/plans/#{plan.id}", method: :get %>
+              <%= link_to 'detail', "/plans/#{plan.id}", method: :get %>
             </li>
             <% if guider_signed_in? && current_guider.id == plan.guider_id %>
              <li>
