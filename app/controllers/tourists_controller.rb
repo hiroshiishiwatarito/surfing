@@ -11,4 +11,7 @@ class TouristsController < ApplicationController
   	@chat = Chat.new
   end
 
+  def infos
+  end
+
 end
