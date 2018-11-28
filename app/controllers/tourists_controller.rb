@@ -8,7 +8,6 @@ class TouristsController < ApplicationController
 
   def index
   	@tourists = Tourist.all
-  	@chat = Chat.new
   end
 
   def infos

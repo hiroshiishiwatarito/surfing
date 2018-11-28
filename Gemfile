@@ -51,10 +51,7 @@ gem 'sprockets', '2.11.0'
 gem 'kaminari'
 gem 'devise'
 gem 'paperclip'
-gem 'momentjs-rails'
-gem 'bootstrap3-datetimepicker-rails'
 gem 'websocket-rails'
-gem 'faye-websocket', '0.10.0'
 #For Heroku
 gem 'rails_12factor', group: :production
 gem 'therubyracer', platforms: :ruby
