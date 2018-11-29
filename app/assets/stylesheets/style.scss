@@ -358,6 +358,9 @@ div.contents.row {
       border: 1px solid $gray;
       border-radius: 5px;
       font-family: "游ゴシック", "YuGothic";
+      .paypal {
+      width: 50%;
+      }
     }
     .image-size {
       width: 40%;

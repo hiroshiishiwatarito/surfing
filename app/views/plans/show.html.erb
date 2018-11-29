@@ -66,12 +66,13 @@
     <input type="hidden" name="hosted_button_id" value="3AD3ZLCJE9D8S">
     <table>
     <tr><td><input type="hidden" name="on0" value="Guider Fee">Guider Fee</td></tr><tr><td><select name="os0">
-       <option value="3 hour 4200 yen">3 hour 4200 yen </option>
-       <option value="6 hour 8400 yen">6 hour 8400 yen </option>
-       <option value="9 hour 12600 yen">9 hour 12600 yen </option>
+      <option value="3 hour">3 hour ¥4,200 JPY</option>
+      <option value="6 hour">6 hour ¥8,400 JPY</option>
+      <option value="9 hour">9 hour ¥12,600 JPY</option>
     </select> </td></tr>
     </table>
     <% if tourist_signed_in? %>
+      <input type="hidden" name="currency_code" value="JPY">
       <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
       <img alt="" border="0" src="https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif" width="1" height="1">
     <% else %>
