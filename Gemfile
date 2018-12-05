@@ -55,4 +55,7 @@ gem 'websocket-rails'
 #For Heroku
 gem 'rails_12factor', group: :production
 gem 'therubyracer', platforms: :ruby
+#画像
+gem 'carrierwave'
+gem 'rmagick'
 

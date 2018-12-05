@@ -1,15 +1,14 @@
 <div class="contents row">
-  <%= form_tag('/plans', method: :post) do %>
+  <%= form_tag('/plans', method: :post, :multipart => true) do %>
     <h3>
       プラン
     </h3>
     <input placeholder="Title" type="text" name="title" autofocus="true">
-    <input placeholder="ImageUrl" type="string" name="image" autofocus="true">
+    <%= file_field_tag 'image' %>
     <input placeholder="Place" type="string" name="place" autofocus="true">
     <input placeholder="MeetingPlace" type="string" name="meetingplace" autofocus="true">
     <input placeholder="How many hour" type="integer" name="times" autofocus="true">
     <input placeholder="date" type="integer" name="datetimes" autofocus="true">
-    
     <textarea placeholder="Contents" name="contents" cols="30" rows="10"></textarea>
     <input type="submit" value="SENT">
   <% end %>
