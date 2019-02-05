@@ -2,15 +2,18 @@
 
 /*
  * "ほのか明朝" licensed under the IPA Font License Agreement v1.0
- * http://fontfree.me/966（配布元のURL）
+ * http://font.gloomy.jp/honoka-mincho-dl.html（”ほのか明朝”配布元のURL）
  * http://ipafont.ipa.go.jp/（IPAフォントのURL）
  * http://ipafont.ipa.go.jp/ipa_font_license_v1.html（IPAフォントライセンスv1.0のURL)
  */
 @font-face {
-    font-family: 'ほのか明朝';
-    src: url('font_1_honokamin.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+   font-family: ‘MyHonoka’;
+   src: url(‘fonts/font_1_honokamin.eot’); /* IE9 Compat Modes */
+   src: url(‘fonts/font_1_honokamin.eot?#iefix’) format(‘embedded-opentype’), /* IE6-IE8 */
+        url(‘fonts/font_1_honokamin.woff’) format(‘woff’), /* Modern Browsers */
+        url(‘fonts/font_1_honokamin.ttf’) format(‘truetype’); /* Safari, Android, iOS */    
+   font-weight: normal;
+   font-style: normal;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Unica+One);
