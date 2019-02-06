@@ -576,10 +576,58 @@ ul li {
   clear: both;
 }
 
-@media only screen and (max-width: 40em) {
+@media  screen and (max-width: 415px) {
+  .pc { display: none; }
+  .sp { display: block; }
   .row {
+    max-width: 100%;
     width: 100%;
     padding: 0 20px !important;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__bar.row {
+    height: 25px;
+    width: 305px;
+    padding-right: 0px;
+  }
+  .grid-6 {
+    height: 10px;
+  }
+  .user_nav.grid-6 {
+    height: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom-width: 25px;
+    margin-bottom: 25px;
+    width: 280px;
+  }
+  .row .grid-1,
+  .row .grid-2,
+  .row .grid-3,
+  .row .grid-4,
+  .row .grid-5,
+  .row .grid-7,
+  .row .grid-8,
+  .row .grid-9,
+  .row .grid-10,
+  .row .grid-11,
+  .row .grid-12 {
+    float: none;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 !important;
+    position: static !important;
+  }
+}
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media screen and (min-width: 420px) and (max-width: 640px) {
+  .pc { display: block; }
+  .sp { display: none; }
+  .row {
+    width: 100%;
+    max-width: 100%;
   }
   .row .grid-1,
   .row .grid-2,
@@ -593,19 +641,31 @@ ul li {
   .row .grid-10,
   .row .grid-11,
   .row .grid-12 {
-    float: none;
-    width: 100% !important;
-    margin: 0 !important;
-    position: static !important;
-  }
-}
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .row .grid-1,
-  .row .grid-2,
-  .row .grid-3,
-  .row .grid-4 {
-    width: 48.2% !important;
+    width: 48.5% !important;
+    max-width: 100%;
   }
 }
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media screen and (min-width: 641px) and (max-width: 1440px) {
+  .pc { display: block; }
+  .sp { display: none; }
+  .row {
+    width: 100%;
+    max-width: 100%;
+  }
+  .row .grid-1,
+  .row .grid-2,
+  .row .grid-3,
+  .row .grid-4,
+  .row .grid-5,
+  .row .grid-6,
+  .row .grid-7,
+  .row .grid-8,
+  .row .grid-9,
+  .row .grid-10,
+  .row .grid-11,
+  .row .grid-12 {
+    max-width: 100%;
+  }
+}
+
