@@ -37,7 +37,7 @@
            <span><%= current_guider.nickname %>
               <ul class="user__info">
                 <li>
-                  <a href="/guiders/<%= current_guider.id %>">マイページ</a>
+                  <a href="/guiders/<%= current_guider.id %>" class="bushi">マイページ</a>
                   <a href="/guiders/<%= current_guider.id %>/go">ヘルプ</a>
                   <%= link_to "ログアウト", destroy_guider_session_path, method: :delete %>
                 </li>

@@ -579,7 +579,7 @@ ul li {
 @media  screen and (max-width: 415px) {
   .pc { display: none; }
   .sp { display: block; }
-  .a {
+  .bushi {
     width: 250px;
     height: 42px;
   }
