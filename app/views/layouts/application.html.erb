@@ -5,7 +5,7 @@
     <title>Chance to Chance: Japan Private Tour with University Guide in Japan</title>
     <meta name="description" content="We offer tour plans in Japan that best suit you. Take this chance to experience the very unique Japanese culture you will never forget!
 ">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -71,7 +71,7 @@
           <% if ! (guider_signed_in? or tourist_signed_in?) %>
            <div class="grid-6">
             <div class="user_nav grid-6">
-              <span class= "samurai" >
+              <span>
                 <ul class="user__info">
                  <li>
                   <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
