@@ -31,13 +31,13 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Chance to Chance</a></h1>
+        <h1 class="grid-6"><a class="bushi" href="/">Chance to Chance</a></h1>
         <% if guider_signed_in? %>
           <div class="user_nav grid-6">
            <span><%= current_guider.nickname %>
               <ul class="user__info">
                 <li>
-                  <a class="bushi" href="/guiders/<%= current_guider.id %>">マイページ</a>
+                  <a href="/guiders/<%= current_guider.id %>">マイページ</a>
                   <a href="/guiders/<%= current_guider.id %>/go">ヘルプ</a>
                   <%= link_to "ログアウト", destroy_guider_session_path, method: :delete %>
                 </li>
