@@ -607,47 +607,11 @@ ul li {
 @media screen and (min-width: 420px) and (max-width: 640px) {
   .pc { display: block; }
   .sp { display: none; }
-  .row {
-    width: 100%;
-    max-width: 100%;
-  }
-  .row .grid-1,
-  .row .grid-2,
-  .row .grid-3,
-  .row .grid-4,
-  .row .grid-5,
-  .row .grid-6,
-  .row .grid-7,
-  .row .grid-8,
-  .row .grid-9,
-  .row .grid-10,
-  .row .grid-11,
-  .row .grid-12 {
-    width: 48.5% !important;
-    max-width: 100%;
-  }
 }
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media screen and (min-width: 641px) and (max-width: 1440px) {
   .pc { display: block; }
   .sp { display: none; }
-  .row {
-    width: 100%;
-    max-width: 100%;
-  }
-  .row .grid-1,
-  .row .grid-2,
-  .row .grid-3,
-  .row .grid-4,
-  .row .grid-5,
-  .row .grid-6,
-  .row .grid-7,
-  .row .grid-8,
-  .row .grid-9,
-  .row .grid-10,
-  .row .grid-11,
-  .row .grid-12 {
-    max-width: 100%;
-  }
+
 }
 
