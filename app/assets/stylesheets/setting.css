@@ -606,6 +606,9 @@ ul li {
     bottom: -50;
     width: 280px;
   }
+  .footer.p {
+    font-size: 15px;
+  }
 }
 @media screen and (min-width: 360px) and (max-width: 380px) {
   .pc { display: none; }
