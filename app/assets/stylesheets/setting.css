@@ -576,7 +576,7 @@ ul li {
   clear: both;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 318px) and (max-width: 340px) {
 .pc { display: none; }
 .sp { display: block; }
 .bushi {
