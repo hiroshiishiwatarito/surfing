@@ -579,15 +579,20 @@ ul li {
 @media  screen and (max-width: 415px) {
   .pc { display: none; }
   .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
   .bushi {
-    max-width: 250px;
+    width: 250px;
   }
   .header {
-    max-height: 56px;
+    height: 56px;
   }
   .header__bar.row {
-    max-height: 25px;
-    max-width: 305px;
+    height: 25px;
+    width: 305px;
     padding-right: 0px;
     margin-left: 55px;
   }
@@ -595,7 +600,7 @@ ul li {
     height: 10px;
   }
   .user_nav.grid-6 {
-    max-height: 10px;
+    height: 10px;
     left: 0;
     margin-left: 0px;
     padding-top: 0px;
@@ -603,7 +608,7 @@ ul li {
     border-bottom-width: 25px;
     margin-bottom: 0;
     bottom: -50;
-    max-width: 280px;
+    width: 280px;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
