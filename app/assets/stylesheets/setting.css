@@ -609,7 +609,7 @@ ul li {
   .footer {
     margin-top: 10px;
   }
-  .p {
+  .footer.p {
     font-size: 15px;
   }
 }
