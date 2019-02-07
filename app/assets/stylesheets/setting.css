@@ -606,7 +606,10 @@ ul li {
     bottom: -50;
     width: 280px;
   }
-  .footer.p {
+  .footer {
+    margin-top: 10px;
+  }
+  .p {
     font-size: 15px;
   }
 }
