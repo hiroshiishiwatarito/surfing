@@ -589,7 +589,7 @@ ul li {
     height: 20px;
     width: 305px;
     padding-right: 0px;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-right: -5px;
   }
   .grid-6 {
@@ -605,23 +605,6 @@ ul li {
     margin-bottom: 0;
     bottom: -50;
     width: 280px;
-  }
-  .row .grid-1,
-  .row .grid-2,
-  .row .grid-3,
-  .row .grid-4,
-  .row .grid-5,
-  .row .grid-7,
-  .row .grid-8,
-  .row .grid-9,
-  .row .grid-10,
-  .row .grid-11,
-  .row .grid-12 {
-    float: none;
-    width: 100% !important;
-    max-width: 100%;
-    margin: 0 !important;
-    position: static !important;
   }
 }
 @media screen and (min-width: 360px) and (max-width: 380px) {
@@ -654,26 +637,9 @@ ul li {
     bottom: -50;
     width: 280px;
   }
-  .row .grid-1,
-  .row .grid-2,
-  .row .grid-3,
-  .row .grid-4,
-  .row .grid-5,
-  .row .grid-7,
-  .row .grid-8,
-  .row .grid-9,
-  .row .grid-10,
-  .row .grid-11,
-  .row .grid-12 {
-    float: none;
-    width: 100% !important;
-    max-width: 100%;
-    margin: 0 !important;
-    position: static !important;
-  }
 }
 
-@media screen and (min-width: 381px) and (max-width: 419px) {
+@media screen and (min-width: 400px) and (max-width: 415px) {
   .pc { display: none; }
   .sp { display: block; }
   .bushi {
@@ -702,23 +668,6 @@ ul li {
     margin-bottom: 0;
     bottom: -50;
     width: 280px;
-  }
-  .row .grid-1,
-  .row .grid-2,
-  .row .grid-3,
-  .row .grid-4,
-  .row .grid-5,
-  .row .grid-7,
-  .row .grid-8,
-  .row .grid-9,
-  .row .grid-10,
-  .row .grid-11,
-  .row .grid-12 {
-    float: none;
-    width: 100% !important;
-    max-width: 100%;
-    margin: 0 !important;
-    position: static !important;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
