@@ -576,7 +576,55 @@ ul li {
   clear: both;
 }
 
-@media  screen and (max-width: 415px) {
+@media screen and (max-width: 320px) {
+.pc { display: none; }
+.sp { display: block; }
+.bushi {
+    width: 250px;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__bar.row {
+    height: 20px;
+    width: 305px;
+    padding-right: 0px;
+    margin-left: 40px;
+    margin-right: -5px;
+  }
+  .grid-6 {
+    height: 10px;
+  }
+  .user_nav.grid-6 {
+    height: 10px;
+    left: 0;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom-width: 25px;
+    margin-bottom: 0;
+    bottom: -50;
+    width: 280px;
+  }
+  .row .grid-1,
+  .row .grid-2,
+  .row .grid-3,
+  .row .grid-4,
+  .row .grid-5,
+  .row .grid-7,
+  .row .grid-8,
+  .row .grid-9,
+  .row .grid-10,
+  .row .grid-11,
+  .row .grid-12 {
+    float: none;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 !important;
+    position: static !important;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 380px) {
   .pc { display: none; }
   .sp { display: block; }
   .bushi {
@@ -590,6 +638,55 @@ ul li {
     width: 305px;
     padding-right: 0px;
     margin-left: 40px;
+    margin-right: -5px;
+  }
+  .grid-6 {
+    height: 10px;
+  }
+  .user_nav.grid-6 {
+    height: 10px;
+    left: 0;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom-width: 25px;
+    margin-bottom: 0;
+    bottom: -50;
+    width: 280px;
+  }
+  .row .grid-1,
+  .row .grid-2,
+  .row .grid-3,
+  .row .grid-4,
+  .row .grid-5,
+  .row .grid-7,
+  .row .grid-8,
+  .row .grid-9,
+  .row .grid-10,
+  .row .grid-11,
+  .row .grid-12 {
+    float: none;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 !important;
+    position: static !important;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 419px) {
+  .pc { display: none; }
+  .sp { display: block; }
+  .bushi {
+    width: 250px;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__bar.row {
+    height: 25px;
+    width: 305px;
+    padding-right: 0px;
+    margin-left: 65px;
     margin-right: -5px;
   }
   .grid-6 {
