@@ -582,7 +582,7 @@ ul li {
 .sp { display: block; }
 .bushi {
     width: 250px;
-    font-size: 20px;
+    font-size: 19px;
   }
   .header {
     height: 56px;
@@ -618,9 +618,14 @@ ul li {
 @media screen and (min-width: 360px) and (max-width: 380px) {
   .pc { display: none; }
   .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
   .bushi {
     width: 250px;
-    font-size: 20px;
+    font-size: 19px;
   }
   .header {
     height: 56px;
@@ -659,7 +664,7 @@ ul li {
   .sp { display: block; }
   .bushi {
     width: 250px;
-    font-size: 20px;
+    font-size: 19px;
   }
   .header {
     height: 56px;
