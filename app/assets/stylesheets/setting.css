@@ -45,7 +45,8 @@ template {
 
 /* ==========================================================================
  * Base
- * ========================================================================== */
+ * ===============================
+ =========================================== */
 /*
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -606,6 +607,12 @@ ul li {
     bottom: -50;
     width: 280px;
   }
+   .footer {
+    margin-top: 0px;
+  }
+  .p.last {
+    width: 295px;
+  }
 }
 @media screen and (min-width: 360px) and (max-width: 380px) {
   .pc { display: none; }
@@ -636,6 +643,12 @@ ul li {
     margin-bottom: 0;
     bottom: -50;
     width: 280px;
+  }
+   .footer {
+    margin-top: 0px;
+  }
+  .p.last {
+    width: 295px;
   }
 }
 

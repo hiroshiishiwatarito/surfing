@@ -93,7 +93,7 @@ a {
 
 .btn {
     @include basePadding(8px 20px);
-    font-size: 14px;
+    font-size: 15px;
     border: 2px solid $accent;
     color: $accent;
     font-weight: bold;
@@ -137,7 +137,7 @@ header.header {
   div.header__bar.row {
     position: relative;
     h1.grid-6 {
-      font-size: 20px;
+      font-size: 25px;
       line-height: 41px;
       float: left;
       a {
