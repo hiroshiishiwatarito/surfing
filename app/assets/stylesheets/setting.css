@@ -606,12 +606,6 @@ ul li {
     bottom: -50;
     width: 280px;
   }
-  .footer {
-    margin-top: 10px;
-  }
-  .footer.p {
-    font-size: 15px;
-  }
 }
 @media screen and (min-width: 360px) and (max-width: 380px) {
   .pc { display: none; }
@@ -674,6 +668,12 @@ ul li {
     margin-bottom: 0;
     bottom: -50;
     width: 280px;
+  }
+  .footer {
+    margin-top: 0px;
+  }
+  .last {
+    width: 295px;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
