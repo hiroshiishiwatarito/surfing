@@ -580,6 +580,11 @@ ul li {
 @media screen and (min-width: 318px) and (max-width: 340px) {
 .pc { display: none; }
 .sp { display: block; }
+.row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
 .bushi {
     width: 250px;
     font-size: 19px;
@@ -662,6 +667,11 @@ ul li {
 @media screen and (min-width: 400px) and (max-width: 415px) {
   .pc { display: none; }
   .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
   .bushi {
     width: 250px;
     font-size: 19px;
