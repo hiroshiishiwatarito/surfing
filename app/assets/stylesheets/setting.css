@@ -616,7 +616,7 @@ ul li {
    .footer {
     margin-top: 0px;
   }
-  .p.last {
+  .last {
     width: 295px;
   }
 }
@@ -659,9 +659,6 @@ ul li {
    .footer {
     margin-top: 0px;
   }
-  .p.last {
-    width: 295px;
-  }
 }
 
 @media screen and (min-width: 400px) and (max-width: 415px) {
@@ -702,9 +699,6 @@ ul li {
   }
   .footer {
     margin-top: 0px;
-  }
-  .last {
-    width: 295px;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
