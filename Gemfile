@@ -48,13 +48,19 @@ end
 gem 'pry-rails'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
+gem 'websocket-rails'
+
+#pagenation
 gem 'kaminari'
+
+#login_logout
 gem 'devise'
 gem 'paperclip'
-gem 'websocket-rails'
+
 #For Heroku
 gem 'rails_12factor', group: :production
 gem 'therubyracer', platforms: :ruby
+
 #画像
 gem 'carrierwave'
 gem 'rmagick'
