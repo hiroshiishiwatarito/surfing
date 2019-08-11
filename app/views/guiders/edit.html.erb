@@ -1,15 +1,200 @@
-<div class="contents row">
-    <%= form_tag( "/guiders/#{@guiders.id}", method: :patch ) do %>
-      <h3>
-        information
-      </h3>
-      <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true">
-      <input placeholder="School" type="string" name="university" value="<%= @guiders.university %>" autofocus="true">
-      <input placeholder="Year" type="string" name="year" value="<%= @guiders.year %>" autofocus="true">
-      <input placeholder="Hometown" type="string" name="hometown" value="<%= @guiders.hometown %>" autofocus="true">
-      <input placeholder="ImageUrl" type="text" name="Image" value="<%= @guiders.Image %>" autofocus="true">
-      <input placeholder="Message" type="text" name="message" value="<%= @guiders.message %>" autofocus="true">
-      <input placeholder="Gmail" type="text" name="contact" value="<%= @guiders.contact %>" autofocus="true">
-      <input type="submit" value="SENT">
-    <% end %>
+<div class="guider-container">
+  <div class="guider1-container">
+     <div class="guider2-container">
+        <div class="kg">
+            <div class="kobe1">
+               <ul class="profile">
+                  <li class="profile1-1">
+                    <span class="profile2"><a class="ac" href= "/guiders/<%= current_guider.id%>/edit"> プロフィール　</a></span>
+                  </li class="profile1-1">
+                  <li class="profile1-1">
+                    <span class="profile1"><a class="ac" href= "/guiders/<%= current_guider.id%>">投稿一覧</a></span>
+                  </li>
+                  <li class="profile1-1">
+                    <span class="profile1">Trust and Verification</span>
+                  </li>
+                  <li class="profile1-1">
+                    <span class="profile1">Reviews</span>
+                  </li>
+                  <li class="profile1-1">
+                    <span class="profile1">References</span>
+                  </li>
+               </ul>
+            </div>
+            <a class="ysp btn-block space-top-4" href="guider/show" >View Profile</a>
+        </div>
+        <div class="kg1">
+          <div class="kobe2">
+             <div class="kobe3">
+                <%= form_tag( "/guiders/#{@guiders.id}", method: :patch, class: "guider-form") do %>
+                  <div class="pdf">
+                      <div class="pdf-header">
+                        <h2 class="pdf-header1">Required</h2>
+                      </div>
+                      <div class="pdf-body">
+                        <div class="pdf-body1">
+                          <label class="name2">名前</label>
+                          <div class="name_form">
+                            <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">苗字</label>
+                          <div class="name_form">
+                            <input placeholder="Name" type="string" name="lastname" value="<%= @guiders.lastname %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">性別</label>
+                          <div class="select">
+                            <select name="gender", id="user_sex" value="<%= @guiders.gender %>">
+                              <option value="Gender">性別</option>
+                              <option value="Male">男性</option>
+                              <option value="Female">女性</option>
+                              <option value="Other">その他</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">職業</label>
+                          <div class="select">
+                            <select name="gender", id="user_sex" value="<%= @guiders.gender %>" required>
+                              <option value="Gender">職業</option>
+                              <option value="Male">学生</option>
+                              
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">生年月日</label>
+                          <div class="name_form">
+                            <p class="birth"><input placeholder="" type="string" name="birth" value="<%= @guiders.birth %>" autofocus="true" required></p>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">メール</label>
+                          <div class="name_form">
+                             <input placeholder="Gmail" type="text" name="contact" value="<%= @guiders.contact %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">住所</label>
+                          <div class="describe">
+                             <input placeholder="" type="text" name="message" value="<%= @guiders.hometown %>" autofocus="true" class="describe1" required>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    
+                      <div class="pdf-header">
+                        <h2 class="pdf-header1">Required</h2>
+                      </div>
+                      <div class="pdf-footer2">
+                        <div class="pdf-body1">
+                          <label class="name2">大学</label>
+                          <div class="name_form">
+                            <input placeholder="" type="string" name="student_name" value="<%= @guiders.university %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">学部</label>
+                          <div class="name_form">
+                            <input placeholder="" type="string" name="lastname" value="<%= @guiders.faculty %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">学年</label>
+                          <div class="name_form">
+                            <p class="birth"><input placeholder="" type="string" name="birth" value="<%= @guiders.year %>" autofocus="true" required></p>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+                      <div class="pdf-footer">
+                        <h2 class="pdf-header1">Profile Photo</h2>
+                      </div>
+                      <div class="pdf-footer1">
+                       <div class="pdf-f1">
+                        
+                          <div class="gogo1">
+                            <div class="gogo2" style="background-image: url(<%= @guiders.Image %>);">
+                            </div>
+                          </div>
+                          <div class="image_form">
+                            <div class="setumei">
+                               <p class="image_setumei">Clear frontal face photos are an important way for hosts and guests to learn about each other. It’s not much fun to host a landscape! Be sure to use a photo that clearly shows your face and doesn’t include any personal or sensitive info you’d rather not have hosts or guests see.</p>
+                            </div>
+                            <div class="file1">
+                                <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                               
+                            </div>
+                          </div>
+                        
+                       </div>
+                      </div>
+                      <div class="pdf-footer">
+                        <h2 class="pdf-header1">Profile Photo</h2>
+                      </div>
+                      <div class="pdf-footer1">
+                       <div class="pdf-f1">
+                        
+                          <div class="gogo1">
+                            <div class="gogo2" style="background-image: url(<%= @guiders.Image %>);">
+                            </div>
+                          </div>
+                          <div class="image_form">
+                            <div class="setumei">
+                               <p class="image_setumei">Clear frontal face photos are an important way for hosts and guests to learn about each other. It’s not much fun to host a landscape! Be sure to use a photo that clearly shows your face and doesn’t include any personal or sensitive info you’d rather not have hosts or guests see.</p>
+                            </div>
+                            <div class="file1">
+                                <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                            </div>
+                          </div>
+                        
+                       </div>
+                      </div>
+                      <div class="pdf-footer">
+                        <h2 class="pdf-header1">Profile Photo</h2>
+                      </div>
+                      <div class="pdf-footer1">
+                       <div class="pdf-f1">
+                        
+                          <div class="gogo1">
+                            <div class="gogo2" style="background-image: url(<%= @guiders.Image %>);">
+                            </div>
+                          </div>
+                          <div class="image_form">
+                            <div class="setumei">
+                               <p class="image_setumei">Clear frontal face photos are an important way for hosts and guests to learn about each other. It’s not much fun to host a landscape! Be sure to use a photo that clearly shows your face and doesn’t include any personal or sensitive info you’d rather not have hosts or guests see.</p>
+                            </div>
+                            <div class="file1">
+                                <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                            </div>
+                          </div>
+                        
+                       </div>
+                      </div>
+                      <button type="sumbit" value="Save" class="save">Save</button>
+
+                  </div>
+
+                  
+                <% end %>
+             </div>
+          </div>
+        </div>
+     </div>
+  </div>
+
 </div>

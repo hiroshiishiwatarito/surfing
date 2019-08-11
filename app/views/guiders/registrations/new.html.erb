@@ -1,8 +1,9 @@
-<div class="contents row">
-  <h2>Sign up</h2>
+<div class="contents center">
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
+
+   <h2 class="ue">Sign up</h2>
 
    <div class="field">
      <%= f.label :email %><br />
@@ -27,10 +28,17 @@
      <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
    </div>
 
+   <%= f.check_box :accepted ,{},checked_value = "true",unchecked_value = "false" %>
+   <a class="ac" href="/guiders/:id/accepted">利用規約、及び、個人情報の取扱に同意する</a>
+
    <div class="actions">
      <%= f.submit "Sign up" %>
    </div>
+
+   <div class="shita">
+     <%= render "guiders/shared/links" %>
+   </div>
+
   <% end %>
 </div>
 
-<%= render "guiders/shared/links" %>

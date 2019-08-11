@@ -12,9 +12,10 @@
 default: &default
   adapter: mysql2
   encoding: utf8
+  host: localhost
   pool: 5
   username: root
-  password:
+  password: beiru5518
   socket: /tmp/mysql.sock
 
 development:
@@ -49,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: heroku_b9854bb943e7233
-  username: b48446427feb7f
+  database: heroku_b6b8efaf5333bf
+  username: b6b8efaf5333bf
   password: <%= ENV['DATABASE_PASSWORD'] %>
+

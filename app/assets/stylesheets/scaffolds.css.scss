@@ -19,12 +19,11 @@ pre {
 }
 
 a {
-  color: #000;
-  &:visited {
-    color: #57C3E9;
+  a.visited {
+    color: #E47911;
   }
   &:hover {
-    color: #57C3E9;
+    color: #febd69;
   }
 }
 

@@ -1,42 +1,49 @@
-<div class="contents row" >
-
-   <div class="avicii">
-    <ul class="user__info">
-      <li>
-        <p> 個人情報:
-          <%= link_to '入力・編集', "/guiders/#{@guiders.id}/edit", method: :get %>
-        </p>
-      </li>
-    </ul>
-    
-    <div class="edm_post" style="background-image: url(<%= @guiders.Image %>);">
-        <div class="more">
-           <span><%= image_tag 'arrow_top.png' %></span>
+<div class="guider-container">
+  <div class="guider1-container">
+     <div class="guider2-container">
+        <div class="kg">
+            <div class="kobe1">
+               <ul class="profile">
+                  <li class="profile1-1">
+                    <span class="profile2"><a class="ac" href= "/guiders/<%= current_guider.id%>/edit"> プロフィール　</a></span>
+                  </li class="profile1-1">
+                  <li class="profile1-1">
+                    <span class="profile1"><a class="ac" href= "/guiders/<%= current_guider.id%>/edit">投稿一覧</a></span>
+                  </li>
+                  <li class="profile1-1">
+                    <span class="profile1">Trust and Verification</span>
+                  </li>
+                  <li class="profile1-1">
+                    <span class="profile1">Reviews</span>
+                  </li>
+                  <li class="profile1-1">
+                    <span class="profile1">References</span>
+                  </li>
+               </ul>
+            </div>
+            <a class="ysp btn-block space-top-4" href="guider/show" >View Profile</a>
         </div>
-    </div>
-    <form pt-charset="UTF-8" action=“/guiders” method=“post”>
-      <h3 class="wave">
-       Information
-      </h3>
-      <div class="firebird">
-         <p>Name: </p><%= simple_format(@guiders.student_name) %>
-         <p class="School" type="string" name="university" autofocus="true">School: <%= @guiders.university %></p>
-         <p class="Year" type="string" name="year" autofocus="true">Year: <%= @guiders.year %></p>
-         <p class="Hometown" type="string" name="hometown" autofocus='true'>Hometown: <%= @guiders.hometown %></p>
-         <p>Message: </p><%= simple_format(@guiders.message) %>
-         <p class="contact" type="text" name="gmail" autofocus='true'>Gmail: <%= @guiders.contact %></p>
-      </div>
-    </form>
-  </div>
-  
-  <p><%= @nickname %>さんの一覧</p>
-    <% @plans.each do |plan| %>
-       <div class="plan_details">
-         <div class="content_post" style="background-image: url(<%= plan.image %>);">
-           <%= simple_format(plan.title) %>
-         </div>
-       </div>
-    <% end %>
-    <%= paginate(@plans) %>
+        <div class="own">
+         <p style="margin-top: 0;"><span style="font-weight: bold; font-size: 20px;"><%= @nickname %></span>さんの投稿一覧</p>
+         <% @plans.each do |plan| %>
+       
+          <div class="ichiran" style="background-image: url(<%= plan.image %>);">
+           <div class="mypost">
+            
+             <ul class="mypost_list">
+               <li>
+                <%= link_to '', "/plans/#{plan.id}", method: :get %>
+               </li>
+               
+             </ul>
+           </div>
+           
+          </div>
+       
+         <% end %>
 
+         <%= paginate(@plans) %>
+        </div>
+     </div>
+  </div>
 </div>

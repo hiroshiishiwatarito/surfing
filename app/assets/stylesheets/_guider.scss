@@ -1,0 +1,453 @@
+@import "compass";
+
+/*
+ * "ほのか明朝" licensed under the IPA Font License Agreement v1.0
+ * http://fontfree.me/966（配布元のURL）
+ * http://ipafont.ipa.go.jp/（IPAフォントのURL）
+ * http://ipafont.ipa.go.jp/ipa_font_license_v1.html（IPAフォントライセンスv1.0のURL）
+ */
+@font-face {
+    font-family: 'ほのか明朝';
+    src: url('font_1_honokamin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Unica+One);
+
+$black: #292929;
+$dark: #666;
+$darkGray: #999999;
+$gray: #D8D8D8;
+$lightGray: #f5f5f3;
+$white: white;
+
+
+//mixin
+
+@mixin boxBase($margin: 30px auto, $padding: 10px) {
+  margin: $margin;
+  padding: $padding;
+}
+@mixin basePadding($padding: 10px) {
+  padding: $padding;
+}
+@mixin baseMargin($margin: 10px auto) {
+  margin: $margin;
+}
+
+body,html {
+  height: 100%;
+  background-color: $lightGray;
+}
+
+body {
+  padding-top: 60px;
+}
+.photo {
+  padding: 0;
+  background-color: #fff;
+  height: 1000px;
+
+}
+
+h1,h2,h3,h4,h5,h6,body {
+line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 17px;
+  color: $dark;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+  @extend .transition;
+  &:hover {
+    color: #E47911;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.serif {
+  font-family: 'ほのか明朝',serif;
+}
+
+.ultra {
+  font-size: 2em !important;
+}
+
+::selection {
+  background: $gray;
+}
+
+.transition {
+  @include transition-property(all);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(linear);
+}
+
+.btn {
+    @include basePadding(8px 20px);
+    font-size: 14px;
+    border: 2px solid #E47911;
+    color: #E47911;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+  &:hover {
+    border-color: lighten(#E47911, 15%);
+    color: lighten(#E47911, 15%);
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+.title {
+  font-weight: bold;
+}
+
+.title--big {
+  font-size: 1.5em;
+  font-weight: bold;
+  i {
+    font-style: italic;
+    font-size: 1.8em;
+  }
+}
+.sign {
+  font-size: 22px
+}
+
+
+
+.guider-container {
+  width: 1440px;
+ 
+}
+.guider1-container {
+   display: flex;
+   width: 1080px;
+   height: 1903px;
+   margin: 24px 180px;
+   padding: 0 24px;
+
+}
+.guider2-container {
+  width: 1056px;
+  height: 1003px;
+  display: flex;
+
+}
+.kg {
+  width: 264px;
+  height: 230px;
+  padding: 0 12px;
+}
+.kobe {
+  width: 240px;
+  height: 170px;
+}
+.profile {
+  width: 240px;
+  height: 170px;
+}
+.profile1-1 {
+  width: 240px;
+  height: 34px;
+  text-align: -webkit-match-parent;
+}
+.profile1 {
+  width: 240px;
+  height: 34px;
+  padding: 6px 0;
+  font-size: 16px;
+  display: block;
+  line-height: 1.43;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+}
+.profile2 {
+  width: 240px;
+  height: 34px;
+  padding: 6px 0;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+  color: #484848;
+  line-height: 1.43;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+}
+a.ysp.btn-block.space-top-4 {
+  width: 240px;
+  height: 36px;
+}
+.ysp {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 7px 21px;
+  display: inline-block;
+  margin-bottom: 0;
+  border: 1px solid;
+  text-align: center;
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+  border-radius: 4px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+}
+.space-top-4 {
+  margin-top: 24px;
+}
+btn-block{
+  width: 100%;
+}
+
+.kg1 {
+  width: 792px;
+  height: 1000px;
+  padding: 0 12px;
+}
+.kobe2 {
+  width: 792px;
+  height: 1000px;
+}
+.kobe3 {
+  width: 768px;
+  height: 1000px;
+}
+.guider-form {
+  width: 768px;
+  height: 550px;
+  display: inline-block;
+  margin-bottom: 0;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  background: white;
+  border-radius: 4px;
+  -webkit-font-smoothin: antialiased;
+  margin-bottom: 24px;
+}
+.pdf {
+  width: 768px;
+  height: 500px;
+  
+}
+.pdf-header {
+  width: 766px;
+  height: 42px;
+  padding: 12px 20px;
+  border-bottom: 1px;
+  background-color: #edefed;
+  border-bottom: 1px solid #dce0e0;
+  position: relative;
+
+}
+.pdf-header1 {
+  width: 726px;
+  height: 17px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+  color: #484848;
+  font-size: 16px;
+  line-height: 1.1;
+}
+.pdf-body {
+  width: 738px;
+  height: 500px;
+  padding: 20px 30px;
+  padding: 9px 27px;
+  margin-bottom: 24px;
+
+}
+.pdf-body1 {
+  width: 738px;
+  height: 36px;
+  margin-bottom: 24px;
+}
+.name2 {
+  width: 184.5px;
+  height: 35px;
+  padding: 8px 6px 8px 6px;
+  float: left;
+  width: 25%;
+  text-align: right;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothin: antialiased;
+}
+.name_form {
+  width: 535.5px;
+  height: 36px;
+  padding: 0 6px;
+  width: 75%;
+  float: left;
+}
+.name_form1 {
+  width: 525.5px;
+  height: 36px;
+  padding: 0 6px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothin: antialiased;
+}
+.select {
+  width:  89px;
+  height: 36px;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+select#user_sex {
+  width: 85px;
+  height: 35px;
+  width: 100%;
+  padding-top: 8px;
+  padding-right: 28px;
+  paddign-left: 10px;
+  padding-bottom: 8px; 
+  margin-left: 5px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  color: #484848;
+  line-height: normal;
+  font: 400 11px system-ui;
+  font-size: 80%;
+}
+.option {
+  font-weight: normal;
+}
+p.birth {
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 9px;
+}
+.save {
+      padding: 9px 27px;
+      font-size: 16px;
+      border-color: #ff5a5f;
+      background-color: #ff5a5f;
+      color: #fff;
+      border-radius: 4px;
+}
+.describe {
+  width: 535.5px;
+  height: 122px;
+  padding: 0 6px;
+  width: 75%;
+  float: left;
+}
+.describe1 {
+  width: 525.5px;
+  height: 122px;
+  padding: 0 6px;
+}
+
+.pdf-footer {
+  width: 766px;
+  height: 42px;
+  padding: 12px 20px;
+  border-bottom: 1px;
+  background-color: #edefed;
+  border-bottom: 1px solid #dce0e0;
+  position: relative;
+
+}
+.pdf-footer1 {
+  width: 766px;
+  height: 265px;
+  display: inline-block;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  background: white;
+  border-radius: 4px;
+  -webkit-font-smoothin: antialiased;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+.pdf-footer2 {
+  width: 766px;
+  height: 105px;
+  display: inline-block;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  background: white;
+  border-radius: 4px;
+  -webkit-font-smoothin: antialiased;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+.pdf-f1 {
+  width: 750px;
+  height: 225px;
+}
+.pdf-footer2 {
+  width: 750px;
+  height: 225px;
+  
+}
+.gogo1 {
+  
+  height: 225px;
+  float: left;
+  width: 33.3333%;
+  display: block;
+
+}
+.image_form {
+  
+  height: 137px;
+  padding: 0 6px;
+  width: 66.6%;
+  float: left;
+  display: block;
+}
+.setumei {
+  width: 476px;
+  height: 86px;
+  margin-bottom: 15px;
+
+}
+p.image_setumei {
+  width: 476px;
+  height: 80px;
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 9px;
+  margin-bottom: 15px;
+  
+}
+.self {
+      width: 476px;
+      padding: 9px 27px;
+      border: 1px solid;
+      font-size: 16px;
+      border-color: #c4c4c4;
+      background-color: white;
+      color: #484848;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 50px;
+      text-align: center;
+      ont-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+      display: block;
+    
+}
+
+.file1 {
+  width: 488px;
+  height: 42px;
+  margin-top: 15px;
+}
+
+.gogo2 {
+  width: 225px;
+  height: 225px;
+}

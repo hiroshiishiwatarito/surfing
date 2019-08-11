@@ -11,13 +11,26 @@ Rails.application.routes.draw do
     registrations: 'guiders/registrations'
   }
 
-  root      'plans#index'
+  root      'home#index'
+  get       'home/index'
+  get '/search' => 'home#search'
+  
+  resources :home
   resources :plans
   resources :guiders
   resources :tourists
   get '/done' => 'tourists#done'
   get 'tourists/:id' => 'tourists#show'
   get 'guiders/:id/go' => 'guiders#go'
+
+  get "/plans/:id/category" => "plans#category"
+  get "/plans/:id/next" => "plans#next"
+  get "/plans/:id/tokyo" => "plans#tokyo"
+  get "/plans/:id/kyoto" => "plans#kyoto"
+  get "/guiders/:id/accepted" => "guiders#accepted"
+  #touristとgudierのリターンページ
+  get "tourists/:id" => "tourists#show", as: :page
+  get "guiders/:id" => "guiders#edit", as: :mypage
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

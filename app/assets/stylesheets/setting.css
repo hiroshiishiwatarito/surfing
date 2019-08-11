@@ -457,15 +457,85 @@ ul li {
   margin: 0;
 }
 
-.row {
+.agreement {
+  max-width: 2000px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+.show {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 950px;
+  max-width: 1440px;
   *zoom: 1;
 }
+.center {
+  width: 100%;
+  margin-left: 125px;
+  margin-right: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1230px;
+  *zoom: 1;
+
+}
+.life {
+  width: 600px;
+  height: 430px;
+  margin-top: 100px;
+  margin-left: 160px;
+}
+.free {
+  width: 610px;
+  display: flex;
+  *zoom: 1;
+}
+
+.info {
+  display: flex;
+  width: 429px;
+  padding-left: 8px;
+  *zoom: 1;
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+.below {
+  width: 100%;
+  margin-left: 110px;
+  margin-right: 120px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1230px;
+  *zoom: 1;
+}
+.avicii {
+    
+     max-width: 50%;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     width: 650px;
+     *zoom: 1;
+
+  }
+.own {
+
+     max-width: 50%;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     width: 650px;
+     *zoom: 1;
+  }
+  .guider-container {
+    width: 1440px;
+  }
+  .sign_up {
+    height: 500px;
+  }
 .row .grid-1,
 .row .grid-2,
 .row .grid-3,
@@ -605,12 +675,6 @@ ul li {
     margin-bottom: 0;
     bottom: -50;
     width: 280px;
-  }
-  .footer {
-    margin-top: 10px;
-  }
-  .footer.p {
-    font-size: 15px;
   }
 }
 @media screen and (min-width: 360px) and (max-width: 380px) {
