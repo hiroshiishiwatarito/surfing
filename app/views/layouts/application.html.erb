@@ -77,6 +77,30 @@
           
         <% end %>
 
+        <div class="sp">
+          <% if ! (guider_signed_in? or tourist_signed_in?) %>
+           <div class="grid-6">
+            <div class="user_nav grid-6">
+              <span class="samurai" style=" 
+                width: 300px;
+                height: 0px;
+                bottom: 5px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-left: 0px;
+                padding-right: 11px;">
+                <ul class="user__info">
+                 <li>
+                  <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
+                  <%= link_to "guider", new_guider_session_path, class: 'post' %>
+                 </li>
+                </ul>
+              </span>
+            </div>
+           </div>
+          <% end %>
+        </div>
 
        </nav>
        <div class="mbar">
@@ -96,6 +120,12 @@
         </p>
       </div>
       
+
+    <footer class="footer">
+      <p class="last">
+        Copyright © 2018 Chance to Chance. All rights reserved.
+      </p>
+
     </footer>
   </body>
 </html>

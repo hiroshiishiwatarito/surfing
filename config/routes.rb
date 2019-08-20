@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :plans
   resources :guiders
   resources :tourists
+  
   get '/done' => 'tourists#done'
   get 'tourists/:id' => 'tourists#show'
   get 'guiders/:id/go' => 'guiders#go'

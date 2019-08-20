@@ -45,7 +45,8 @@ template {
 
 /* ==========================================================================
  * Base
- * ========================================================================== */
+ * ===============================
+ =========================================== */
 /*
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -649,8 +650,14 @@ ul li {
 @media screen and (min-width: 318px) and (max-width: 340px) {
 .pc { display: none; }
 .sp { display: block; }
+.row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
 .bushi {
     width: 250px;
+    font-size: 19px;
   }
   .header {
     height: 56px;
@@ -659,7 +666,7 @@ ul li {
     height: 20px;
     width: 305px;
     padding-right: 0px;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: -5px;
   }
   .grid-6 {
@@ -674,14 +681,29 @@ ul li {
     border-bottom-width: 25px;
     margin-bottom: 0;
     bottom: -50;
-    width: 280px;
+    width: 0px;
   }
+<<<<<<< HEAD
+=======
+   .footer {
+    margin-top: 0px;
+  }
+  .last {
+    width: 295px;
+  }
+>>>>>>> 7b8829748dd3007059a057df68ac96f42d39cd33
 }
 @media screen and (min-width: 360px) and (max-width: 380px) {
   .pc { display: none; }
   .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
   .bushi {
     width: 250px;
+    font-size: 19px;
   }
   .header {
     height: 56px;
@@ -690,7 +712,7 @@ ul li {
     height: 25px;
     width: 305px;
     padding-right: 0px;
-    margin-left: 40px;
+    margin-left: 24px;
     margin-right: -5px;
   }
   .grid-6 {
@@ -705,15 +727,24 @@ ul li {
     border-bottom-width: 25px;
     margin-bottom: 0;
     bottom: -50;
-    width: 280px;
+    width: 0px;
+  }
+   .footer {
+    margin-top: 0px;
   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 415px) {
   .pc { display: none; }
   .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
   .bushi {
     width: 250px;
+    font-size: 19px;
   }
   .header {
     height: 56px;
@@ -722,7 +753,7 @@ ul li {
     height: 25px;
     width: 305px;
     padding-right: 0px;
-    margin-left: 65px;
+    margin-left: 43px;
     margin-right: -5px;
   }
   .grid-6 {
@@ -737,7 +768,10 @@ ul li {
     border-bottom-width: 25px;
     margin-bottom: 0;
     bottom: -50;
-    width: 280px;
+    width: 0px;
+  }
+  .footer {
+    margin-top: 0px;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
