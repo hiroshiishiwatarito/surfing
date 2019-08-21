@@ -751,7 +751,7 @@ div.little {
 }
 
 /* plan/index and guider/show */
-div.contents.center, .sign_up, .life, .free, .info, .own, .avicii {
+div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
   h2 {
     @include boxBase(20px 0, 0);
     font-weight: normal;
