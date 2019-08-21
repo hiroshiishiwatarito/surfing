@@ -560,9 +560,6 @@ a.post:hover {
 .ac {
   
 }
-a:visited {
-  color: #E47911;
-}
 .ac:hover {
   color: #E47911;
 }
@@ -1280,54 +1277,6 @@ img#target.hall {
     background-size: contain !important;
     background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
-}
-#prev, #next {
-  cursor: pointer;
-  font-size: 42px;
-  color: #bbb;
-  position: absolute;
-  top: 90px;
-}
-#prev {
-  top: 180px;
-  left: -60px;
-}
-#next {
-  top: 180px;
-  right: -60px;
-}
-
-div.king {
-  width: 516px;
-  height: 460px;
-  
-}
-div.example {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.example ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.example li {
-  float: left;
-  vertical-align: middle;
-  width: 258px;
-  height: 230px;
-  cursor: pointer;
-  opacity: 0.6;
-}
-.example li + li {
-  
-}
-.example li:hover {
-  opacity: 1;
-}
-.example li.current {
-  opacity: 1;
 }
 
 .airbnb1 {
