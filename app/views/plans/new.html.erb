@@ -1,14 +1,19 @@
 <div class="contents graph">
   <%= form_tag('/plans', method: :post, :multipart => true) do %>
     <h3>
-      プラン
+      投稿商品の詳細
     </h3>
-    <input placeholder="Title" type="text" name="title" autofocus="true">
+    <input placeholder="タイトル" type="text" name="title" autofocus="true" required>
+    <input placeholder="著者名" type="string" name="place" autofocus="true" required>
+    <input placeholder="授業名" type="string" name="times" autofocus="true" required>
+    <input placeholder="本の状態" type="integer" name="datetimes" autofocus="true" required>
+    <input placeholder="価格" type="string" name="price" autofocus="true" required>
+    <select name="transport", class="box" required>
+        <option value="both">両方</option>
+        <option value="direct">直接渡す</option>
+        <option value="transport">配送する</option>
+    </select>
     <%= file_field_tag 'image' %>
-    <input placeholder="Place" type="string" name="place" autofocus="true">
-    <input placeholder="MeetingPlace" type="string" name="meetingplace" autofocus="true">
-    <input placeholder="How many hour" type="integer" name="times" autofocus="true">
-    <input placeholder="date" type="integer" name="datetimes" autofocus="true">
     <textarea placeholder="Contents" name="contents" cols="30" rows="10"></textarea>
     <input type="submit" value="SENT">
   <% end %>
