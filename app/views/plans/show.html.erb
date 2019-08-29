@@ -1,89 +1,170 @@
-<div class ="contents row">
-
-  <div class="content_post" style="background-image: url(<%= @plan.image %>);">
-    <% if guider_signed_in? && current_guider.id == @plan.guider_id %>
-    <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-      <ul class="more_list">
-        <li>
-          <%= link_to '編集', "/plans/#{@plan.id}/edit", method: :get %>
-        </li>
-        <li>
-          <%= link_to '削除', "/plans/#{@plan.id}", method: :delete %>
-        </li>
-      </ul>
+<div class= "headquarter">
+ <div class= "image-all">
+  <div class="image-five ">
+   <div class="image-parts">
+    <div class="main">
+       <i class="fas fa-chevron-circle-left" aria-hidden="true" id="prev"></i>
+       <img src="<%= @plan.image %>" id="target" style="width: 950px; max-width: 100%; height: 400px; padding-bottom:: 15px; padding-top: 20px; " class= "contain">
+       <i class="fas fa-chevron-circle-right" aria-hidden="true" id="next"></i>
     </div>
-    <% end %>
-    <%= simple_format(@plan.title) %>
-    <span class="name">
-      <a href="/tourists/infos">
-        <span>guider</span><%= @plan.guider.nickname %>
-      </a>
-    </span>
+    <script src="javascripts/main.js"></script>
+    <script>
+      var files = [
+      '<%= @plan.image %>',
+      '<%= @plan.copy_image %>',
+      '<%= @plan.third_image %>',
+      '<%= @plan.fourth_image %>',
+      '<%= @plan.five_image %>'
+      ];
+　  </script>
+   </div>
   </div>
-  <form class="mogi" pt-charset="UTF-8" action=“/plan” method=“post”>
-    <h3 class="attributes"">
-      Plan
-    </h3>
-    <div class="superwave">
-     <p class="place" type="string" name="place" autofocus="true">Place: <%= @plan.place %></p>
-     <p class="meetingplace" type="string" name="meetingplace" autofocus="true">MeetingPlace: <%= @plan.meetingplace %></p>
-     <p class="date" type="text" name="datetimes" class="form-control" id='datetimepicker4'>Date: <%= @plan.datetimes %></p>
-     <p class="How many hour" type="integer" name="times" autofocus="true">How many hours: <%= @plan.times %></p>
-     <p>Contents: </p><%= simple_format(@plan.contents) %>
-    </div>
-  </form>
+ </div>
 
-  <div class="martin garrix">
-    <div class="clear"></div>
-    <div class="edm_post" style="background-image: url(<%= @plan.guider.Image %>);">
-        <div class="more">
-           <span><%= image_tag 'arrow_top.png' %></span>
+ <div class= "macro">
+  <div class="detail">
+   <div class="micro">
+    <div class="contents free">
+     <div class="specific">
+
+      <div class="airbnb1">
+        <div class="airbnb-plus">
+          <div style="margin-top: 24px; width: 610px;">
+          <div class="minus">
+           <div class="kataho" style="height: 10px;">
+            <div class="airbnb1-1">
+              <div class="airbnb2-2"><span class="nini"><%= @plan.title %></span></div>
+            
+            </div>
+           </div>
+
+          </div>
+          </div>
         </div>
-    </div>
-    
-    <form class="hori" pt-charset="UTF-8" action=“/plan” method=“post”>
-      <h3 class="wave">
-       Profile
-      </h3>
-      <div class="firebird">
-         <p>Name: </p><%= simple_format(@plan.guider.student_name) %>
-         <p>School: </p><%= simple_format(@plan.guider.university) %>
-         <p class="Year" type="string" name="year" autofocus="true">Year: <%= @plan.guider.year %></p>
-         <p class="Hometown" type="string" name="hometown" autofocus='true'>Hometown: <%= @plan.guider.hometown %></p>
-         <p>Message: </p><%= simple_format(@plan.guider.message) %>
-         <% if tourist_signed_in? %>
-          <p class="contact" type="text" name="contact" autofocus='true'>Gmail: <%= @plan.guider.contact %></p>
-         <% end %>
       </div>
-    </form>
-  </div>
 
+      <div class="arasuji">
 
+        <div class="arasuji1">
+           <div class="arasuji2">
+        
 
-  <form class="kenichiro" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="3AD3ZLCJE9D8S">
-    <table>
-    <tr><td><input type="hidden" name="on0" value="Guider Fee">Guider Fee</td></tr><tr><td><select name="os0">
-      <option value="3 hour">3 hour ¥4,200 JPY</option>
-      <option value="6 hour">6 hour ¥8,400 JPY</option>
-      <option value="9 hour">9 hour ¥12,600 JPY</option>
-    </select> </td></tr>
-    </table>
-    <% if tourist_signed_in? %>
-      <input type="hidden" name="currency_code" value="JPY">
-      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif" width="1" height="1">
-    <% else %>
-     <div class="sign">
-       <%= link_to "Can you Sign up before payment? ", new_tourist_registration_path, class: 'post' %>
+             <div style="margin-top:16px;">
+             <div class="shashin">
+               <div class="bg"><span class="bg1"><i class="fas fa-user-edit"></i></span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.place %></div>
+               <div class="dg1">JINJINJINJIN</div>
+             </div>
+             </div>
+
+             <div style="margin-top:16px;">
+             <div class="shashin">
+               <div class="bg"><span class="bg1"><i class="fas fa-school"></i></span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.times %></div>
+               <div class="dg1">JINJINJINJIN</div>
+             </div>
+             </div>
+
+             <div style="margin-top:16px;">
+             <div class="shashin">
+               <div class="bg"><span class="bg1"><i class="far fa-comment-alt"></i></span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.contents %></div>
+               <div class="dg1">GoGo</div>
+             </div>
+             </div>
+
+             <div style="margin-top:16px;">
+             <div class="shashin">
+               <div class="bg"><span class="bg1"><i class="fas fa-eye"></i></span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.meetingplace %></div>
+               <div class="dg1">GoGo</div>
+             </div>
+             </div>
+
+             <div style="margin-top: 24px; margin-bottom: 24px;">
+                <div class="shashin-bar"></div>
+             </div>
+           </div>
+
+        </div>
+
+      </div>
+
+      <div class="shosai">
+        <div class="shosai1">
+          <div class="shosai2">
+            <p class="shosai3"><span class="shosai4">商品の説明</span></p>
+          </div>
+        </div>
+        <div style="margin-top: 16px; width: 594px; height: 638px;">
+          <div class="shosai5">
+            <p><span><%= @plan.contents %></span></p>
+          </div>
+        </div>
+      </div>
      </div>
-    <% end %>
+　  </div>
+    <div class="contents info">
+     <div style="margin-top: 24px;">
+     <div class="payment">
+      <div class="payment-1">
+       <form class="kenichiro" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="FMJVCM6U844J4">
+         <table>
+           <tr><td>
+              <input type="hidden" name="on0" value="Guider Fee"><span class="guide">購入代金</span><hr class="line">
+           </td></tr>
+           <tr><td>
 
-  </form>
+             <span class="dates" style="height: 48px;">配送方法</span>
+　　　　　　　
+               <p class="date" >郵便配送</p>
+            
+           </td></tr>
+
+           <tr><td><span class="price">価格</span>
+             <p class="date" ><%= @plan.price %></p>
+          </td></tr>
+         </table>
+        <% if guider_signed_in? %>
+         <%= form_tag('/plans', action: :pay, method: :post) do %>
+          <script
+             type="text/javascript"
+             src="https://checkout.pay.jp/"
+             class="payjp-button"
+             data-key="
+　　　           pk_live_df4eed1af794dd6563b1508a"
+             data-on-created="onCreated"
+             data-text="支払う"
+             data-submit-text="支払う"
+           ></script>
+         <% end %>
+
+        <% else %>
+         <div class="sign">
+           <%= link_to "Can you Sign up before payment? ", new_tourist_registration_path, class: 'finish' %>
+          </div>
+        <% end %>
+
+
+       </form>
+      </div>
+      
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 </div>
-
 
 
 

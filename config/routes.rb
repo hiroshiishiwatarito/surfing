@@ -16,11 +16,15 @@ Rails.application.routes.draw do
   get '/search' => 'home#search'
   
   resources :home
-  resources :plans
+  resources :plans do
+    collection do
+      post 'pay/:id' => 'plans#pay', as: 'pay'
+    end
+  end
   resources :guiders
   resources :tourists
   
-  get '/done' => 'tourists#done'
+  get '/done' => 'guiders#done'
   get 'tourists/:id' => 'tourists#show'
   get 'guiders/:id/go' => 'guiders#go'
   get "/guiders/:id/accepted" => "guiders#accepted"

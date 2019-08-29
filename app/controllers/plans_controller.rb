@@ -1,5 +1,7 @@
 class PlansController < ApplicationController
 
+	require 'payjp'
+
 	before_action :move_to_index, except: [:index, :show, :category, :next, :tokyo, :kyoto]
 
 	def index
@@ -8,27 +10,22 @@ class PlansController < ApplicationController
            @search_keyword = params[:search]
     end
 
-    def category
-    	   @kobe = Plan.where(title: 'kobe')
-    end
+    def pay
 
-    def next
-    	   @osaka = Plan.where(title: 'osaka')
-    end
-
-    def tokyo
-    	   @tokyo = Plan.where(title: 'tokyo')
-    end
-
-    def kyoto 
-    	   @kyoto = Plan.where(title: 'kyoto')
+        Payjp.api_key = 'sk_live_157b4609bed3c98d179f5f1e9ba0e9eb2ef8def128891e5bc9634b14'
+        charge = Payjp::Charge.create(
+            :currency => 'jpy',
+            :amount => @plans.price,
+            :card => params['payjp-token']
+            )
+       
     end
 
 	def new
 	end
 
 	def create
-		Plan.create(place: params[:place], image: params[:image], copy_image: params[:copy_image], second_image: params[:second_image], third_image: params[:third_image], fourth_image: params[:fourth_image], five_image: params[:five_image], title: params[:title], contents: params[:contents], times: params[:times], guider_id: current_guider.id)
+		Plan.create(place: params[:place], image: params[:image], copy_image: params[:copy_image], third_image: params[:third_image], fourth_image: params[:fourth_image], five_image: params[:five_image], title: params[:title], contents: params[:contents], times: params[:times], price: params[:price], guider_id: current_guider.id)
 		
 	end
 
@@ -54,7 +51,7 @@ class PlansController < ApplicationController
 
 	private
 	def plan_params
-		params.permit(:place, :image, :copy_image, :second_image, :third_image, :fourth_image, :five_image, :title, :contents, :times)
+		params.permit(:place, :image, :title, :contents, :times)
 	end
 
 	def move_to_index

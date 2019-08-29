@@ -1,0 +1,2 @@
+class GuiderMailer < ApplicationMailer
+end

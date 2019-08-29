@@ -9,10 +9,9 @@ class GuidersController < ApplicationController
 	def go
 	end
 
-	def infos
-		
+	def done
 	end
-
+	
 	def index
     	@guider = Guider.all
     end

@@ -497,14 +497,14 @@ ul li {
   margin-left: 160px;
 }
 .free {
-  width: 610px;
+  width: 400px;
   display: flex;
   *zoom: 1;
 }
 
 .info {
   display: flex;
-  width: 429px;
+  width: 400px;
   padding-left: 8px;
   *zoom: 1;
   position: sticky;

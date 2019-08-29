@@ -29,6 +29,7 @@ body,html {
 
 body {
   padding-top: 60px;
+  
 }
 .photo {
   padding: 0;
@@ -565,11 +566,11 @@ a.post:hover {
   margin-inline-end: 0px;
   font-weight: bold;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  padding: 20px 60px 0;
+  padding: 20px 60px 0 45px;
 }
 .accepted {
   margin: 20px 0;
-  padding: 40px 4.6875%;
+  padding: 20px 4.6875%;
   background: #fff;
 }
 
@@ -690,10 +691,10 @@ a.story-1 {
 }
 .image-all {
   display: flex;
-  width: 1032px;
-  height: 460px;
+  width: 800px;
+  height: 450px;
   padding: 0 24px;
-  margin: 70px 180px 0 180px;
+  margin: 70px 180px 0 340px;
 }
 .image-five {
   display: flex;
@@ -701,11 +702,12 @@ a.story-1 {
 .image-parts {
   width: 100%;
   display: flex;
+  margin-left: 100px;
 }
 /* plans/show 情報 */
 .macro {
   display: flex;
-  width: 1080px;
+  width: 800px;
   height: 1800px;
   padding-left: 24px;
   padding-right: 24px;
@@ -1166,6 +1168,7 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
   p.date {
       height: 48px;
       margin-bottom: 20px;
+      padding-top: 13px;
   }
   a.finish {
       color: #E47911;
@@ -1227,6 +1230,15 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
   }
 }
 
+div#payjp_checkout_box {
+  width: 326px;
+
+}
+#payjp_checkout_box input[type=button] {
+  height: 40px;
+  background-image: linear-gradient(#E47911 0,#E47911 48%,#E47911 100%);
+  border: 1px solid #E47911;
+}
 .posts {
   width: 200px;
   height: 200px;
@@ -1245,8 +1257,10 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
 /* plans/show */
 .main {
   position: relative;
-  width: 516px;
-  height: 460px;
+  width: 400px;
+  height: 400px;
+  margin-right: 60px;
+  margin-left:  60px;
 }
 img#target.hall {
   width: 100%;
@@ -1256,16 +1270,66 @@ img#target.hall {
     background-repeat: no-repeat !important;
 }
 .here {
-    width: 258px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     position: absolute !important;
     background-size: contain !important;
     background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
 }
 
+#prev, #next {
+  cursor: pointer;
+  font-size: 42px;
+  color: #bbb;
+  position: absolute;
+  top: 90px;
+}
+#prev {
+  top: 180px;
+  left: -60px;
+}
+#next {
+  top: 180px;
+  right: -60px;
+}
+
+div.king {
+  width: 520px;
+  height: 460px;
+  
+}
+div.example {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.example ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.example li {
+  float: left;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.example li + li {
+  
+}
+.example li:hover {
+  opacity: 1;
+}
+.example li.current {
+  opacity: 1;
+}
+
+
 .airbnb1 {
-  width: 610px;
+  width: 400px;
   height: 100px;
   display: flex;
  
@@ -1279,13 +1343,13 @@ img#target.hall {
 
 }
 .airbnb1-1 {
-  width: 508.33px;
+  width: 400px;
   height: 116px;
   padding-top: 6px;
   padding-bottom: 6px;
 }
 .airbnb2-2 {
-  width: 492.33px;
+  width: 400px;
   height: 72px;
 }
 .nini {
@@ -1300,7 +1364,7 @@ img#target.hall {
   padding-bottom: 6px;
 }
 .airbnb2-3 {
-  width: 492.33px;
+  width: 400px;
   height: 22px;
 }
 .sansan {
@@ -1333,15 +1397,15 @@ img#target.hall {
 }
 
 .arasuji {
-  width: 594px;
-  height: 340px;
+  width: 400px;
+  height: 270px;
 }
 .arasuji1 {
-  width: 594px;
+  width: 400px;
   height: 249px;
 }
 .arasuji2 {
-  width: 594px;
+  width: 400px;
   height: 44px;
 }
 .shashin {
@@ -1377,22 +1441,22 @@ img#target.hall {
   -webkit-font-smoothing: antialiased;
 }
 .shashin-bar {
-  width: 594px;
+  width: 400px;
   height: 1px;
   border-bottom-width: var(--border-rule-border-width, 1px) !important;
   border-bottom-color: var(--color-divider, #EBEBEB) !important;
   border-bottom-style: solid !important;
 }
 .shosai {
-  width: 594px;
+  width: 400px;
   height: 794px;
 }
 .shosai2 {
-  width: 594px;
+  width: 400px;
   height: 44px;
 }
 .shosai3 {
-  width: 594px;
+  width: 400px;
   height: 44px;
   margin-top: 14px;
   margin-bottom: 14px;
@@ -1402,11 +1466,11 @@ img#target.hall {
   color: #484848 !important;
 }
 .shosai4 {
-  width: 561px;
+  width: 400px;
   height: 43px;
 }
 .shosai5 {
-  width: 594px;
+  width: 400px;
   height: 602px;
 }
 /* tourist/done */

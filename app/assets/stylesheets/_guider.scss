@@ -119,7 +119,7 @@ h1,h2,h3,h4,h5,h6 {
    display: flex;
    width: 1080px;
    height: 1903px;
-   margin: 24px 180px;
+   margin: 44px 180px 24px 180px;
    padding: 0 24px;
 
 }
@@ -402,12 +402,28 @@ p.birth {
 }
 p.image_setumei {
   width: 476px;
-  height: 80px;
+  height: 20px;
   font-size: 14px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   margin-top: 9px;
   margin-bottom: 15px;
   
+}
+p.image_setumei1 {
+  width: 476px;
+  height: 10px;
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+p.image_setumei2 {
+  width: 476px;
+  height: 10px;
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 .self {
       width: 476px;

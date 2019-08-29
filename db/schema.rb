@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190822041319) do
+ActiveRecord::Schema.define(version: 20190827083049) do
 
   create_table "guiders", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "",    null: false
@@ -65,6 +65,12 @@ ActiveRecord::Schema.define(version: 20190822041319) do
     t.string   "meetingplace", limit: 255
     t.string   "price",        limit: 255
     t.string   "transport",    limit: 255
+    t.string   "copy_image",   limit: 255
+    t.string   "string",       limit: 255
+    t.string   "second_image", limit: 255
+    t.string   "third_image",  limit: 255
+    t.string   "fourth_image", limit: 255
+    t.string   "five_image",   limit: 255
   end
 
   create_table "tourists", force: :cascade do |t|
