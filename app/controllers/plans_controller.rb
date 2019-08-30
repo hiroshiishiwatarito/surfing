@@ -13,11 +13,15 @@ class PlansController < ApplicationController
     def pay
 
         Payjp.api_key = 'sk_live_157b4609bed3c98d179f5f1e9ba0e9eb2ef8def128891e5bc9634b14'
+
         charge = Payjp::Charge.create(
             :currency => 'jpy',
-            :amount => @plans.price,
+            :amount => @plan.price,
             :card => params['payjp-token']
             )
+        GuiderMailer.guider_payment_mail(self).deliver_now
+
+
        
     end
 
