@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   end
   resources :guiders
   resources :tourists
-  
+
   get '/done' => 'guiders#done'
   get 'tourists/:id' => 'tourists#show'
   get 'guiders/:id/go' => 'guiders#go'

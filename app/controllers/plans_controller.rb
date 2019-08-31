@@ -16,13 +16,11 @@ class PlansController < ApplicationController
 
         charge = Payjp::Charge.create(
             :currency => 'jpy',
-            :amount => @plan.price,
+            :amount => 500,
             :card => params['payjp-token']
             )
         GuiderMailer.guider_payment_mail(self).deliver_now
 
-
-       
     end
 
 	def new
