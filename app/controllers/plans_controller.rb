@@ -55,7 +55,7 @@ class PlansController < ApplicationController
 
 	private
 	def plan_params
-		params.permit(:place, :image, :title, :contents, :times)
+		params.permit(:place, :image, :copy_image, :thrid_image, :fourth_image, :five_image, :title, :contents, :times)
 	end
 
 	def move_to_index
