@@ -4,7 +4,7 @@
    <div class="image-parts">
     <div class="main">
        <i class="fas fa-chevron-circle-left" aria-hidden="true" id="prev"></i>
-       <img src="<%= @plan.image %>" id="target" style="width: 950px; max-width: 100%; height: 400px; padding-bottom:: 15px; padding-top: 20px; " class= "contain">
+       <%= image_tag(@plan.image.thumb.url , :id=> "target", :class => "contain") %>
        <i class="fas fa-chevron-circle-right" aria-hidden="true" id="next"></i>
     </div>
     <script src="javascripts/main.js"></script>
@@ -136,18 +136,12 @@
           </td></tr>
          </table>
         <% if guider_signed_in? %>
-         <%= form_tag('/plans', action: :pay, method: :post) do %>
-          <script
-             type="text/javascript"
-             src="https://checkout.pay.jp/"
-             class="payjp-button"
-             data-key="
-　　　           pk_live_df4eed1af794dd6563b1508a"
-             data-on-created="onCreated"
-             data-text="支払う"
-             data-submit-text="支払う"
-           ></script>
-         <% end %>
+         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+           <input type="hidden" name="cmd" value="_s-xclick">
+           <input type="hidden" name="hosted_button_id" value="FMJVCM6U844J4">
+           <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - オンラインでより安全・簡単にお支払い" style="width: 250px; height: 70px; background-size: contain; margin-left: 40px;">
+           <img alt="" border="0" src="https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif" width="1" height="1">
+         </form>
 
         <% else %>
          <div class="sign">
