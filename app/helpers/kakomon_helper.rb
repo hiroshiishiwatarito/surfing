@@ -1,0 +1,2 @@
+module KakomonHelper
+end

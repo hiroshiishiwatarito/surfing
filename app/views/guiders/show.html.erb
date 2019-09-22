@@ -32,7 +32,13 @@
             
              <ul class="mypost_list">
                <li>
-                <%= link_to '', "/plans/#{plan.id}", method: :get %>
+                <%= link_to '詳細', "/plans/#{plan.id}", method: :get %>
+               </li>
+               <li>
+                 <%= link_to '編集', "/plans/#{plan.id}/edit", method: :get %>
+               </li>
+               <li>
+                 <%= link_to '削除', "/plans/#{plan.id}", method: :delete %>
                </li>
                
              </ul>

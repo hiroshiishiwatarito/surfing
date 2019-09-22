@@ -1,14 +1,15 @@
-<div class="contents row">
+<div class="contents graph">
     <%= form_tag("/plans/#{@plan.id}", method: :patch ) do %>
       <h3>
-        編集する
+        投稿商品の編集
       </h3>
-      <input placeholder="Title" type="text" name="title" value="<%= @plan.title %>" autofocus="true">
+      <input placeholder="タイトル" type="text" name="title" value="<%= @plan.title %>" autofocus="true">
+      <input placeholder="著者名" type="string" name="place" value="<%= @plan.place %>" autofocus="true">
+      <input placeholder="授業名" type="string" name="times" value="<%= @plan.times %>" autofocus="true" required>
+      <input placeholder="本の状態" type="integer" name="datetimes" value="<%= @plan.datetimes %>"  autofocus="true" required>
+      <input placeholder="価格" type="string" name="price" value="<%= @plan.price %>" autofocus="true" required>
       <input placeholder="ImageUrl" type="string" name="image" autofocus="true">
-      <input placeholder="Place" type="string" name="place" autofocus="true">
-      <input placeholder="MeetingPlace" type="string" name="meetingplace" autofocus="true">
-      <input placeholder="How many hour" type="integer" name="times" value="<%= @plan.times %>" autofocus="true">
-      <input placeholder="date" type="integer" name="datetimes" autofocus="true">
+     
       <textarea cols="30" name="contents" placeholder="content" rows="10"><%= @plan.contents %></textarea>
       <input type="submit" value="SENT">
     <% end %>

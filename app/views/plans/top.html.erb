@@ -1,0 +1,75 @@
+
+<div class="main-container" style="height: 350px;">
+</div>
+<div class="mainpage">
+ 
+  <div class="contents center">
+   <% if @search_keyword.present? %> 
+    <div class="topic">
+     <span class="topic2"><%= @search_keyword %></span>
+     <span class="topic1">の検索結果</span>
+    </div>
+   <% end %>
+   <% if ! @search_keyword.present? %> 
+    <div class="all-topic">
+     <h1 class="post_post">最新の投稿一覧</h1>
+     <span style="padding-left: 10px;">本の投稿</span>
+    </div>
+   <% end %>
+   <% @plans.each do |plan| %>
+   <div class="posts">
+    <div class="content_post" style="background-image: url(<%= plan.image.url %>);" >
+        <div class="more">
+          
+           <ul class="more_list">
+            <li>
+              <%= link_to '', "/plans/#{plan.id}", method: :get %>
+            </li>
+            
+           </ul>
+        </div>
+       
+      <span class="name">
+        <a href="/guiders/<%= plan.guider_id %>">
+          
+        </a>
+      </span>
+      
+    </div>
+
+    <div class="mix-change">
+     <span class="mix"><%= plan.title %></span>
+     <span class="mix1">¥<%= plan.price %></span>
+     
+    </div>
+     
+
+  
+
+   </div>
+
+
+   <% end %>
+  
+ </div>
+ <% if ! Plan.find_by(title: params[:title]).blank? %> 
+  <div class="contents center">
+   <% @post.each do |plan| %>
+    <div class="kanren" style="background-image: url(<%= plan.image %>);">
+        <div class="less">
+           <ul class="less_link">
+            <li>
+              <%= link_to '', "/plans/#{plan.id}", method: :get %>
+            </li>
+           
+           </ul>
+        </div>
+        <%= simple_format(plan.title) %>
+       
+      </div>
+   <% end %>
+   
+  </div>
+ <% end %>
+</div>
+

@@ -6,9 +6,17 @@ class PlansController < ApplicationController
 
 	def index
 
- 	       @plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(20).order("created_at DESC")
+ 	       @plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(20 ).order("created_at DESC")
            @search_keyword = params[:search]
+           
+
     end
+
+    def top
+    	@plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(10).order("created_at DESC")
+        @search_keyword = params[:search]
+    end
+
 
     def pay
 
@@ -23,11 +31,18 @@ class PlansController < ApplicationController
 
     end
 
+    def category
+    	
+    	@category = ["---", "新品、未使用品", "未使用品に近い" , "目立った傷や汚れなし" , "やや傷や汚れあり" ,"傷や汚れあり", "全体的に状態が悪い"]
+        @category = params[:others]
+    end
+
 	def new
+	
 	end
 
 	def create
-		Plan.create(place: params[:place], image: params[:image], copy_image: params[:copy_image], third_image: params[:third_image], fourth_image: params[:fourth_image], five_image: params[:five_image], title: params[:title], contents: params[:contents], times: params[:times], price: params[:price], guider_id: current_guider.id)
+		Plan.create(place: params[:place], image: params[:image], copy_image: params[:copy_image], third_image: params[:third_image], fourth_image: params[:fourth_image], five_image: params[:five_image], title: params[:title], contents: params[:contents], times: params[:times], price: params[:price], datetimes: params[:datetimes], category: [:category], others: params[:others], guider_id: current_guider.id)
 		
 	end
 
@@ -53,7 +68,7 @@ class PlansController < ApplicationController
 
 	private
 	def plan_params
-		params.permit(:place, :image, :copy_image, :thrid_image, :fourth_image, :five_image, :title, :contents, :times)
+		params.permit(:datetimes, :place, :image, :copy_image, :thrid_image, :fourth_image, :five_image, :title, :contents, :times, :category, :others)
 	end
 
 	def move_to_index

@@ -5,6 +5,7 @@ class Guider < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :plans
+  has_many :professions
   belongs_to :tourist
 
   validates :accepted, presence: {message: 'を入力してください'}

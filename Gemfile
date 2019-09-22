@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -44,6 +45,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+
 
 
 gem 'pry-rails'
@@ -67,6 +70,8 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'mini_magick'
 
+gem 'stripe'
 gem 'payjp'
-
+gem 'redcarpet', '~> 2.3.0'
+gem 'coderay'
 

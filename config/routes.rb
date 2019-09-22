@@ -11,24 +11,29 @@ Rails.application.routes.draw do
     registrations: 'guiders/registrations'
   }
 
-  root      'home#index'
-  get       'home/index'
-  get '/search' => 'home#search'
+  root      'plans#top'
+  get       'plans/top'
   
   resources :home
-  resources :plans do
-    collection do
-      post 'pay/:id' => 'plans#pay', as: 'pay'
-    end
-  end
+  resources :plans
+  resources :professions
+  get '/professions/:id/category' => "professions#category"
+  
+  resources :categorys
+  get '/categorys' => 'categorys#index'
+
+  post "plans/:id/charge", to: "charges#create", as: "charge"
+
+  resources :tests
   resources :guiders
+  get "/guiders/:id/post" => "guiders#post"
   resources :tourists
 
   get '/done' => 'guiders#done'
   get 'tourists/:id' => 'tourists#show'
   get 'guiders/:id/go' => 'guiders#go'
   get "/guiders/:id/accepted" => "guiders#accepted"
- 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

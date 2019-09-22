@@ -1,6 +1,7 @@
 class Plan < ActiveRecord::Base
 	belongs_to :guider
 	belongs_to :home
+	has_many :tests
 	
 	mount_uploader :image, ImageUploader
 	mount_uploader :copy_image, CopyImageUploader

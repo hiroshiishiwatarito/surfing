@@ -53,7 +53,7 @@ line-height: 1.57;
 
 a {
   text-decoration: none;
-  color: #E47911;
+  color: #333;
   @extend .transition;
   &:hover {
     color: #E47911;
@@ -85,7 +85,7 @@ a {
 .btn {
     @include basePadding(8px 20px);
     font-size: 14px;
-    border: 2px solid #E47911;;
+    border: 2px solid #E47911;
     color: #E47911;;
     font-weight: bold;
     text-align: center;
@@ -115,6 +115,22 @@ h1,h2,h3,h4,h5,h6 {
 .sign {
   font-size: 22px
 }
+.eureka {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  font-size: 30px;
+  color: inherit;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+  margin-bottom: 11px;
+  margin-top: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
 
 /* home */
@@ -123,7 +139,18 @@ h1,h2,h3,h4,h5,h6 {
   height: 865px;
   background-size: cover;
   position: relative;
-  width: 100%;
+  max-width: 100%;
+  animation-name: keyframe_18jn58a !important;
+    animation-duration: 300ms !important;
+    animation-timing-function: ease-out !important;
+    border-bottom-left-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    -moz-background-size: contain;
+    
+    background-repeat: no-repeat !important;
+    background-position: center;
 }
 
 .bar {
@@ -294,10 +321,11 @@ input.question {
   
   width: 700px;
   display: flex;
+  margin-left: 126px;
 }
 .full {
   width: 100%;
-  height: 75px;
+  height: 50px;
   display: flex;
   
 }
@@ -312,11 +340,29 @@ input.question {
   width: 75%;
   margin-right: 0;
   display: flex;
-  margin-left: 65px;
-
+  margin-left: 20px;
+}
+.question_answer1 {
+  width: 650px;
+  margin-top: 0;
+ 
+  margin-right: 0;
+  display: flex;
+  margin-left: 20px;
 }
 .fun_interview {
-  width: 400px;
+  width: 576px;
+  height: 40px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+}
+.gogo_interview {
+  width: 700px;
   height: 50px;
   display: inline-block;
   padding: 0.3em 1em;
@@ -331,14 +377,24 @@ input.question {
   width: 25%;
   display: flex;
   margin-right: 70px;
+  margin-left: 6px;
+
+}
+.interview_answer1 {
+  margin-top: 0;
+  width: 25%;
+  display: flex;
+  
+  margin-left: 6px;
+  width: 42px;
 
 }
 .interview {
   background-image: url("/images/search_button.png");
   background-size: contain;
   background-color: #febd69;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   padding: 0.3em 0.5em;
   text-decoration: none;
@@ -346,6 +402,38 @@ input.question {
   border: solid #febd69;
   border-radius: 3px;
   transition: .4s;
+}
+.interview1 {
+  background-image: url("/images/search_button.png");
+  background-size: contain;
+  background-color: #febd69;
+  width: 40px;
+  height: 35px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 12px;
+}
+
+.interview2 {
+  background-image: url("/images/search_button.png");
+  background-size: contain;
+  background-color: #febd69;
+  width: 45px;
+  height: 40px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*  header  */
@@ -371,24 +459,26 @@ input.question {
 .headed {
   list-style: none;
   display: flex;
-  height: 85px;
+  height: 50px;
 }
 .headed li {
   width: 150px;
   text-align: right;
   height: 50px;
   line-height: 50px;
-  font-size: 20px;
+  font-size: 19px;
   margin-top: 0.8%;
   margin-bottom: 1%;
   color: #E47911;
+  margin-bottom: 10px;
+
 }
 
 li.left {
   
   font-size: 35px;
   margin-right: 5%;
-  margin-top: 15px;
+  margin-top: 10px;
   
 }
 a.home {
@@ -456,7 +546,7 @@ a.home:hover {
     font-size: 19px;
     width: 150px;
     background-color: white;
-    height: 214px;
+    height: 200px;
     text-align: center;
     left: 25px;
   }
@@ -469,7 +559,7 @@ a.home:hover {
     color: white;
 }
   a.plan {
-  font-size: 25px;
+  font-size: 23px;
   color: #E47911;
   display: inline-block;
   padding: 0.6em 0.8em 0.5em 1em;
@@ -478,8 +568,8 @@ a.home:hover {
   border-radius: 3px;
   transition: .4s;
   float: right;
-  margin-right: 100px;
-  margin-top: 15px;
+  margin-right: 135px;
+  margin-top: 4px;
 }
   a.plan:hover {
   background: #E47911;
@@ -489,8 +579,9 @@ a.home:hover {
 /* header/tourist or first visit */
 
 li.first {
-  width: 500px;
-  margin-left: 435px;
+  width: 125px;
+  margin-left: 725px;
+  margin-top: 10px;
 }
 a.logout {
 
@@ -503,14 +594,24 @@ a.logout {
   border-radius: 3px;
   transition: .4s;
 }
+li.second {
+  margin-top: 10px;
+  margin-left: 20px;
+}
 a.post {
   color: #E47911;
-  display: inline-block;
+  display: flex;
   padding: 0.1em 0.8em 0.1em 1em;
   text-decoration: none;
   border: solid 2px #E47911;
   border-radius: 3px;
   transition: .4s;
+  height: 40px;
+  width: 130px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  margin-left: 50px;
 
 }
 a.visited {
@@ -610,14 +711,27 @@ a.post:hover {
 .topic1, .all-topic{
     
   font-weight: 700 !important;
-    font-size: 25px !important;
+    font-size: 23px !important;
     line-height: 30px !important;
     letter-spacing: normal !important;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     color: rgb(72, 72, 72) !important;
-    margin-bottom: 20px;
     margin-top: 30px;
+    margin-bottom: 0px;
 
+}
+.post_post {
+  font-weight: 700 !important;
+    font-size: 30px !important;
+    line-height: 30px !important;
+    text-align: center;
+    letter-spacing: normal !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    color: rgb(72, 72, 72) !important;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding-right: 83px;
+    padding-bottom: 20px;
 }
 .mix-change {
   width: 200px;
@@ -753,7 +867,7 @@ div.little {
 }
 
 /* plan/index and guider/show */
-div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
+div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gonext, .surfing {
   h2 {
     @include boxBase(20px 0, 0);
     font-weight: normal;
@@ -880,6 +994,35 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
     -moz-background-size: contain;
     background-size: contain;
     background-repeat: no-repeat !important;
+    background-position: center;
+  }
+  .surfing {
+    width: 900px;
+    height: 300px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    box-shadow: 0 0 1px rgba(41, 41, 41, 0.2);
+    background-color: white;
+    box-sizing: border-box;
+    clear: both;
+    margin-left: 50px;
+  }
+
+  div.ichiran {
+    animation-name: keyframe_18jn58a !important;
+    animation-duration: 300ms !important;
+    animation-timing-function: ease-out !important;
+    border-bottom-left-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    -moz-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    -webkit-background-size:contain;
+    -o-background-size:contain;
+    -ms-background-size:contain;  
   }
 
   /* plan/index */
@@ -890,8 +1033,6 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
     width: 180px;
     color: #fff;
     display: inline-block;
-    background-size: contain;
-    background-position: center center;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba($black,0.2);
     &:after {
@@ -978,8 +1119,6 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
     height: 150px;
     width: 150px;
     color: #fff;
-    background-size: cover;
-    background-position: center center;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba($black,0.2);
     display: inline-block;
@@ -1004,7 +1143,7 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
       right: 0;
       bottom: 0;
       z-index: 2;
-      height: 150px;
+      height: 50px;
       width: 150px;
       text-align: right;
       &:hover ul.mypost_list {
@@ -1029,8 +1168,9 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
           a {
             display: block;
             padding: 5px;
-            height: 150px;
+            height: 50px;
             width: 150px;
+            background-color: white;
             &:hover {
               
               
@@ -1193,7 +1333,7 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph {
   /* guider or tourist login/sign up */
   form#new_guider, form#new_tourist {
       width: 450px;
-      margin: 85px auto 10px;
+      margin: 50px auto 10px;
   }
   .ue {
       font-size: 24px;
@@ -1486,3 +1626,98 @@ h3.done {
   font-size: 20px;
 }
 
+.category-id {
+  color: inherit;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  white-space: nowrap;
+}
+.category-is {
+  color: inherit;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+.category-ih {
+  color: inherit;
+  font-size: 16px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+.category-if {
+  color: inherit;
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.half-score {
+   display:flex;
+   justify-content: center;
+}
+.open-score {
+  display:flex;  
+  align-items: center;
+}
+.opened-score {
+  isplay:flex;  
+  align-items: center;
+}
+.closed-score {
+   width:100%;
+   display:flex;
+   justify-content:center; 
+   height: 380px;
+}
+.close-score {
+   width:100%;
+   display:flex;
+   justify-content:center; 
+   height: 380px;
+}
+.standard-score {
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+}
+.basic-score {
+   
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+}
+
+#editor{
+  margin:4px;
+  width: 45%;
+  height:500px;
+  box-sizing: border-box;
+  float: left;
+  font-size:16px;
+}
+span.page {
+  margin-left: 20px;
+  margin-right: 20px;
+    
+  border-radius: 15px; 
+}
+a.next, .last, .current {
+  
+  color: #333;
+}
+
+.goster {
+  line-height: 30px;
+}
+.superpark, .select#university.superpark {
+  height: 45px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background-color: white;
+}

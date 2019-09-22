@@ -1,0 +1,48 @@
+
+
+<div class="go_form" style="margin-left: 100px; margin-top: 20px;">
+  <%= form_tag('/tests', method: :post, class: :test_center, :multipart => true) do %>
+	  <input id="for" class="go_form1" placeholder="タイトル" type="string" name="title" autofocus="true" required>
+    <input id="for" class="go_form1" placeholder="タイトルの説明" type="text" name="description" autofocus="true" required>
+    
+    <input type="string" name="image" autofocus="true" class="go_gorm1">
+</div>
+<div style="margin-bottom: 108px;"></div>
+<div class = "firstwrap" style="margin-top: 57.5px;">
+  
+  <div class = "secondwrap">
+    <div class="nakabox">
+    
+     <div class="box">
+      <div class="contents gonext" style=" border-top: none;">
+       
+         <textarea style="width: 600px;" class="teratail" id="src" placeholder="Contents" name="body" cols="30" rows="10"></textarea>
+
+       
+         <div class="go2_form" style="float: right;"><input style="margin-top: 30px; margin-right: 15px;" class="gonext_form" type="submit" value="SENT">
+   
+
+         </div>
+
+  
+      
+      </div>
+   <% end %>
+
+     </div>
+
+     <div class="box">
+      <div class="contents gonext" style="border-left: none; border-top: none;">
+       <%= form_tag('/plans', method: :post, class: :test_ielts, :multipart => true) do %>
+           <div id="preview" class="preview">
+           </div>
+       <% end %>
+　　  </div>
+     </div>
+  
+    </div>
+  </div>
+</div>
+
+ 
+  

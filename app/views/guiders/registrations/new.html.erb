@@ -3,15 +3,15 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
-   <h2 class="ue">Sign up</h2>
+   <h2 class="ue">サインアップ</h2>
 
    <div class="field">
-     <%= f.label :email %><br />
+     <%= f.label :メール %><br />
      <%= f.email_field :email %>
    </div>
 
    <div class="field">
-     <%= f.label :password %>
+     <%= f.label :パスワード %>
      <% if @validatable %>
      <em>(<%= @minimum_password_length %> characters minimum)</em>
      <% end %><br />
@@ -19,12 +19,12 @@
    </div>
 
    <div class="field">
-     <%= f.label :password_confirmation %><br />
+     <%= f.label :パスワード確認 %><br />
      <%= f.password_field :password_confirmation, autocomplete: "off" %>
    </div>
 
    <div class="field">
-     <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+     <%= f.label :ニックネーム %> <em>(6文字まで)</em><br />
      <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
    </div>
 
@@ -32,7 +32,7 @@
    <a class="ac" href="/guiders/:id/accepted">利用規約、及び、個人情報の取扱に同意する</a>
 
    <div class="actions">
-     <%= f.submit "Sign up" %>
+     <%= f.submit "サインアップ" %>
    </div>
 
    <div class="shita">

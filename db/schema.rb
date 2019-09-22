@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190827083049) do
+ActiveRecord::Schema.define(version: 20190917160418) do
+
+  create_table "chats", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "guiders", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "",    null: false
@@ -47,10 +52,35 @@ ActiveRecord::Schema.define(version: 20190827083049) do
     t.string   "birth",                  limit: 255
     t.string   "occupation",             limit: 255
     t.string   "faculty",                limit: 255
+    t.integer  "test_id",                limit: 4
+    t.integer  "profession_id",          limit: 4
   end
 
   add_index "guiders", ["email"], name: "index_guiders_on_email", unique: true, using: :btree
   add_index "guiders", ["reset_password_token"], name: "index_guiders_on_reset_password_token", unique: true, using: :btree
+
+  create_table "kakomons", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "plan_id",    limit: 4
+    t.integer  "tourist_id", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "content",    limit: 65535
+    t.integer  "from_id",    limit: 4
+    t.integer  "to_id",      limit: 4
+    t.string   "room_id",    limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["room_id", "created_at"], name: "index_messages_on_room_id_and_created_at", using: :btree
 
   create_table "plans", force: :cascade do |t|
     t.text     "title",        limit: 65535
@@ -66,11 +96,61 @@ ActiveRecord::Schema.define(version: 20190827083049) do
     t.string   "price",        limit: 255
     t.string   "transport",    limit: 255
     t.string   "copy_image",   limit: 255
-    t.string   "string",       limit: 255
-    t.string   "second_image", limit: 255
     t.string   "third_image",  limit: 255
     t.string   "fourth_image", limit: 255
     t.string   "five_image",   limit: 255
+    t.integer  "test_id",      limit: 4
+    t.string   "test_image",   limit: 255
+    t.text     "description",  limit: 65535
+    t.text     "body",         limit: 65535
+    t.string   "big_title",    limit: 255
+    t.integer  "category",     limit: 4
+    t.integer  "tourist_id",   limit: 4
+    t.integer  "likes_count",  limit: 4
+    t.text     "others",       limit: 65535
+    t.string   "university",   limit: 255
+  end
+
+  create_table "professions", force: :cascade do |t|
+    t.string   "university",     limit: 255
+    t.string   "faculty",        limit: 255
+    t.string   "lesson",         limit: 255
+    t.string   "teacher",        limit: 255
+    t.string   "book",           limit: 255
+    t.string   "thing",          limit: 255
+    t.string   "year",           limit: 255
+    t.string   "confirm",        limit: 255
+    t.string   "recommendation", limit: 255
+    t.text     "test",           limit: 65535
+    t.text     "feel",           limit: 65535
+    t.text     "content",        limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "guider_id",      limit: 4
+    t.float    "rate",           limit: 24
+    t.integer  "star",           limit: 4
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "student_name", limit: 255
+    t.string   "school",       limit: 255
+    t.string   "year",         limit: 255
+    t.string   "hometown",     limit: 255
+    t.text     "image",        limit: 65535
+    t.text     "message",      limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "body",        limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.text     "description", limit: 65535
+    t.string   "image",       limit: 255
+    t.integer  "guider_id",   limit: 4
+    t.integer  "plan_id",     limit: 4
   end
 
   create_table "tourists", force: :cascade do |t|
@@ -87,6 +167,7 @@ ActiveRecord::Schema.define(version: 20190827083049) do
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
     t.string   "name",                   limit: 255
+    t.integer  "plan_id",                limit: 4
   end
 
   add_index "tourists", ["email"], name: "index_tourists_on_email", unique: true, using: :btree

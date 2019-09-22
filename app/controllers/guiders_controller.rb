@@ -14,6 +14,7 @@ class GuidersController < ApplicationController
 	
 	def index
     	@guider = Guider.all
+    	
     end
     
 	def new
@@ -21,7 +22,7 @@ class GuidersController < ApplicationController
 	end
 
 	def create
-		Guider.create(student_name: params[:student_name], Image: params[:Image], university: params[:university], year: params[:year], hometown: params[:hometown], message: params[:message], contact: params[:contact])
+		Guider.create(student_name: params[:student_name], Image: params[:Image], university: params[:university], year: params[:year], hometown: params[:hometown], message: params[:message], contact: params[:contact], lastname: params[:lastname])
     end
 
 	def edit
@@ -35,7 +36,7 @@ class GuidersController < ApplicationController
 
 	private
     def guider_params
-    	params.permit(:student_name, :Image, :university, :year, :hometown, :message, :contact)
+    	params.permit(:student_name, :Image, :university, :year, :hometown, :message, :contact, :lastname)
     end
 
 end

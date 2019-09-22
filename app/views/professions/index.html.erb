@@ -1,0 +1,67 @@
+   <div class="all-star" style="margin-top: 10px;">
+      <span style="margin-left: 126px;" class="category-is">ユリイカ</span>
+      <i class="fas fa-angle-right"></i>
+      <a class="category-id" href="/categorys">カテゴリー一覧</a>
+      <i class="fas fa-angle-right"></i>
+      <a class="category-id" href="/tests">過去問</a>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @search_keyword1 %>
+      </div>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @search_keyword2 %>
+      </div>
+   </div>
+   <div class="strange2">
+     <a class="strange" href="/professions/:id/category"></a>
+   </div>
+    
+   <div class="profession" style="margin-top: 0px;">
+
+    <div class="profession1">
+
+      <div class="profession2">
+        <% @professions.each do |profession| %>
+         <dis class="pro">
+           <div class="dogo-go">
+            <div>
+             <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= simple_format(profession.lesson) %></h2>
+             <div style="text-align: center;">
+              <% if profession.star == 1 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★★★★</label>
+              <% elsif profession.star == 2 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★★★</label>
+              <% elsif profession.star == 3 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★★</label>
+              <% elsif profession.star == 4 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★</label>
+              <% else %>
+                <label for="star1"><span class="text">オススメ度</span>★</label>
+              <% end %>
+             </div>
+             <div style="text-align: center;">
+              <span style="text-align: center;">難易度</span><span>:<%= profession.feel %></span>
+             </div>
+              <%= link_to "", "/professions/#{profession.id}", class: "dogo" %>
+            </div>
+           </div>
+         </dis>
+
+        <% end %>
+        <div class="semi" style="float: right; margin-right: 0px;">
+         <div class="sticky">
+           <a href="professions/new"><i style="font-size: 46px;
+             font-weight: 900; " class="fas fa-plus-circle"></i>
+           </a>
+         </div>
+        </div>
+      </div>
+
+    </div>
+
+   </div>
+
+
+
+

@@ -13,8 +13,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script>
+      $(function() {
+        $('body').keyup(function() {
+         $('#preview').html($('#src').val());
+         });
+      });
+    </script>
     <%= csrf_meta_tags  %>
-   
+    <meta name="google-site-verification" content="uh4J6YQwgfL0Q9XnjCyjTV2xB16q7eXGFCHfdq2UNLQ" />
   </head>  
 
   <body class="photo">
@@ -27,18 +34,23 @@
 
           <div class="full_max">
            <div class="full">
+            <h1 class="eureka"><a style="color: #E47911;" href="/plans/top">eureka</a></h1>
             <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
                    <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
                    <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
              <% end %>
+             
            </div>
-           </div>
-          <div>
+           
+
+          </div>
+         <div>
+
         </li>
        
         <% if guider_signed_in? %>
           <div class="guider_nav">
-            <span style="top: 20px;"><%= current_guider.nickname %>
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
               <ul>
                   <li class="category">
                     <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
@@ -47,7 +59,7 @@
                   </li>
               </ul>
             </span>
-            <a class="plan" href="/plans/new">プラン</a>
+            <a class="plan" href="/guiders/:id/post">プラン</a>
           </div>
           
         <% end %>
@@ -95,8 +107,20 @@
            </div>
           <% end %>
         </div>
+       
 
        </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+          <i style="margin-left: 126px;" class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/plans" >教科書</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/tests">過去問</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/professions/:id/category">資格</a>
+        </div>
+
        <div class="mbar">
       </div>
      </div>

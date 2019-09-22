@@ -1,0 +1,41 @@
+<div class="all-star" style="margin-top: 10px;">
+      <span style="margin-left: 126px;" class="category-is">ユリイカ</span>
+      <i class="fas fa-angle-right"></i>
+      <a class="category-id" href="/categorys">カテゴリー一覧</a>
+      <i class="fas fa-angle-right"></i>
+      <a class="category-id" href="/tests">過去問</a>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @profession.university %>
+      </div>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @profession.faculty %>
+      </div>
+</div>
+
+<div class="contents surfing">
+   <div class="surfing">
+      <h2 class="line-go" style="font-size: 30px; color: inherit; margin-bottom: 0px; "><%= @profession.lesson %></h2>
+      <span style="float: right; padding-right: 30px;"><%= @profession.year %></span>
+      <div style="text-align: left;">
+              <% if @profession.star == 1 then %>
+                <label for="star1"><span class="text" style="font-size: 18px;">オススメ度</span>★★★★★</label>
+              <% elsif @profession.star == 2 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★★★</label>
+              <% elsif @profession.star == 3 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★★</label>
+              <% elsif @profession.star == 4 then %>
+                <label for="star1"><span class="text">オススメ度</span>★★</label>
+              <% else %>
+                <label for="star1"><span class="text">オススメ度</span>★</label>
+              <% end %>
+      </div>
+      <span style="display: block; padding-right: 30px;">難易度:<%= @profession.feel %></span>
+      <span style="display: block; padding-right: 30px;">出席: <%= @profession.confirm %></span>
+      <span style="display: block; padding-right: 30px;">難易度:<%= @profession.book %>/span>
+      <span style="display: block; padding-right: 30px;"> <%= @profession.content %></span>
+       <span style="display: block; padding-right: 30px;"> <%= @profession.test %></span>
+    </div>
+</div>
+

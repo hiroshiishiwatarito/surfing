@@ -487,7 +487,17 @@ ul li {
   margin-top: 50px;
   margin-bottom: 0;
   max-width: 800px;
-  height: 900px;
+  height: 1200px;
+  *zoom: 1;
+}
+.gonext {
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 600px;
+  height: 600px;
   *zoom: 1;
 }
 .life {
@@ -518,6 +528,16 @@ ul li {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 1230px;
+  *zoom: 1;
+}
+.surfing {
+  width: 100%;
+  margin-left: 200px;
+  margin-right: 150px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1000px;
+  height: 500px;
   *zoom: 1;
 }
 .avicii {

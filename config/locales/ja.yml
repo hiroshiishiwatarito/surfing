@@ -1,2 +1,12 @@
+
 guider:
   accepted: 利用規約、及び、個人情報の取扱に同意する
+
+  ja:
+  views:
+    pagination:
+      first: <i class="fas fa-angle-double-left"></i>
+      last: <i class="fas fa-angle-double-right"></i>
+      previous: <i class="fas fa-angle-left"></i>
+      next: <i class="fas fa-angle-right"></i>
+      truncate: "..."
