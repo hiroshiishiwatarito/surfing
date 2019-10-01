@@ -8,6 +8,5 @@ class Guider < ActiveRecord::Base
   has_many :professions
   belongs_to :tourist
 
-  validates :accepted, presence: {message: 'を入力してください'}
-
+  
 end

@@ -1,3 +1,12 @@
+<div class="all-star" style="margin-top: 10px;">
+   <span style="margin-left: 126px;" class="category-is">ユリイカ</span>
+   <i class="fas fa-angle-right"></i>
+   <a class="category-id" href="/categorys">カテゴリー一覧</a>
+   <i class="fas fa-angle-right"></i>
+   <a class="category-id" href="/tests">過去問</a>
+</div>
+
+
 <div class="mainpage">
  
   <div class="contents center">
@@ -5,11 +14,10 @@
     <div class="second-go" style="height: 800px;">
      <% @tests.each do |test| %>
      <div class="posts" style="width: 250px; height: 179px; margin-bottom: 50px; margin-top: 50px;">
-        <%= image_tag(test.image, :class => "create") %>
-        
+        <%= image_tag(test.book.thumb.url, :class => "creat") %>
+        <%= link_to "", "/tests/#{test.id}", class: "hah" %>
       <div class="mix-change">
-          <a href="/tests/show" style="width: 300px; height: 168px;">
-          <h2 class="line_go" style="width: 250px; margin-bottom: 30px;"><%= simple_format(test.description) %></h2></a>
+          <h2 class="line_go" style="width: 250px; margin-bottom: 30px;"><%= simple_format(test.summary) %></h2>
       </div>
      </div>
      <% end %>
@@ -21,49 +29,5 @@
 
 
 
-<div class="all-star" style="margin-top: 10px; margin-bottom: 50px;">
-   <span style="margin-left: 126px;" class="category-is">ユリイカ</span>
-   <i class="fas fa-angle-right"></i>
-   <a class="category-id" href="/categorys">カテゴリー一覧</a>
-   <i class="fas fa-angle-right"></i>
-   <a class="category-id" href="/tests">過去問</a>
-</div>
-
-<% @tests.each do |test| %>
-<div class = "line1" style="margin-top: 57.5px;">
- <div class = "line2">
-  
-  <div class="line3" >
-    
-    <div class="line4" style="border: 2px solid #FAEEBE; ">
-   
-       
-       
-
-        <div class="line6">
-          <a href="/tests/show" style="width: 750px; height: 168px;"><%= image_tag(test.image, :class => "create") %></a>
-          
-        </div>
-        <div class="line7">
-          <a href="/tests/show" style="width: 750px; height: 168px;">
-          <h2 class="line_go"><%= simple_format(test.title) %></h2>
-          <span><%= simple_format(test.description) %></span>
-          </a>
- 
-        </div>
-       
-       
-     
-     </div>
-    
-
-     
-     <div class="line5">
-     </div>
-  </div>
-  
- </div>
-</div>
-<% end %>
 
 

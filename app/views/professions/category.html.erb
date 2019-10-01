@@ -1,7 +1,13 @@
 <div class="contents life" style="margin-left: 350px;">
      <%= form_tag professions_path, :method => 'get', :class => 'gopro' do %>
-                   <div class="question_answer1" style="width: 300px;"><%= text_field_tag :search1, params[:search1], class: "gogo_interview", placeholder: '大学名' %></div>
-                   <div class="question_answer1" style="width: 300px;"><%= text_field_tag :search2, params[:search2], class: "gogo_interview", placeholder: '学部' %></div>
-                   <div class="interview_answer1" style="margin-top: 5px;"><%= submit_tag "", :name => nil, class: "interview2" %></div>
+                   <div class="question_answer1" style="width: 300px;"><%= text_field_tag :university, params[:university], class: "gogo_interview", placeholder: '大学名' %></div>
+                   <div class="question_answer1" style="width: 300px;"><%= text_field_tag :faculty, params[:faculty], class: "gogo_interview", placeholder: '学部' %></div>
+                   <select name="season" style="width: 150px;height: 50px; margin-left: 18px; background-color: white;  margin-top: 6px; margin-right: 15px;">
+                     <option value=""></option>
+                     <option value="春学期">春学期</option>
+                     <option value="秋学期">秋学期</option>
+                   </select>
+                   
+                   <div class="interview_answer1" style="width: 40px; margin-top: 8px;"><%= submit_tag "", :name => nil, class: "interview2" %></div>
      <% end %>
 </div>

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(resource)
-      search_path(resource)   
+      plans_path(resource)
   end
 
   def configure_permitted_parameters

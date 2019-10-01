@@ -1,0 +1,112 @@
+   <div class="all-star" style="margin-top: 10px;">
+      <span style="margin-left: 126px;" class="category-is">ユリイカ</span>
+      <i class="fas fa-angle-right"></i>
+      <a class="category-id" href="/categorys">カテゴリー一覧</a>
+      <i class="fas fa-angle-right"></i>
+      <a class="category-id" href="/tests">過去問</a>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @search_keyword1 %>
+      </div>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @search_keyword2 %>
+      </div>
+   </div>
+   <div class="strange2">
+     <a class="strange" href="/professions/:id/category"></a>
+   </div>
+    <span style="margin-left: 800px; width: 40px; height: 40px; font-size: 16px;">件数:<%= @chart15 %>件</span>
+   <div class="profession" style="margin-top: 5px;">
+
+    <div class="profession1">
+
+      <div class="profession2" style="padding: 0px 30px 30px 80px;">
+        
+         <dis class="pro" style="width: 700px;">
+
+           <div class="dogo-go">
+            <div>
+             <h2 style="padding: 20px 30px; text-align: center; font-size: 30px; font-weight: 600; color: inherit; margin-bottom: 10px;"><%= @profession.lesson %></h2>
+
+             <div style="text-align: center; display: inline-block; width: 700px; height: 450px;">
+             
+                <h3 style="padding: 20px 30px; text-align: center; font-size: 18px; font-weight: 600; color: inherit; width: 300px; display: inline-block;">オススメ度（面白い)</h3>
+                
+                <h3 style="padding: 20px 30px; text-align: center; font-size: 18px; font-weight: 600; color: inherit; width: 300px; display: inline-block;">オススメ度（面白い)</h3>
+                <span style="width: 300px; display:inline-block; margin-right: 10px;"><%= pie_chart @chart, :legend => {:labelFormat => '{name} : {y} ({percentage}%)'} %></span>
+                 
+                 <span style="width: 300px; display:inline-block;"><%= pie_chart @chart11, :legend => {:labelFormat => '{name} : {y} ({percentage}%)'} %></span>
+                 <div style="display: inline-block; float: center; margin-top: 30px;">
+                   <div style="background-color: blue; width: 35px; height: 10px; display: inline-block; "></div><span style="margin-left: 5px;">大変不満足</span>
+                   <div style="background-color: red; width: 35px; height: 10px; display: inline-block; "></div><span style="margin-left: 5px;">不満足</span>
+                   <div style="background-color: orange; width: 35px; height: 10px; display: inline-block; "></div><span style="margin-left: 5px;">まあまあ</span>
+                   <div style="background-color: green; width: 35px; height: 10px; display: inline-block; "></div><span style="margin-left: 5px;">満足</span>
+                   <div style="background-color: purple; width: 35px; height: 10px; display: inline-block; "></div><span style="margin-left: 5px;">大満足</span>
+                 </div>             
+              
+            </div>
+           </div>
+
+         </div>
+        <div style="display: block;">
+
+        <% @professions.each do |profession| %>
+          <div class="semi" style="margin-top: 0px; margin-right: 0px; width: 300px; padding: 20px;">
+
+            <div class="suo-go">
+               
+            <div>
+             <h2 class="line_go" style="text-align: left; font-size: 30px; padding: 0 10px; margin-bottom: 0px;"><%= simple_format(current_guider.nickname, class: "nickname") %></h2>
+             <h2 class="line_go" style="text-align: right; font-size: 13px; padding-bottom: 15px;"><%= profession.year %></h2>
+            </div>
+              <div style=" text-align: center; padding: 10px 10px 10px 15px;">
+
+               <div style="text-align: center; display: inline-block;">
+
+                 <% if profession.star == 5 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                 <% elsif profession.star == 4 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★</span></label>
+                 <% elsif profession.star == 3 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★</span></label>
+                 <% elsif profession.star == 2 then %>
+                   <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★</span></label>
+                 <% else %>
+                   <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★</span></label>
+                 <% end %>
+              </div>
+              <div style="padding-left: 25px; text-align: center; display: inline-block; margin-bottom: 20px;">
+                  <% if profession.fun == 1 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                  <% elsif profession.fun == 2 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
+                  <% elsif profession.fun == 3 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif profession.fun == 4 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                  <% else %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                  <% end %>
+              </div>
+              <div style="margin-top: 25px; margin: 0 0;">
+                  <%= truncate(profession.content) do %>
+                       <p style="font-size: 14px;">(続きを読むには<%= link_to 'ここ', "/professions/#{profession.id}" %>をクリックしてください。<p>
+                  <% end %>
+                  
+              </div>
+             
+            </div>
+           </div>
+          
+          </div>
+        <% end %>
+        </div>
+      </div>
+
+    </div>
+
+   </div>
+
+
+

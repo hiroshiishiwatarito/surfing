@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190917160418) do
+ActiveRecord::Schema.define(version: 20191001114221) do
 
   create_table "chats", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20190917160418) do
     t.string   "faculty",                limit: 255
     t.integer  "test_id",                limit: 4
     t.integer  "profession_id",          limit: 4
+    t.boolean  "approved"
   end
 
   add_index "guiders", ["email"], name: "index_guiders_on_email", unique: true, using: :btree
@@ -129,6 +130,11 @@ ActiveRecord::Schema.define(version: 20190917160418) do
     t.integer  "guider_id",      limit: 4
     t.float    "rate",           limit: 24
     t.integer  "star",           limit: 4
+    t.integer  "fun",            limit: 4
+    t.string   "season",         limit: 255
+    t.string   "type",           limit: 255
+    t.string   "detail",         limit: 255
+    t.integer  "pick_up",        limit: 4
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -151,6 +157,11 @@ ActiveRecord::Schema.define(version: 20190917160418) do
     t.string   "image",       limit: 255
     t.integer  "guider_id",   limit: 4
     t.integer  "plan_id",     limit: 4
+    t.string   "secondword",  limit: 255
+    t.string   "thirdword",   limit: 255
+    t.text     "purpose",     limit: 65535
+    t.string   "book",        limit: 255
+    t.string   "summary",     limit: 255
   end
 
   create_table "tourists", force: :cascade do |t|

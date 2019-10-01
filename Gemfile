@@ -74,4 +74,9 @@ gem 'stripe'
 gem 'payjp'
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
+#円グラフ
+gem "chartkick"
+gem 'chartable'
+
+gem "bigdecimal", ">= 1.3.2"
 

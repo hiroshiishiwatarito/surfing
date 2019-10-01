@@ -14,28 +14,159 @@
       </div>
 </div>
 
-<div class="contents surfing">
-   <div class="surfing">
-      <h2 class="line-go" style="font-size: 30px; color: inherit; margin-bottom: 0px; "><%= @profession.lesson %></h2>
-      <span style="float: right; padding-right: 30px;"><%= @profession.year %></span>
-      <div style="text-align: left;">
-              <% if @profession.star == 1 then %>
-                <label for="star1"><span class="text" style="font-size: 18px;">オススメ度</span>★★★★★</label>
-              <% elsif @profession.star == 2 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★★★</label>
-              <% elsif @profession.star == 3 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★★</label>
-              <% elsif @profession.star == 4 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★</label>
-              <% else %>
-                <label for="star1"><span class="text">オススメ度</span>★</label>
-              <% end %>
-      </div>
-      <span style="display: block; padding-right: 30px;">難易度:<%= @profession.feel %></span>
-      <span style="display: block; padding-right: 30px;">出席: <%= @profession.confirm %></span>
-      <span style="display: block; padding-right: 30px;">難易度:<%= @profession.book %>/span>
-      <span style="display: block; padding-right: 30px;"> <%= @profession.content %></span>
-       <span style="display: block; padding-right: 30px;"> <%= @profession.test %></span>
-    </div>
-</div>
+<div class="profession" style="margin-top: 35px;">
 
+    <div class="profession1">
+
+      <div class="profession2" style="margin-top: 11px; width: 600px;">
+        
+         <dis class="pro" style="height: 610px;">
+           <div class="hogo-go">
+
+              <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= simple_format(@profession.lesson, class: "lesson") %></h2>
+              <h2 class="line_go" style="text-align: right; font-size: 13px; padding-bottom: 15px;"><%= @profession.year %><span style="margin-left: 10px;"><%= current_guider.nickname %></span></h2>
+              <div style="text-align: center;">
+               <div style="text-align: center; display: inline-block; ">
+                 <% if @profession.star == 5 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                 <% elsif @profession.star == 4 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★</span></label>
+                 <% elsif @profession.star == 3 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★</span></label>
+                 <% elsif @profession.star == 2 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★</span></label>
+                 <% else %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★</span></label>
+                 <% end %>
+               </div>
+               <div style="padding-left: 25px; text-align: center; display: inline-block; margin-bottom: 20px;">
+                  <% if @profession.fun == 1 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                  <% elsif @profession.fun == 2 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
+                  <% elsif @profession.fun == 3 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif @profession.fun == 4 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                  <% else %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                  <% end %>
+               </div>
+              </div>
+             <div style=" height: 32px; margin-top: 15px;">
+              
+              <span ><span style="color: #333; font-family: verdana, arial, helvetica, sans-serif; font-size: 16px; font-weight: bold;">授業の内容:</span><%= simple_format(@profession.content) %></span>
+              <span><span style="color: #333; font-family: verdana, arial, helvetica, sans-serif; font-size: 16px; font-weight: bold;">テストの内容:</span><%= simple_format(@profession.test) %></span>
+            
+             </div>
+           </div>
+          
+          </div>
+        <div style="width: 560px;">
+         <% @high.each do |profession| %>
+         <div class="semi" >
+
+          <div class="go_chance">
+
+             <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= current_guider.nickname %></h2>
+             <h2 class="line_go" style="text-align: right; font-size: 13px; padding-bottom: 10px;"><%= profession.year %></h2>
+            <div>
+             <div style=" text-align: center; padding: 10px 10px 10px 15px;">
+
+               <div style="text-align: center; display: inline-block;">
+
+                 <% if profession.star == 5 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                 <% elsif profession.star == 4 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★</span></label>
+                 <% elsif profession.star == 3 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★</span></label>
+                 <% elsif profession.star == 2 then %>
+                   <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★</span></label>
+                 <% else %>
+                   <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★</span></label>
+                 <% end %>
+              </div>
+              <div style="padding-left: 25px; text-align: center; display: inline-block; margin-bottom: 20px;">
+                  <% if @profession.fun == 1 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                  <% elsif @profession.fun == 2 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
+                  <% elsif @profession.fun == 3 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif @profession.fun == 4 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                  <% else %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                  <% end %>
+              </div>
+              <div style="margin-top: 15px; margin: 0 0;">
+                  <%= truncate(profession.test, length: 60) do %>
+                       <p style="font-size: 14px;">(続きを読むには<%= link_to 'ここ', "/professions/#{profession.id}" %>をクリックしてください。<p>
+                  <% end %>
+                  
+              </div>
+            </div>
+
+           </div>
+          
+          </div>
+         <% end %>
+         <% @low.each do |profession| %>
+         <div class="semi" >
+
+          <div class="go_chance">
+
+             <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= current_guider.nickname %></h2>
+             <h2 class="line_go" style="text-align: right; font-size: 13px; padding-bottom: 10px;"><%= profession.year %></h2>
+             <div>
+              <div style=" text-align: center; padding: 10px 10px 10px 15px;">
+
+                <div style="text-align: center; display: inline-block;">
+
+                 <% if profession.star == 5 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                 <% elsif profession.star == 4 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★★</span></label>
+                 <% elsif profession.star == 3 then %>
+                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★★</span></label>
+                 <% elsif profession.star == 2 then %>
+                   <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★★</span></label>
+                 <% else %>
+                   <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★</span></label>
+                 <% end %>
+                </div>
+                <div style="padding-left: 25px; text-align: center; display: inline-block; margin-bottom: 20px;">
+                  <% if @profession.fun == 1 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                  <% elsif @profession.fun == 2 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
+                  <% elsif @profession.fun == 3 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif @profession.fun == 4 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                  <% else %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                  <% end %>
+                </div>
+                <div style="margin-top: 15px; margin: 0 0;">
+                  <%= truncate(profession.test, length: 60) do %>
+                       <p style="font-size: 14px;">(続きを読むには<%= link_to 'ここ', "/professions/#{profession.id}" %>をクリックしてください。<p>
+                  <% end %>
+                  
+                </div>
+             </div>
+            </div>
+           </div>
+          
+          </div>
+         <% end %>
+        </div>
+       
+        
+      </div>
+
+    </div>
+
+   </div>
+   

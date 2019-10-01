@@ -330,9 +330,14 @@ input.question {
   
 }
 .gopro {
-  width: 700px;
+  width: 750px;
   display: flex;
   margin-left: 20px;
+}
+.gobro {
+  width: 300px;
+  display: inline-block;
+  height: 350px;
 }
 
 .question_answer {
@@ -345,10 +350,16 @@ input.question {
 .question_answer1 {
   width: 650px;
   margin-top: 0;
- 
   margin-right: 0;
   display: flex;
   margin-left: 20px;
+}
+.question_answer3 {
+  width: 300px;
+  margin-top: 0;
+  margin-right: 0;
+  display: flex;
+  
 }
 .fun_interview {
   width: 576px;
@@ -360,9 +371,21 @@ input.question {
   border: solid #febd69;
   border-radius: 3px;
   transition: .4s;
+  font-size: 30px;
 }
 .gogo_interview {
   width: 700px;
+  height: 50px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+}
+.bobo_interview {
+  width: 300px;
   height: 50px;
   display: inline-block;
   padding: 0.3em 1em;
@@ -380,11 +403,18 @@ input.question {
   margin-left: 6px;
 
 }
-.interview_answer1 {
+.interview_answer3 {
   margin-top: 0;
   width: 25%;
   display: flex;
+  margin-right: 13px;
+  float: right;
+  margin-top: 30px;
+}
+.interview_answer1 {
   
+  width: 25%;
+  display: flex;
   margin-left: 6px;
   width: 42px;
 
@@ -423,7 +453,24 @@ input.question {
   background-image: url("/images/search_button.png");
   background-size: contain;
   background-color: #febd69;
-  width: 45px;
+  width: 50px;
+  height: 35px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.interview3 {
+  
+  background-size: contain;
+  background-color: #febd69;
+  width: 90px;
   height: 40px;
   display: inline-block;
   padding: 0.3em 0.5em;
@@ -568,7 +615,7 @@ a.home:hover {
   border-radius: 3px;
   transition: .4s;
   float: right;
-  margin-right: 135px;
+  margin-right: 160px;
   margin-top: 4px;
 }
   a.plan:hover {

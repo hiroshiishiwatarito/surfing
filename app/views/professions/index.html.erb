@@ -21,47 +21,104 @@
 
     <div class="profession1">
 
-      <div class="profession2">
-        <% @professions.each do |profession| %>
-         <dis class="pro">
-           <div class="dogo-go">
+      <div class="profession3" style="width: 325px; border-radius: 4px !important; box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); padding: 18px; height: 550px;">
+        
+         <dis class="proper">
+           <div class="go-go">
             <div>
-             <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= simple_format(profession.lesson) %></h2>
-             <div style="text-align: center;">
-              <% if profession.star == 1 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★★★★</label>
-              <% elsif profession.star == 2 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★★★</label>
-              <% elsif profession.star == 3 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★★</label>
-              <% elsif profession.star == 4 then %>
-                <label for="star1"><span class="text">オススメ度</span>★★</label>
-              <% else %>
-                <label for="star1"><span class="text">オススメ度</span>★</label>
-              <% end %>
-             </div>
-             <div style="text-align: center;">
-              <span style="text-align: center;">難易度</span><span>:<%= profession.feel %></span>
-             </div>
-              <%= link_to "", "/professions/#{profession.id}", class: "dogo" %>
+            
+                 <%= form_tag professions_path, :method => 'get', :class => 'gobro' do %>
+                   <h3 style="font-size: 22px; text-align: center; width: 280px;" class="category-id">検索</h3>
+                   <h4 style="margin-top: 10px; padding: 7px 0px;">学校</h4>
+                   <select name="university" style="width: 280px; border: solid #febd69; height: 50px; background-color: white;  margin-top: 6px; margin-right: 15px;">
+                     <option value="関西学院大学">関西学院大学</option>
+                     <option value="大阪大学">大阪大学</option>
+                   </select>
+                   <h4 style="padding: 7px 0px;">学部</h4>
+                   <select name="faculty" style="width: 280px; border: solid #febd69; height: 50px; background-color: white;  margin-top: 6px; margin-right: 15px;">
+                     <option value="経済学部">経済学部</option>
+                     <option value="商学部">商学部</option>
+                     <option value="神学部">神学部</option>
+                     <option value="文学部">文学部</option>
+                     <option value="法学部">法学部</option>
+                     <option value="社会学部">社会学部</option>
+                     <option value="人間福祉学部">人間福祉学部</option>
+                     <option value="国際学部">国際学部</option>
+                     <option value="総合政策学部">総合政策学部</option>
+                     <option value="理工学部">理工学部</option>
+                     <option value="教育学部">教育学部</option>
+                   </select>
+                   <h4 style="margin-top: 10px; padding: 7px 0px;">履修時期</h4>
+                    <select name="season" style="width: 280px; border: solid #febd69; height: 50px; background-color: white;  margin-top: 6px; margin-right: 15px;">
+                     <option value="春学期">春学期</option>
+                     <option value="秋学期">秋学期</option>
+                   </select>
+                   <h4 style="padding: 7px 0px;">必修</h4>
+                   <select name="detail" style="width: 280px;height: 50px;  border: solid #febd69; background-color: white;  margin-top: 6px; margin-right: 15px;">
+                     <option value="基礎科目">全コース必修</option>
+                     <option value="応用科目">学部必修</option>
+                     <option value="応用科目">自由履修</option>
+                   </select>
+                   <div class="interview_answer3" style="margin-top: 5px 10px;"><%= submit_tag "検索する", :name => nil, class: "interview3" %></div>
+                 <% end %>
+             
             </div>
            </div>
-         </dis>
 
-        <% end %>
-        <div class="semi" style="float: right; margin-right: 0px;">
-         <div class="sticky">
-           <a href="professions/new"><i style="font-size: 46px;
-             font-weight: 900; " class="fas fa-plus-circle"></i>
-           </a>
          </div>
+        <div style="display: inline-block; width: 800px; margin-left: 50px;">
+
+        <% @professions.each do |profession| %>
+          <div class="semi_pro" style="width: 330px; margin-top: 0px; margin-right: 0px; display: inline-block; height: 200px; box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); margin-bottom: 30px; margin-left: 30px; border-radius: 4px !important; padding: 5px;">
+
+            <div class="bo-go">
+
+            <div>
+             <div>
+               <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= simple_format(profession.lesson, class: "thoso") %></h2>
+               <h3 style="text-align: right; font-weight: bold; color: #333; padding-right: 15px; padding-bottom: 5px;"><%= profession.teacher %></h3>
+             </div>
+             <div style=" text-align: center; padding: 10px 10px 10px 15px;">
+                <div style="display: inline-block;">
+                  <% if profession.star == 1 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                  <% elsif profession.star == 2 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
+                  <% elsif profession.star == 3 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif profession.star == 4 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                  <% else %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                  <% end %>
+                </div>
+                <div style="padding-left: 25px; text-align: center; display: inline-block;">
+                  <% if profession.fun == 1 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
+                  <% elsif profession.fun == 2 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
+                  <% elsif profession.fun == 3 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif profession.fun == 4 then %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                  <% else %>
+                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                  <% end %>
+                </div>
+             </div>
+             
+             <div style="width: 300px; height: 50px; padding-left: 135px; margin-top: 15px;">
+              <%= link_to "次へ", "/professions/#{profession.id}/top", class: "bogo" %>
+             </div>
+             
+            </div>
+           </div>
+          
+          </div>
+        <% end %>
         </div>
       </div>
 
     </div>
 
    </div>
-
-
-
-

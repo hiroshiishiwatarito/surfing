@@ -14,7 +14,6 @@ class GuidersController < ApplicationController
 	
 	def index
     	@guider = Guider.all
-    	
     end
     
 	def new

@@ -4,13 +4,16 @@
       過去問
     </h3>
     <%= select_tag :year, options_for_select([["-- 年度 --"],["2017年春"],["2017年秋"], ["2018年春"],["2018年秋"],["2019年春"], ["2019年秋"]]) , class: "superpark" %>
+    <%= select_tag :season, options_for_select([["-- 時期 --"],["春"],[ "秋"]]) , class: "superpark" %>
     <%= select_tag :university, options_for_select([["-- 大学 --"],["関西学院大学"],["大阪大学"]]) , class: "superpark" %>
     <%= select_tag :faculty, options_for_select([["-- 授業 --"],["経済学部"],["商学部"], ["神学部"], ["文学部"], ["法学部"], ["社会学部"], ["人間福祉学部"], ["国際学部"], ["教育学部"],["総合政策学部"], ["理工学部"]]) , class: "superpark" %>
+    <%= select_tag :detail, options_for_select([["-- 必修 --"],["全コース必修"],["学部必修"], ["自由履修"]]) , class: "superpark" %>
     <input placeholder="授業名" type="string" name="lesson" autofocus="true" required>
+    <input placeholder="先生" type="string" name="teacher" autofocus="true" required>
     <%= select_tag :confirm, options_for_select([["-- 出席 --"],["必須"],["時々"], ["出なくていい"]]) , class: "superpark" %>
     <%= select_tag :feel, options_for_select([["-- 必要なもの --"],["本"],["ノート"]]) , class: "superpark" %>
     <input placeholder="本" type="string" name="book" autofocus="true" required>
-    <%= select_tag :feel, options_for_select([["-- 難易度 --"],["難しい"],["普通"], ["簡単"],["超簡単"]]) , class: "superpark" %>
+    
      <div class="evaluation">
       
       <input id="star1" type="radio" name="star" value="5" />
@@ -23,9 +26,23 @@
       <label for="star4"><span class="text"></span>★</label>
       <input id="star5" type="radio" name="star" value="1" />
       <label for="star5"><span class="text"></span>★</label>
-      <span style="justify-content: left; padding-top: 10px; font-size: 17px; ">オススメ度:</span>
+      <span style="justify-content: left; padding-top: 10px; font-size: 17px; padding-right: 37px; ">オススメ度(楽):</span>
     </div>
-     <input placeholder="おすすめか" type="string" name="recommendation" autofocus="true" required>
+    <div class="review">
+      
+      <input id="star5" type="radio" name="fun" value="5" />
+      <label for="star5"><span class="text"></span>★</label>
+      <input id="star6" type="radio" name="fun" value="4" />
+      <label for="star6"><span class="text"></span>★</label>
+      <input id="star7" type="radio" name="fun" value="3" />
+      <label for="star7"><span class="text"></span>★</label>
+      <input id="star8" type="radio" name="fun" value="2" />
+      <label for="star8"><span class="text"></span>★</label>
+      <input id="star9" type="radio" name="fun" value="1" />
+      <label for="star9"><span class="text"></span>★</label>
+      <span style="justify-content: left; padding-top: 10px; font-size: 17px; ">オススメ度(面白い):</span>
+    </div>
+    
     <textarea style="height: 130px;" placeholder="テスト内容" name="test" cols="30" rows="10"></textarea>
     <textarea style="height: 130px;" placeholder="授業内容" name="content" cols="30" rows="10"></textarea>
     <input type="submit" value="SENT">

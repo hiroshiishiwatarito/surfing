@@ -4,13 +4,17 @@
   <%= form_tag('/tests', method: :post, class: :test_center, :multipart => true) do %>
 	  <input id="for" class="go_form1" placeholder="タイトル" type="string" name="title" autofocus="true" required>
     <input id="for" class="go_form1" placeholder="タイトルの説明" type="text" name="description" autofocus="true" required>
+    <input id="for" class="go_form1" placeholder="書こうと思ったきっかけ" type="text" name="purpose" autofocus="true" required>
+    <input id="for" class="go_form1" placeholder="トップページの言葉" type="string" name="summary" autofocus="true" required>
+    <input id="for" class="go_form1" placeholder="第二の見出し" type="string" name="secondword" autofocus="true" required>
+    <input id="for" class="go_form1" placeholder="第三の見出し" type="string" name="thirdword" autofocus="true" required>
+     <%= file_field_tag 'book' %>
     
-    <input type="string" name="image" autofocus="true" class="go_gorm1">
 </div>
-<div style="margin-bottom: 108px;"></div>
-<div class = "firstwrap" style="margin-top: 57.5px;">
+<div style="margin-bottom: 300px;"></div>
+<div class = "firstwrap" style="margin-top: 57.5px; height: 700px;">
   
-  <div class = "secondwrap">
+  <div class = "secondwrap" style="height: 700px;">
     <div class="nakabox">
     
      <div class="box">

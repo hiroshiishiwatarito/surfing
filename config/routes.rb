@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :plans
   resources :professions
   get '/professions/:id/category' => "professions#category"
+  get '/professions/:id/top' => "professions#top"
   
   resources :categorys
   get '/categorys' => 'categorys#index'
@@ -25,12 +26,15 @@ Rails.application.routes.draw do
   post "plans/:id/charge", to: "charges#create", as: "charge"
 
   resources :tests
+  get '/tests' => 'tests#index'
+  get '/tests' => 'tests#new'
+  get 'tests/:id' => 'tests#show'
+  
   resources :guiders
-  get "/guiders/:id/post" => "guiders#post"
+    get "/guiders/:id/post" => "guiders#post"
   resources :tourists
 
   get '/done' => 'guiders#done'
-  get 'tourists/:id' => 'tourists#show'
   get 'guiders/:id/go' => 'guiders#go'
   get "/guiders/:id/accepted" => "guiders#accepted"
 

@@ -1,0 +1,135 @@
+<div class="mainpage" style="height: 2500px;">
+<div class = "line1" style="margin-top: 0;">
+ <div class = "line2">
+  <div class="line3">
+
+     <div class="line4" style="display: block; height: 2500px;">
+      
+      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 2250px; padding: 50px;">   
+        <div class="line6" style="display: block; width: 630px;">
+          <div class="race" style="display: block;" >
+              <!-- タイトル -->
+             <h1 class="line_pay" style="width: 630px;"><%= @test.title %></h1>
+               <!-- 日付 -->
+             <span style="float: right; margin-top: 15px; font-size: 16px; color: #524e4d;
+    font-family: 'Noto Sans Japanese',sans-serif;"><%= @test.created_at.strftime('%Y/%m/%d') %></span>
+           
+          </div>
+          <!-- 画像 -->
+          <div class="race1">
+           <%= image_tag(@test.book.thumb.url , :class => "creativity") %>
+          
+          </div>
+           <!-- なんで書こうと思ったのか -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <span><%= simple_format(@test.purpose, class: "gostar") %></span>
+          </div>
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.secondword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.thirdword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.description %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 250px;">
+               <%= simple_format(@test.body, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 250px; height: 240px;">
+               <%= @test.title %>
+             </div>
+
+          </div>
+           <!-- 最新の投稿 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" class="far fa-folder-open"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               最新の投稿
+             </span>
+            
+          </div>
+          <div class="recent_post">
+            <% @tests.each do |test| %> 
+             <div class="posts" style="width: 225px; height: 250px; margin-bottom: 50px; ">
+               <%= image_tag(test.book.thumb.url, :class => "create") %>
+               <%= link_to "", "/tests/#{test.id}", class: "hah" %>
+               <div class="mix-change">
+                  <h2 class="line_go" style="width: 200px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
+               </div>
+             </div>
+            <% end %>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+     </div>
+     <div class="line5" >
+      <div class="advertise" style="border: 2px solid #FAEEBE; border-bottom: none;" >
+         <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-8830310600171711">
+         </amp-auto-ads>
+      </div>
+      <div class="recent" style="border: 2px solid #FAEEBE;">
+        <h2 class="paper">カテゴリー</h2>
+        <div style="padding-left: 10px;">
+          <a href="/plans"><p>ホーム</p></a>
+          <a><p>留学</p></a>
+            <div style="padding-left: 8px;">
+              <a><p style="font-size: 16px;">おすすめ言語</p></a>
+              <a><p style="font-size: 16px;">奨学金</p></a>
+              <a><p style="font-size: 16px;">勉強の仕方</p></a>
+              <a><p style="font-size: 16px;">おすすめ本</p></a>
+            </div>
+          <a><p>簿記</p></a>
+          <a><p>プログラミング</p></a>
+          <a><p>宅建</p></a>
+          <a><p>教職</p></a>
+          <a><p>SPI</p></a>
+        </div>
+      </div>
+     </div>
+    
+
+  </div>
+ </div>
+</div>
+</div>
