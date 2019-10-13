@@ -1,5 +1,7 @@
 class ProfessionsController < ApplicationController
 
+    before_action :move_to_index, except: [:category, :index, :top, :show]
+
     def category
     end
     
@@ -8,8 +10,8 @@ class ProfessionsController < ApplicationController
 	    @professions = Profession.group(:lesson).where(["(university LIKE ?) AND (faculty LIKE ?) AND (season LIKE ?)" , "%#{params[:university]}%", "%#{params[:faculty]}%", "%#{params[:season]}%"]).page(params[:page]).per(20).order("created_at DESC")
         @professions = Profession.group(:lesson).where(["(university LIKE ?) AND (faculty LIKE ?) AND (season LIKE ?) AND (detail LIKE?)" , "%#{params[:university]}%", "%#{params[:faculty]}%", "%#{params[:season]}%",  "%#{params[:detail]}%"]).page(params[:page]).per(20 ).order("created_at DESC")
 
-	    @search_keyword1 = params[:search1]
-	    @search_keyword2 = params[:search2]
+	    @search_keyword1 = params[:university]
+	    @search_keyword2 = params[:faculty]
 
 	end
 
@@ -58,6 +60,22 @@ class ProfessionsController < ApplicationController
 	def new
 	end
 
+    def destroy
+        profession = Profession.find(params[:id])
+        profession.destroy if profession.guider_id == current_guider.id
+    end
+
+    def edit
+        @profession = Profession.find(params[:id])
+    end
+
+    def update
+        profession = Profession.find(params[:id])
+        if profession.guider_id == current_guider.id
+            profession.update(profession_params)
+        end
+    end
+
 	def show 
 		@profession = Profession.find(params[:id])
 	    @professions = Profession.where(faculty: @profession.faculty, lesson: @profession.lesson).page(params[:page]).per(20).order("created_at DESC")
@@ -67,8 +85,10 @@ class ProfessionsController < ApplicationController
            profession.save   
 	   }
 	   ##最低と最高のデータを取る方法
+       
         @high = Profession.where(lesson: @profession.lesson, pick_up: @professions.maximum(:pick_up))
         @low = Profession.where(lesson: @profession.lesson, pick_up: @professions.minimum(:pick_up))
+      
 	end
 
 	def create
@@ -79,5 +99,9 @@ class ProfessionsController < ApplicationController
 	def profession_params
 		params.permit(:university, :faculty, :teacher, :lesson, :book, :test, :thing, :content, :year, :confirm, :recommendation, :feel, :rate, :star, :fun, :season, :detail)
 	end
+
+    def move_to_index
+            redirect_to action: :index unless guider_signed_in?
+    end
 
 end

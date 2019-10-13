@@ -17,8 +17,10 @@
     </div>
    <% end %>
    <% @plans.each do |plan| %>
-   <div class="posts">
-    <div class="content_post" style="background-image: url(<%= plan.image.url %>);" >
+   <div class="posts" style="margin-top: 20px; margin-left: 10px;">
+    <div style="position: relative; height: 233.91px; background-image: url(<%= plan.image.url %>);" >
+     <%= image_tag(plan.image.url, class: "bookdo") %>
+     <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master2" %>
         <div class="more">
           
            <ul class="more_list">
@@ -38,7 +40,7 @@
     </div>
 
     <div class="mix-change">
-     <span class="mix"><%= plan.title %></span>
+     <span class="mix" style="margin-left: 0px;"><%= plan.title %></span>
      <span class="mix1">¥<%= plan.price %></span>
      
     </div>

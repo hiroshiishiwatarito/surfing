@@ -1,0 +1,22 @@
+<div class="contents graph">
+    <%= form_tag("/professions/#{@profession.id}", method: :patch ) do %>
+      <h3>
+        過去問の編集
+      </h3>
+       <%= select_tag :year, options_for_select([["-- 年度 --"],["2017年春"],["2017年秋"], ["2018年春"],["2018年秋"],["2019年春"], ["2019年秋"]]) , class: "superpark" %>
+      <%= select_tag :season, options_for_select([["-- 時期 --"],["春"],[ "秋"]]) , class: "superpark" %>
+      <%= select_tag :university, options_for_select([["-- 大学 --"],["関西学院大学"],["大阪大学"]]) , class: "superpark" %>
+      <%= select_tag :faculty, options_for_select([["-- 授業 --"],["経済学部"],["商学部"], ["神学部"], ["文学部"], ["法学部"], ["社会学部"], ["人間福祉学部"], ["国際学部"], ["教育学部"],["総合政策学部"], ["理工学部"]]) , class: "superpark" %>
+      <%= select_tag :detail, options_for_select([["-- 必修 --"],["全コース必修"],["学部必修"], ["自由履修"]]) , class: "superpark" %>
+      <%= select_tag :confirm, options_for_select([["-- 出席 --"],["必須"],["時々"], ["出なくていい"]]) , class: "superpark" %>
+      <%= select_tag :feel, options_for_select([["-- 必要なもの --"],["本"],["ノート"]]) , class: "superpark" %>
+      <input placeholder="授業名" type="string" name="lesson" value="<%= @plan.lesson %>" autofocus="true">
+      <input placeholder="先生" type="string" name="teacher" value="<%= @plan.teacher %>" autofocus="true">
+      <input placeholder="授業名" type="string" name="book" value="<%= @plan.book %>" autofocus="true" required>
+      <input placeholder="本" type="string" name="datetimes" value="<%= @plan.datetimes %>"  autofocus="true" required>
+      
+      <textarea cols="30" name="test" placeholder="テスト内容" rows="10"><%= @profession.test %></textarea>
+      <textarea cols="30" name="content" placeholder="授業内容" rows="10"><%= @profession.content %></textarea>
+      <input type="submit" value="SENT">
+    <% end %>
+</div>

@@ -6,10 +6,17 @@
     remote:        data-remote
     paginator:     the paginator that renders the pagination tags inside
 -%>
+
+<% case controller.action_name %>
+<% when "show" %>
 <%= paginator.render do -%>
-  <nav class="pagination" role="navigation" aria-label="pager" style="margin-right: 100px; text-align: center;">
+  <nav class="pagination" role="navigation" aria-label="pager" style="width: 540px; text-align: center; margin: 30px 0px 0px 0px;">
     <%= first_page_tag %>
-    <%= prev_page_tag %>
+    <% case controller.action_name %>
+    <% when "index" %>
+      <%= prev_page_tag %>
+    <% when "show" %>
+    <% end %>
     <% each_page do |page| -%>
       <% if page.display_tag? -%>
         <%= page_tag page %>
@@ -18,8 +25,34 @@
       <% end -%>
     <% end -%>
     <% unless current_page.out_of_range? %>
-      <%= next_page_tag  %>
+      <% case controller.action_name %>
+      <% when "index" %>
+         <%= next_page_tag  %>
+      <% when "show" %>
+      <% end %>
       <%= last_page_tag  %>
     <% end %>
   </nav>
 <% end -%>
+<% end %>
+
+<% case controller.action_name %>
+<% when "index" %>
+<%= paginator.render do -%>
+  <nav class="pagination" role="navigation" aria-label="pager" style="width: 1160px; text-align: center;">
+    <%= first_page_tag %>
+      <%= prev_page_tag %>
+    <% each_page do |page| -%>
+      <% if page.display_tag? -%>
+        <%= page_tag page %>
+      <% elsif !page.was_truncated? -%>
+        <%= gap_tag %>
+      <% end -%>
+    <% end -%>
+    <% unless current_page.out_of_range? %>
+         <%= next_page_tag  %>
+      <%= last_page_tag  %>
+    <% end %>
+  </nav>
+<% end -%>
+<% end %>

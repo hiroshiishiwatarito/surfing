@@ -13,13 +13,16 @@
 
     <div class="second-go" style="height: 800px;">
      <% @tests.each do |test| %>
-     <div class="posts" style="width: 250px; height: 179px; margin-bottom: 50px; margin-top: 50px;">
+     <div class="posts" style="width: 250px; height: 179px; margin-bottom: 50px; margin-top: 50px; position: relative;">
         <%= image_tag(test.book.thumb.url, :class => "creat") %>
-        <%= link_to "", "/tests/#{test.id}", class: "hah" %>
+        <%= link_to "", test_path(test.id), class: "hah" %>
+        
       <div class="mix-change">
-          <h2 class="line_go" style="width: 250px; margin-bottom: 30px;"><%= simple_format(test.summary) %></h2>
+          <h2 class="line_go" style="width: 220px; margin-bottom: 30px;"><%= simple_format(test.summary) %></h2>
       </div>
+
      </div>
+
      <% end %>
 
     </div>

@@ -20,7 +20,7 @@ class FourthImageUploader < CarrierWave::Uploader::Base
   #
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
-  process resize_to_fit: [400, 400]
+  process resize_to_fit: [700, 700]
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #

@@ -1,0 +1,22 @@
+<div class="contents graph">
+    <%= form_tag("/tests/#{@test.id}", method: :patch ) do %>
+      <h3>
+        過去問の編集
+      </h3>
+       
+      <input placeholder="タイトル" type="string" name="title" value="<%= @test.title %>" autofocus="true">
+      <input placeholder="書こうと思ったきっかけ" type="text" name="purpose" value="<%= @test.purpose %>" autofocus="true">
+      <input placeholder="トップページの言葉" type="string" name="summary" value="<%= @test.summary %>" autofocus="true" required>
+      <input placeholder="第二の見出し" type="string" name="secondword" value="<%= @test.secondword %>"  autofocus="true" required>
+      <input placeholder="第三の見出し" type="string" name="thirdword" value="<%= @test.thirdword %>"  autofocus="true" required>
+      
+      <textarea cols="30" name="description" placeholder="感想" rows="10"><%= @test.description %></textarea>
+
+      <input placeholder="本のタイトル" type="string" name="bookname" value="<%= @test.bookname %>" autofocus="true">
+      <input placeholder="著者" type="text" name="author" value="<%= @test.author %>" autofocus="true">
+    
+      <textarea cols="30" name="body" placeholder="広告のコード" rows="10"><%= @test.body %></textarea>
+
+      <input type="submit" value="SENT">
+    <% end %>
+</div>

@@ -1,9 +1,0 @@
-<table>
-    <% @guiders.each do |guider| %>
-      <tr>
-        <td><%= guider.email %>
-        <td><%= guider.approved %>
-        <td><%= link_to "Edit", edit_guider_path(guider) %>
-      </tr>
-    <% end %>
-</table>

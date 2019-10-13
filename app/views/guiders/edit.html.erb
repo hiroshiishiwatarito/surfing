@@ -27,44 +27,58 @@
                         <div class="pdf-body1">
                           <label class="name2">名前</label>
                           <div class="name_form">
-                            <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true" class="name_form1" required>
+                            <input placeholder="Name" type="string" name="lastname" value="<%= @guiders.lastname %>" autofocus="true" class="name_form1" required>
                           </div>
                         </div>
 
                         <div class="pdf-body1">
                           <label class="name2">苗字</label>
                           <div class="name_form">
-                            <input placeholder="Name" type="string" name="lastname" value="<%= @guiders.lastname %>" autofocus="true" class="name_form1" required>
+                            
+                            <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true" class="name_form1" required>
                           </div>
                         </div>
 
-                        <div class="pdf-body1">
+                        <div class="pdf-body1" style="margin-bottom: 0px;">
                           <label class="name2">性別</label>
+                          <% if Guider.find_by(gender: params[:gender]).blank? %>
                           <div class="select">
+                           
                             <select name="gender", id="user_sex" value="<%= @guiders.gender %>">
-                              <option value="Gender">性別</option>
-                              <option value="Male">男性</option>
-                              <option value="Female">女性</option>
-                              <option value="Other">その他</option>
+                              <option value="性別">性別</option>
+                              <option value="男">男性</option>
+                              <option value="女">女性</option>
+                              <option value="その他">その他</option>
                             </select>
                           </div>
+                          <% else %>
+                             <p class="birth"><input placeholder="性別" style="margin-left: 6px;" type="string" name="gender" value="<%= @guiders.gender %>" autofocus="true" class="name_form1" required></p>
+                           
+                          <% end %>
                         </div>
-
+　　　　　　　　　　　
                         <div class="pdf-body1">
                           <label class="name2">職業</label>
+                          <% if Guider.find_by(occupation: params[:occupation]).blank? %>
                           <div class="select">
-                            <select name="gender", id="user_sex" value="<%= @guiders.occupation %>" required>
-                              <option value="Gender">職業</option>
-                              <option value="Male">学生</option>
+                            <select name="guider[occupation]" id="user_sex" value="<%= @guiders.occupation %>"  required>
+
+                              <option value="職業">職業</option>
+                              <option value="学生">学生</option>
                               
                             </select>
                           </div>
+                          <% else %>
+                            <div class="name_form">
+                            <input placeholder="職業"  type="string" name="occupation" value="<%= @guiders.occupation %>" class="name_form1" autofocus="true" required>
+                          </div>
+                          <% end %>
                         </div>
 
                         <div class="pdf-body1">
                           <label class="name2">生年月日</label>
                           <div class="name_form">
-                            <p class="birth"><input placeholder="" type="string" name="birth" value="<%= @guiders.birth %>" autofocus="true" required></p>
+                            <input placeholder="" type="string" name="birth" value="<%= @guiders.birth %>" autofocus="true" class="name_form1" required>
                           </div>
                         </div>
 
@@ -78,7 +92,7 @@
                         <div class="pdf-body1">
                           <label class="name2">住所</label>
                           <div class="describe">
-                             <input placeholder="" type="text" name="message" value="<%= @guiders.hometown %>" autofocus="true" class="describe1" required>
+                             <input placeholder="" type="text" name="hometown" value="<%= @guiders.hometown %>" autofocus="true" class="describe1" required>
                           </div>
                         </div>
 
@@ -92,21 +106,21 @@
                         <div class="pdf-body1">
                           <label class="name2">大学</label>
                           <div class="name_form">
-                            <input placeholder="" type="string" name="student_name" value="<%= @guiders.university %>" autofocus="true" class="name_form1" required>
+                            <input placeholder="" type="string" name="university" value="<%= @guiders.university %>" autofocus="true" class="name_form1" required>
                           </div>
                         </div>
 
                         <div class="pdf-body1">
                           <label class="name2">学部</label>
                           <div class="name_form">
-                            <input placeholder="" type="string" name="lastname" value="<%= @guiders.faculty %>" autofocus="true" class="name_form1" required>
+                            <input placeholder="" type="string" name="faculty" value="<%= @guiders.faculty %>" autofocus="true" class="name_form1" required>
                           </div>
                         </div>
 
                         <div class="pdf-body1">
                           <label class="name2">学年</label>
                           <div class="name_form">
-                            <p class="birth"><input placeholder="" type="string" name="birth" value="<%= @guiders.year %>" autofocus="true" required></p>
+                            <input placeholder="" type="string" name="year" value="<%= @guiders.year %>" class="name_form1" autofocus="true" required>
                           </div>
                         </div>
 
@@ -120,16 +134,15 @@
                        <div class="pdf-f1">
                         
                           <div class="gogo1">
-                            <div class="gogo2" style="background-image: url(<%= @guiders.Image %>);">
+                            <div class="gogo2" style="background-image: url(<%= @guiders.photo %>);">
                             </div>
                           </div>
                           <div class="image_form">
                             <div class="setumei">
                                <p class="image_setumei">以下の書類のうち、住所、氏名、生年月日、書類発行元が確認できるものをご用意ください。
                                 </p>
-                               <p class="image_setumei1">・運転免許証</p>
-                               <p class="image_setumei2">・健康保険証</p>
-                               <p class="image_setumei2">・学生証</p>
+                               
+                               <p class="image_setumei2" style="margin-top: 30px;">・学生証</p>
 
                                
                             </div>
@@ -148,7 +161,7 @@
                        <div class="pdf-f1">
                         
                           <div class="gogo1">
-                            <div class="gogo2" style="background-image: url(<%= @guiders.Image %>);">
+                            <div class="gogo2" style="background-image: url(<%= @guiders.driver %>);">
                             </div>
                           </div>
                           <div class="image_form">
@@ -156,8 +169,8 @@
                                 <p class="image_setumei">以下の書類のうち、住所、氏名、生年月日、書類発行元が確認できるものをご用意ください。
                                 </p>
                                <p class="image_setumei1">・運転免許証</p>
-                               <p class="image_setumei2">・健康保険証</p>
-                               <p class="image_setumei2">・学生証</p>
+                               <p class="image_setumei2" style="margin-top: 20px;">・健康保険証</p>
+              
                             </div>
                             <div class="file1">
                                 <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
@@ -166,31 +179,7 @@
                         
                        </div>
                       </div>
-                      <div class="pdf-footer">
-                        <h2 class="pdf-header1">本人確認書類</h2>
-                      </div>
-                      <div class="pdf-footer1">
-                       <div class="pdf-f1">
-                        
-                          <div class="gogo1">
-                            <div class="gogo2" style="background-image: url(<%= @guiders.Image %>);">
-                            </div>
-                          </div>
-                          <div class="image_form">
-                            <div class="setumei">
-                               <p class="image_setumei">以下の書類のうち、住所、氏名、生年月日、書類発行元が確認できるものをご用意ください。
-                                </p>
-                               <p class="image_setumei1">・運転免許証</p>
-                               <p class="image_setumei2">・健康保険証</p>
-                               <p class="image_setumei2">・学生証</p>
-                            </div>
-                            <div class="file1">
-                                <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
-                            </div>
-                          </div>
-                        
-                       </div>
-                      </div>
+                    
                       <button type="sumbit" value="Save" class="save">Save</button>
 
                   </div>

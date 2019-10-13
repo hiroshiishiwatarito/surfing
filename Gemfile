@@ -68,10 +68,10 @@ gem 'therubyracer', platforms: :ruby
 #画像
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog'
 gem 'mini_magick'
 
 gem 'stripe'
-gem 'payjp'
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
 #円グラフ

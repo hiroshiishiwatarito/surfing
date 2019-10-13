@@ -12,6 +12,7 @@
       <div class="text-rule">
         <%= @search_keyword2 %>
       </div>
+
    </div>
    <div class="strange2">
      <a class="strange" href="/professions/:id/category"></a>
@@ -59,55 +60,55 @@
                      <option value="応用科目">学部必修</option>
                      <option value="応用科目">自由履修</option>
                    </select>
-                   <div class="interview_answer3" style="margin-top: 5px 10px;"><%= submit_tag "検索する", :name => nil, class: "interview3" %></div>
+                   <div class="interview_answer3" style="margin: 15px 10px 5px 10px;"><%= submit_tag "検索する", :name => nil, class: "interview3" %></div>
                  <% end %>
              
             </div>
            </div>
 
          </div>
-        <div style="display: inline-block; width: 800px; margin-left: 50px;">
+        <div style="display: inline-block; width: 770px; margin-left: 25px;">
 
         <% @professions.each do |profession| %>
-          <div class="semi_pro" style="width: 330px; margin-top: 0px; margin-right: 0px; display: inline-block; height: 200px; box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); margin-bottom: 30px; margin-left: 30px; border-radius: 4px !important; padding: 5px;">
+          <div class="semi_pro" style="width: 330px; margin-top: 0px; margin-right: 0px; display: inline-block; height: 220px; box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); margin-bottom: 30px; margin-left: 30px; border-radius: 4px !important; ">
 
             <div class="bo-go">
 
             <div>
              <div>
                <h2 class="line_go" style="text-align: center; font-size: 30px;"><%= simple_format(profession.lesson, class: "thoso") %></h2>
-               <h3 style="text-align: right; font-weight: bold; color: #333; padding-right: 15px; padding-bottom: 5px;"><%= profession.teacher %></h3>
+               <h3 style="text-align: right; font-weight: bold; color: #333; padding-right: 15px; padding-bottom: 5px;"><%= profession.teacher %>教授</h3>
              </div>
-             <div style=" text-align: center; padding: 10px 10px 10px 15px;">
-                <div style="display: inline-block;">
-                  <% if profession.star == 1 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
-                  <% elsif profession.star == 2 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
-                  <% elsif profession.star == 3 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+             <div style=" text-align: center;">
+                <div style="display: inline-block; text-align: center; width: 150px;">
+                  <% if profession.star == 5 then %>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" ">★★★★★</span></label>
                   <% elsif profession.star == 4 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" >★★★★</span></label>
+                  <% elsif profession.star == 3 then %>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" >★★★</span></label>
+                  <% elsif profession.star == 2 then %>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" >★★</span></label>
                   <% else %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" >★</span></label>
                   <% end %>
                 </div>
-                <div style="padding-left: 25px; text-align: center; display: inline-block;">
-                  <% if profession.fun == 1 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
-                  <% elsif profession.fun == 2 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
-                  <% elsif profession.fun == 3 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
+                <div style="display: inline-block; text-align: center; width: 150px;">
+                  <% if profession.fun == 5 then %>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" >★★★★★</span></label>
                   <% elsif profession.fun == 4 then %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color" >★★★★</span></label>
+                  <% elsif profession.fun == 3 then %>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color">★★★</span></label>
+                  <% elsif profession.fun == 2 then %>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color">★★</span></label>
                   <% else %>
-                    <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
+                    <label for="star1"><span class="text" style="display: block; float: center;">オススメ度</span><span class= "star-color">★</span></label>
                   <% end %>
                 </div>
              </div>
              
-             <div style="width: 300px; height: 50px; padding-left: 135px; margin-top: 15px;">
+             <div style="width: 300px; height: 50px; padding-left: 143px; margin-top: 35px;">
               <%= link_to "次へ", "/professions/#{profession.id}/top", class: "bogo" %>
              </div>
              

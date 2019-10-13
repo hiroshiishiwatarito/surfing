@@ -1,2 +1,7 @@
-<p><%= @email %> has registered to join your site!</p>
+  
+
+  <p><%= @guider.email %> has registered to join your site!</p>
   <p>An admin can approve this registration by visiting the website and editing the user</p>
+  <p><%= image_tag(@guider.photo.thumb.url) %><p>
+  <p><%= link_to "approve" , "http://localhost:3000/guiders/#{@guider.id}/approve" %></p>
+  

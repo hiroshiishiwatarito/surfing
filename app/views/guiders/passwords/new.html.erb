@@ -1,8 +1,8 @@
-<div class="contents graph" style="margin-top: 100px;">
+<div class="contents graph" style="height: 670px;">
  <h2 style="text-align: center; font-weight: 600; font-size: 25px; color: inherit; line-height: 36px;
     white-space: nowrap;">パスワードをお忘れの方</h2>
 
- <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+ <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => {:class => "new_guider2"}) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
@@ -13,7 +13,9 @@
   <div class="actions">
     <%= f.submit "送信する" %>
   </div>
+  <div class="shita2">
+    <%= render "guiders/shared/links" %>
+  </div>
  <% end %>
 </div>
 
-<%= render "guiders/shared/links" %>

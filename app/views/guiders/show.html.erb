@@ -1,6 +1,6 @@
 <div class="guider-container">
-  <div class="guider1-container">
-     <div class="guider2-container">
+  <div class="guider1-container" style="width: 1248px;">
+     <div class="guider2-container" style="width:1100px;">
         <div class="kg">
             <div class="kobe1">
                <ul class="profile">
@@ -23,12 +23,36 @@
             </div>
             <a class="ysp btn-block space-top-4" href="guider/show" >View Profile</a>
         </div>
+
+        <!-- 本の投稿 -->
         <div class="own">
          <p style="margin-top: 0;"><span style="font-weight: bold; font-size: 20px;"><%= @nickname %></span>さんの投稿一覧</p>
+         <div style="display: block;">
+           <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+            <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               本
+             </span>
+            
+            </div>
+         </div>
          <% @plans.each do |plan| %>
        
-          <div class="ichiran" style="background-image: url(<%= plan.image %>);">
-           <div class="mypost">
+          <div style="background-image: url(<%= plan.image %>); height: 180.91px; position: relative; display: inline-block; margin-right: 10px;">
+           <%= image_tag(plan.image, class: "bookdo1") %>
+           <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master1" %>
+           <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master1" %>
+           <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master1" %>
+           <div class="mypost" style="margin-bottom: 10px;">
             
              <ul class="mypost_list">
                <li>
@@ -47,9 +71,121 @@
           </div>
        
          <% end %>
+         <div style="padding-right: 530px; width: 1160px;">
+           <%= paginate(@plans) %>
+         </div>
+         <div class="mbar" style="width: 550px; margin: 20px 0px;">
+         </div>
 
-         <%= paginate(@plans) %>
+         <!-- 資格の投稿 -->
+          
+          <div style="display: block; margin-bottom: 20px;">
+           <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+            <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               資格
+             </span>
+            
+            </div>
+         </div>
+         <% @tests.each do |test| %>
+       
+          <div style="background-image: url(<%= test.book %>); height: 180.91px; position: relative; display: inline-block; margin-right: 10px;">
+           <%= image_tag(test.book, class: "bookdo1") %>
+           <%= link_to '', "/tests/#{test.id}", method: :get, class: "magic-master1" %>
+           <%= link_to '', "/tests/#{test.id}", method: :get, class: "magic-master1" %>
+           <%= link_to '', "/testtests/#{test.id}", method: :get, class: "magic-master1" %>
+           <div class="mypost" style="margin-bottom: 10px;">
+            
+             <ul class="mypost_list">
+               <li>
+                <%= link_to '詳細', "/tests/#{test.id}", method: :get %>
+               </li>
+               <li>
+                 <%= link_to '編集', "/tests/#{test.id}/edit", method: :get %>
+               </li>
+               <li>
+                 <%= link_to '削除', "/tests/#{test.id}", method: :delete %>
+               </li>
+               
+             </ul>
+           </div>
+           
+          </div>
+       
+         <% end %>
+         <div style="padding-right: 530px; width: 1160px;">
+           <%= paginate(@tests) %>
+         </div>
+
+         <div class="mbar" style="width: 550px; margin: 20px 0px;">
+         </div>
+
+         <!-- テストの投稿 -->
+
+          <div style="display: block; margin-bottom: 20px;">
+           <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+            <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               資格
+             </span>
+            
+            </div>
+         </div>
+         <% @tests.each do |test| %>
+       
+          <div style="background-image: url(<%= test.book %>); height: 180.91px; position: relative; display: inline-block; margin-right: 10px;">
+           <%= image_tag(test.book, class: "bookdo1") %>
+           <%= link_to '', "/tests/#{test.id}", method: :get, class: "magic-master1" %>
+           <%= link_to '', "/tests/#{test.id}", method: :get, class: "magic-master1" %>
+           <%= link_to '', "/testtests/#{test.id}", method: :get, class: "magic-master1" %>
+           <div class="mypost" style="margin-bottom: 10px;">
+            
+             <ul class="mypost_list">
+               <li>
+                <%= link_to '詳細', "/tests/#{test.id}", method: :get %>
+               </li>
+               <li>
+                 <%= link_to '編集', "/tests/#{test.id}/edit", method: :get %>
+               </li>
+               <li>
+                 <%= link_to '削除', "/tests/#{test.id}", method: :delete %>
+               </li>
+               
+             </ul>
+           </div>
+           
+          </div>
+       
+         <% end %>
+         <div style="padding-right: 530px; width: 1160px;">
+           <%= paginate(@tests) %>
+         </div>
+         
         </div>
+
+
+        
+         
+       
      </div>
   </div>
 </div>

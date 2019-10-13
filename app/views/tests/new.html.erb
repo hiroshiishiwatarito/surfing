@@ -1,50 +1,51 @@
-
-
-<div class="go_form" style="margin-left: 100px; margin-top: 20px;">
-  <%= form_tag('/tests', method: :post, class: :test_center, :multipart => true) do %>
-	  <input id="for" class="go_form1" placeholder="タイトル" type="string" name="title" autofocus="true" required>
-    <input id="for" class="go_form1" placeholder="タイトルの説明" type="text" name="description" autofocus="true" required>
-    <input id="for" class="go_form1" placeholder="書こうと思ったきっかけ" type="text" name="purpose" autofocus="true" required>
-    <input id="for" class="go_form1" placeholder="トップページの言葉" type="string" name="summary" autofocus="true" required>
-    <input id="for" class="go_form1" placeholder="第二の見出し" type="string" name="secondword" autofocus="true" required>
-    <input id="for" class="go_form1" placeholder="第三の見出し" type="string" name="thirdword" autofocus="true" required>
-     <%= file_field_tag 'book' %>
-    
-</div>
-<div style="margin-bottom: 300px;"></div>
-<div class = "firstwrap" style="margin-top: 57.5px; height: 700px;">
-  
-  <div class = "secondwrap" style="height: 700px;">
-    <div class="nakabox">
-    
+<div class = "firstwrap">
+  <div class = "secondwrap">
+   
      <div class="box">
       <div class="contents gonext" style=" border-top: none;">
+
+         <%= form_tag('/tests', method: :post, class: :test_center, :multipart => true) do %>
+            <h4 class="sansan">表紙:</h4>
+            <input id="for" class="go_form1" placeholder="タイトル" type="string" name="title" autofocus="true" required>
+            <%= file_field_tag 'book' %>
+
+            <h4 class="sansan">投稿の内容:</h4>
+            <input id="for" class="go_form1" placeholder="書こうと思ったきっかけ" type="text" name="purpose" autofocus="true" required>
+            <input id="for" class="go_form1" placeholder="トップページの言葉" type="string" name="summary" autofocus="true" required>
+            <input id="for" class="go_form1" placeholder="第二の見出し" type="string" name="secondword" autofocus="true" required>
+            <input id="for" class="go_form1" placeholder="第三の見出し" type="string" name="thirdword" autofocus="true" required>
+            <textarea style="height: 300px;" id="for" class="go_form1" placeholder="感想" type="text" name="description" cols="30" rows="10" required></textarea>
+
+            <h4 class="sansan" style="display: inline-block;">広告:</h4><a href="/tests/new/guideline" style="border-bottom: 2px solid #d8d8d8;">広告の手順</a>
+            <input id="for" class="go_form1" placeholder="本のタイトル" type="string" name="bookname" autofocus="true" required>
+            <input id="for" class="go_form1" placeholder="著者" type="string" name="author" autofocus="true" required>
+            <textarea style="width: 540px; " class="teratail" id="src" placeholder="広告のコード" name="body" cols="30" rows="10"></textarea>
        
-         <textarea style="width: 600px;" class="teratail" id="src" placeholder="Contents" name="body" cols="30" rows="10"></textarea>
-
-       
-         <div class="go2_form" style="float: right;"><input style="margin-top: 30px; margin-right: 15px;" class="gonext_form" type="submit" value="SENT">
-   
-
-         </div>
-
-  
-      
+           <div class="go2_form" style="float: right;"><input style="padding-top: 5px; margin-right: 15px;" class="gonext_form" type="submit" value="送信">
+           </div>
+          <% end %>
       </div>
-   <% end %>
+  
 
      </div>
 
      <div class="box">
-      <div class="contents gonext" style="border-left: none; border-top: none;">
-       <%= form_tag('/plans', method: :post, class: :test_ielts, :multipart => true) do %>
-           <div id="preview" class="preview">
-           </div>
-       <% end %>
-　　  </div>
+      <div style="padding-right: 25px; padding: 25px; margin-left: 50px; box-shadow: 0 0 1px rgba(41, 41, 41, 0.2);
+    background-color: white; box-sizing: border-box; border-radius: 4px; height: 1200px;">
+       <h4 class="sansan">投稿のサンプル:</h4>
+       <div style="border-radius: 4px; width: 500px; height: 400px; margin-bottom: 20px; margin-top: 10px;">
+          <%= image_tag('photo1.png') %>
+       </div>
+       <div style="border-radius: 4px; width: 500px; height: 400px;">
+          <%= image_tag('photo2.png') %>
+       </div>
+       <div style="border-radius: 4px; width: 500px; height: 400px;">
+          <%= image_tag('photo3.png') %>
+       </div>
+      </div>
      </div>
   
-    </div>
+    
   </div>
 </div>
 

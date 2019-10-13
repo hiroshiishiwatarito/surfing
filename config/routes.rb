@@ -11,32 +11,43 @@ Rails.application.routes.draw do
     registrations: 'guiders/registrations'
   }
 
-  root      'plans#top'
-  get       'plans/top'
-  
-  resources :home
+  #本
   resources :plans
+  root      'plans#top'
+  get       'plans/:id/top' => "plans#top"
+  post "plans/:id/purchase", to: "plans#purchase"
+  get  "plans/:id/purchase" => "plans#purchase"
+  get  "/plans" => "plans#destory"
+  get  "plans/:id/fail"     => "plans#fail"
+
+  #テスト
   resources :professions
   get '/professions/:id/category' => "professions#category"
   get '/professions/:id/top' => "professions#top"
   
+  #カテゴリー
   resources :categorys
   get '/categorys' => 'categorys#index'
 
-  post "plans/:id/charge", to: "charges#create", as: "charge"
-
+  #まとめサイト
   resources :tests
   get '/tests' => 'tests#index'
   get '/tests' => 'tests#new'
   get 'tests/:id' => 'tests#show'
+  get '/tests/new/guideline' => 'tests#guideline'
   
+  #ガイドナー
   resources :guiders
-    get "/guiders/:id/post" => "guiders#post"
-  resources :tourists
-
+  get "/guiders/:id/post" => "guiders#post"
   get '/done' => 'guiders#done'
   get 'guiders/:id/go' => 'guiders#go'
   get "/guiders/:id/accepted" => "guiders#accepted"
+  post "/guiders/:id/approve" => "guiders#approve_guider", as: "approve_guider"
+  get  "/guiders/:id/approve" => "guiders#approve_guider"
+ 
+
+  #観光客
+  resources :tourists
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

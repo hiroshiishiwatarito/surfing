@@ -415,7 +415,6 @@ input.question {
   
   width: 25%;
   display: flex;
-  margin-left: 6px;
   width: 42px;
 
 }
@@ -453,8 +452,8 @@ input.question {
   background-image: url("/images/search_button.png");
   background-size: contain;
   background-color: #febd69;
-  width: 50px;
-  height: 35px;
+  width: 35px;
+  height: 32px;
   display: inline-block;
   padding: 0.3em 0.5em;
   text-decoration: none;
@@ -672,23 +671,58 @@ a.post:hover {
 /* footer */
 .shita {
   width: 100%;
-  height: auto;
-    background-color: #fff;
-    color: #E47911;
-    text-align: center;
-    padding: 20px 0;
+  height: 330px;
+    padding: 5px 0 20px 0;
     bottom: 0; /*下に固定*/
-    top: 50%;
-    margin-bottom: 0;
-    font-size: 16px;
-  p {
+    
+}
+.shita2 {
+  width: 100%;
+  height: 100px;
+    padding: 5px 0 20px 0;
+    bottom: 0; /*下に固定*/
     text-align: center;
-    height: auto;
+    
+}
+.category-footer {
+  width: 1450px;
+  height: 300px;
+  display: flex;
+  padding: 30px 200px;
+  background-color: #232F3E;
+}
+
+.category-footer2 {
+  width: 262.5px;
+  height: 300px;
+  display: flex;
+  .footer-word {
+     text-align: left;
+     font-weight: 700;
+     color: #FFF;
+     width: 262.5px;
+     display: block;
+     margin: 6px 0px 14px 0px;
+     white-space: nowrap;
+     line-height: 120%;
+  }
+  .footer-word1 {
+     text-align: left;
+     margin-left: 1px;
+     margin-bottom: 15px;
+     color: #DDD;
+     font-size: 13px;
+     display: block;
+     white-space: nowrap;
+     line-height: 120%;
   }
 }
 .shita1 {
-  height: auto;
-  margin-top: 30px;
+  height: 60px;
+  padding: 10px 0px 20px 0px;
+  margin-top: 0px;
+  background-color: #131A22;
+
 }
 
 .ac {
@@ -783,10 +817,11 @@ a.post:hover {
 .mix-change {
   width: 200px;
   height: 100px;
+  margin-top: 10px;
+  text-align: center;
 }
 .mix {
-  width: 150px;
-  margin: auto;
+  width: 160px;
   font-weight: 400px;
   line-height: 1.5;
   font-size: 16px;
@@ -798,9 +833,9 @@ a.post:hover {
 }
 
 .mix1 {
-  width: 150px;
-  margin: auto;
+  width: 160px;
   font-weight: 400px;
+  margin-left: 0px;
   line-height: 1.5;
   font-size: 16px;
   font-size: 1.17em;
@@ -852,18 +887,19 @@ a.story-1 {
 }
 .image-all {
   display: flex;
-  width: 800px;
-  height: 450px;
-  padding: 0 24px;
+  width: 1200px;
+  height: 630px;
+  padding: 0px;
   margin: 70px 180px 0 340px;
 }
 .image-five {
   display: flex;
 }
 .image-parts {
+  width: 1000px;
   width: 100%;
   display: flex;
-  margin-left: 100px;
+  
 }
 /* plans/show 情報 */
 .macro {
@@ -912,11 +948,42 @@ div.little {
   display: flex;
   margin-left: 10px;
 }
+.bookdo {
+  
+  height: 233.91px;
+  width: 159.98px;
+  display: inline-block;
+}
+.bookdo1 {
+  
+  height: 180.91px;
+  width: 120.98px;
+  display: inline-block;
+
+}
+.magic-master {
+  position: absolute;
+  left: 0px;
+  width: 159.97px;
+  height: 233.91px;
+}
+.magic-master2 {
+  position: absolute;
+  left: 0;
+  width: 159.97px;
+  height: 233.91px;
+  
+}
+.magic-master1 {
+  position: absolute;
+  left: 0px;
+  width: 120px;
+  height: 60px;
+}
 
 /* plan/index and guider/show */
 div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gonext, .surfing {
   h2 {
-    @include boxBase(20px 0, 0);
     font-weight: normal;
     strong {
       font-weight: bold;
@@ -941,32 +1008,16 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
   }
   /* plan/index and guider/show */
   div.content_post, .edm_post, .ichiran{
-    @include boxBase(15px 0px, 15px);
     position: relative;
     height: 100%;
     color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 0 1px rgba($black,0.2);
     display: inline-block;
-    
     width: 100%;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include filter-gradient(#000000, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
-    } 
     .more {
       position: absolute;
       z-index: 2;
-      height: 200px;
-      width: 200px;
+      height: 210px;
+      width: 160px;
       top: 2px;
       right: 2px;
       &:hover ul.more_list {
@@ -979,16 +1030,15 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
         height: 210px;
         right: 0;
         display: none;
-        border-radius: 3px;
         li {
-          border-bottom: 1px solid #ddd;
+          
           &:last-child {
-            border-bottom: 0;
+           
           }
           a {
             display: block;
             width: 150px;
-            height: 150px;            
+            height: 150px;
           }
         }
       }
@@ -1003,7 +1053,6 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
       font-size: 20px;
       z-index: 2;
       font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
     }
     span.name {
       position: absolute;
@@ -1025,75 +1074,29 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
       }
     }
   }
-  div.profile-photo {
+  .div.profile-photo {
     height: 100px;
     width: 100px;
     margin-bottom: 70px;
-  }
-  div.content_post {
-    animation-name: keyframe_18jn58a !important;
-    animation-duration: 300ms !important;
-    animation-timing-function: ease-out !important;
-    border-bottom-left-radius: 3px !important;
-    border-bottom-right-radius: 3px !important;
-    border-top-left-radius: 3px !important;
-    border-top-right-radius: 3px !important;
-    -moz-background-size: contain;
-    background-size: contain;
-    background-repeat: no-repeat !important;
-    background-position: center;
   }
   .surfing {
     width: 900px;
     height: 300px;
     padding: 15px 30px;
     margin-top: 50px;
-    box-shadow: 0 0 1px rgba(41, 41, 41, 0.2);
     background-color: white;
     box-sizing: border-box;
     clear: both;
     margin-left: 50px;
   }
 
-  div.ichiran {
-    animation-name: keyframe_18jn58a !important;
-    animation-duration: 300ms !important;
-    animation-timing-function: ease-out !important;
-    border-bottom-left-radius: 3px !important;
-    border-bottom-right-radius: 3px !important;
-    border-top-left-radius: 3px !important;
-    border-top-right-radius: 3px !important;
-    -moz-background-size: contain;
-    background-size: contain;
-    background-repeat: no-repeat !important;
-    background-position: center;
-    -webkit-background-size:contain;
-    -o-background-size:contain;
-    -ms-background-size:contain;  
-  }
-
   /* plan/index */
   div.kanren {
-    @include boxBase(20px 0 ,30px);
     position: relative;
     height: 180px;
     width: 180px;
     color: #fff;
     display: inline-block;
-    border-radius: 3px;
-    box-shadow: 0 0 1px rgba($black,0.2);
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include filter-gradient(#000000, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
-    } 
     .less {
       position: absolute;
       z-index: 2;
@@ -1111,9 +1114,7 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
         right: 30px;
         bottom: 30px;
         display: none;
-        border-radius: 3px;
         li {
-          border-bottom: 1px solid #ddd;
           &:last-child {
             border-bottom: 0;
           }
@@ -1136,8 +1137,6 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
       font-size: 20px;
       z-index: 2;
       font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-
     }
     span.namae {
       position: absolute;
@@ -1161,34 +1160,16 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
   }
   /* guider/show */
   div.ichiran {
-    @include boxBase(20px 0 ,30px);
     position: relative;
     height: 150px;
     width: 150px;
     color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 0 1px rgba($black,0.2);
     display: inline-block;
     margin-right: 15px;
     margin-left: auto;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include filter-gradient(#000000, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
-    } 
     .mypost {
       position: absolute;
       cursor: pointer;
-      top: 0;
-      right: 0;
-      bottom: 0;
       z-index: 2;
       height: 50px;
       width: 150px;
@@ -1203,14 +1184,11 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
         height: 150px;
         right: 0;
         font-size: 18px;
-        border: 1px solid #ddd;
         display: none;
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        border-radius: 3px;
         li {
           border-bottom: 1px solid #ddd;
           &:last-child {
-            border-bottom: 0;
+            
           }
           a {
             display: block;
@@ -1236,8 +1214,6 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
       font-size: 20px;
       z-index: 2;
       font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-
     }
     span.name {
       position: absolute;
@@ -1380,6 +1356,17 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
   /* guider or tourist login/sign up */
   form#new_guider, form#new_tourist {
       width: 450px;
+      height: 450px;
+      margin: 50px auto 10px;
+  }
+  form#new_guider.new_guider1, form#new_tourist {
+      width: 450px;
+      height: 700px;
+      margin: 50px auto 10px;
+  }
+  form#new_guider.new_guider2, form#new_tourist {
+      width: 450px;
+      height: 320px;
       margin: 50px auto 10px;
   }
   .ue {
@@ -1387,7 +1374,7 @@ div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gone
       font-weight: bold;
       line-height: 1.00;
       letter-spacing: 0;
-      margin: 0 0 20px;
+      margin: 0 0 40px;
       -webkit-font-smoothing: antialiased;
       color: #484848 !important;
   }
@@ -1426,8 +1413,8 @@ div#payjp_checkout_box {
   border: 1px solid #E47911;
 }
 .posts {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 210px;
   display: inline-block;
   vertical-align: top;
   margin-bottom: 150px;
@@ -1443,10 +1430,11 @@ div#payjp_checkout_box {
 /* plans/show */
 .main {
   position: relative;
-  width: 400px;
+  width: 500px;
   height: 400px;
-  margin-right: 60px;
-  margin-left:  60px;
+  margin-right: 175px;
+  margin-left:  165px;
+  text-align: center;
 }
 img#target.hall {
   width: 100%;
@@ -1481,8 +1469,9 @@ img#target.hall {
 }
 
 div.king {
-  width: 520px;
-  height: 460px;
+  width: 900px;
+  height: 200px;
+  padding: 0px 40px;
   
 }
 div.example {
@@ -1491,7 +1480,7 @@ div.example {
   list-style: none;
 }
 .contain {
-  width: 400px; 
+  width: 300px; 
   max-width: 100%; 
   height: 400px; 
   padding-bottom: 15px; 
@@ -1507,8 +1496,8 @@ div.example {
 .example li {
   float: left;
   vertical-align: middle;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 220px;
   cursor: pointer;
   opacity: 0.6;
 }
@@ -1767,4 +1756,20 @@ a.next, .last, .current {
   font-size: 15px;
   margin-bottom: 10px;
   background-color: white;
+}
+.payment-go {
+  float: center;
+  width: 328px; 
+  height: 48px;
+}
+.stripe-button-el span {
+  width: 100px;
+  height: 48px;
+  background: #EBEBEB;
+  background-color: #EBEBEB;
+  background-image: -webkit-linear-gradient(#EBEBEB)
+}
+.post_photo {
+  width: 100px;
+  height: 150px;
 }

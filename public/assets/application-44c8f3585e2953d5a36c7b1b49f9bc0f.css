@@ -1,0 +1,4404 @@
+@charset "UTF-8";/*
+
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ 
+ */
+
+
+
+/* line 24, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+body, html {
+  height: 100%;
+  background-color: #f5f5f3;
+}
+
+/* line 29, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+body {
+  padding-top: 60px;
+}
+
+/* line 32, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.photo {
+  padding: 0;
+  background-color: #fff;
+  height: 1000px;
+}
+
+/* line 39, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+h1, h2, h3, h4, h5, h6, body {
+  line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 17px;
+  color: #666666;
+  margin: 0;
+}
+
+/* line 47, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+a {
+  text-decoration: none;
+  color: #666666;
+}
+/* line 51, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+a:hover {
+  color: #E47911;
+}
+
+/* line 56, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 60, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.serif {
+  font-family: 'ほのか明朝',serif;
+}
+
+/* line 64, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.ultra {
+  font-size: 2em !important;
+}
+
+/* line 68, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+::selection {
+  background: #d8d8d8;
+}
+
+/* line 72, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.transition, a {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+/* line 78, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #E47911;
+  color: #E47911;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+}
+/* line 87, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.btn:hover {
+  border-color: #f2a050;
+  color: #f2a050;
+}
+
+/* line 96, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.title {
+  font-weight: bold;
+}
+
+/* line 100, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.title--big {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 103, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.title--big i {
+  font-style: italic;
+  font-size: 1.8em;
+}
+
+/* line 108, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.sign {
+  font-size: 22px;
+}
+
+/* line 114, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.guider-container {
+  width: 1440px;
+}
+
+/* line 118, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.guider1-container {
+  display: flex;
+  width: 1080px;
+  height: 1903px;
+  margin: 44px 180px 24px 180px;
+  padding: 0 24px;
+}
+
+/* line 126, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.guider2-container {
+  width: 1056px;
+  height: 1003px;
+  display: flex;
+}
+
+/* line 132, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.kg {
+  width: 264px;
+  height: 230px;
+  padding: 0 12px;
+}
+
+/* line 137, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.kobe {
+  width: 240px;
+  height: 170px;
+}
+
+/* line 141, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.profile {
+  width: 240px;
+  height: 170px;
+}
+
+/* line 145, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.profile1-1 {
+  width: 240px;
+  height: 34px;
+  text-align: -webkit-match-parent;
+}
+
+/* line 150, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.profile1 {
+  width: 240px;
+  height: 34px;
+  padding: 6px 0;
+  font-size: 16px;
+  display: block;
+  line-height: 1.43;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+}
+
+/* line 160, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.profile2 {
+  width: 240px;
+  height: 34px;
+  padding: 6px 0;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+  color: #484848;
+  line-height: 1.43;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+}
+
+/* line 172, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+a.ysp.btn-block.space-top-4 {
+  width: 240px;
+  height: 36px;
+}
+
+/* line 176, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.ysp {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 7px 21px;
+  display: inline-block;
+  margin-bottom: 0;
+  border: 1px solid;
+  text-align: center;
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+  border-radius: 4px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+}
+
+/* line 191, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.space-top-4 {
+  margin-top: 24px;
+}
+
+/* line 194, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+btn-block {
+  width: 100%;
+}
+
+/* line 198, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.kg1 {
+  width: 792px;
+  height: 1000px;
+  padding: 0 12px;
+}
+
+/* line 203, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.kobe2 {
+  width: 792px;
+  height: 1000px;
+}
+
+/* line 207, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.kobe3 {
+  width: 768px;
+  height: 1000px;
+}
+
+/* line 211, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.guider-form {
+  width: 768px;
+  height: 550px;
+  display: inline-block;
+  margin-bottom: 0;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  background: white;
+  border-radius: 4px;
+  -webkit-font-smoothin: antialiased;
+  margin-bottom: 24px;
+}
+
+/* line 223, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf {
+  width: 768px;
+  height: 500px;
+}
+
+/* line 228, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-header {
+  width: 766px;
+  height: 42px;
+  padding: 12px 20px;
+  border-bottom: 1px;
+  background-color: #edefed;
+  border-bottom: 1px solid #dce0e0;
+  position: relative;
+}
+
+/* line 238, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-header1 {
+  width: 726px;
+  height: 17px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothin: antialiased;
+  color: #484848;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+/* line 247, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-body {
+  width: 738px;
+  height: 500px;
+  padding: 20px 30px;
+  padding: 9px 27px;
+  margin-bottom: 24px;
+}
+
+/* line 255, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-body1 {
+  width: 738px;
+  height: 36px;
+  margin-bottom: 24px;
+}
+
+/* line 260, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.name2 {
+  width: 184.5px;
+  height: 35px;
+  padding: 8px 6px 8px 6px;
+  float: left;
+  width: 25%;
+  text-align: right;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothin: antialiased;
+}
+
+/* line 271, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.name_form {
+  width: 535.5px;
+  height: 36px;
+  padding: 0 6px;
+  width: 75%;
+  float: left;
+}
+
+/* line 278, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.name_form1 {
+  width: 525.5px;
+  height: 36px;
+  padding: 0 6px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothin: antialiased;
+}
+
+/* line 286, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.select {
+  width: 89px;
+  height: 36px;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* line 293, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+select#user_sex {
+  width: 85px;
+  height: 35px;
+  width: 100%;
+  padding-top: 8px;
+  padding-right: 28px;
+  paddign-left: 10px;
+  padding-bottom: 8px;
+  margin-left: 5px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  color: #484848;
+  line-height: normal;
+  font: 400 11px system-ui;
+  font-size: 80%;
+}
+
+/* line 309, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.option {
+  font-weight: normal;
+}
+
+/* line 312, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+p.birth {
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 9px;
+}
+
+/* line 317, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.save {
+  padding: 9px 27px;
+  font-size: 16px;
+  border-color: #ff5a5f;
+  background-color: #ff5a5f;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* line 325, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.describe {
+  width: 535.5px;
+  height: 122px;
+  padding: 0 6px;
+  width: 75%;
+  float: left;
+}
+
+/* line 332, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.describe1 {
+  width: 525.5px;
+  height: 122px;
+  padding: 0 6px;
+}
+
+/* line 338, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-footer {
+  width: 766px;
+  height: 42px;
+  padding: 12px 20px;
+  border-bottom: 1px;
+  background-color: #edefed;
+  border-bottom: 1px solid #dce0e0;
+  position: relative;
+}
+
+/* line 348, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-footer1 {
+  width: 766px;
+  height: 265px;
+  display: inline-block;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  background: white;
+  border-radius: 4px;
+  -webkit-font-smoothin: antialiased;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+
+/* line 360, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-footer2 {
+  width: 766px;
+  height: 105px;
+  display: inline-block;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  background: white;
+  border-radius: 4px;
+  -webkit-font-smoothin: antialiased;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+
+/* line 372, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-f1 {
+  width: 750px;
+  height: 225px;
+}
+
+/* line 376, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pdf-footer2 {
+  width: 750px;
+  height: 225px;
+}
+
+/* line 381, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.gogo1 {
+  height: 225px;
+  float: left;
+  width: 33.3333%;
+  display: block;
+}
+
+/* line 389, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.image_form {
+  height: 137px;
+  padding: 0 6px;
+  width: 66.6%;
+  float: left;
+  display: block;
+}
+
+/* line 397, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.setumei {
+  width: 476px;
+  height: 86px;
+  margin-bottom: 15px;
+}
+
+/* line 403, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+p.image_setumei {
+  width: 476px;
+  height: 20px;
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 9px;
+  margin-bottom: 15px;
+}
+
+/* line 412, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+p.image_setumei1 {
+  width: 476px;
+  height: 10px;
+  font-size: 16px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+
+/* line 420, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+p.image_setumei2 {
+  width: 476px;
+  height: 10px;
+  font-size: 16px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 428, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.self {
+  width: 476px;
+  padding: 9px 27px;
+  border: 1px solid;
+  font-size: 16px;
+  border-color: #c4c4c4;
+  background-color: white;
+  color: #484848;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  ont-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  display: block;
+}
+
+/* line 445, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.file1 {
+  width: 488px;
+  height: 42px;
+  margin-top: 15px;
+}
+
+/* line 451, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.gogo2 {
+  width: 225px;
+  height: 225px;
+}
+
+/* line 456, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.file1 {
+  width: 488px;
+  height: 42px;
+  margin-top: 15px;
+}
+
+/* line 462, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.gogo2 {
+  width: 225px;
+  height: 225px;
+}
+
+/* line 466, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.post1 {
+  width: 600px;
+  display: flex;
+  margin-top: 30px;
+}
+
+/* line 471, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.post2 {
+  width: 190px;
+  display: flex;
+}
+
+/* line 475, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.bnb {
+  font-size: 20px;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* line 480, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+a.btn:hover {
+  background: #E47911;
+  color: white;
+}
+
+/* line 484, /Users/hiroshi/break/app/assets/stylesheets/_guider.scss */
+.pagenate-1 {
+  width: 550px;
+}
+
+/* line 1, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 1200px;
+}
+/* line 7, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 {
+  width: 1200px;
+  height: 1100px;
+  justify-content: center;
+  display: flex;
+}
+/* line 12, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 .profession2 {
+  width: 100%;
+  display: flex;
+}
+/* line 15, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 .profession2 .pro {
+  display: flex;
+  width: 560px;
+  height: 550px;
+  margin-right: 25px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+/* line 24, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 .profession2 .semi {
+  display: flex;
+  width: 600px;
+  height: 300px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  border-radius: 4px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+/* line 35, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 .profession2 .profession3 {
+  width: 30%;
+  width: 350px;
+  height: 320px;
+  display: flex;
+}
+/* line 40, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 .profession2 .profession3 .proper {
+  display: flex;
+  width: 350px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  border-radius: 4px;
+  margin-bottom: 25px;
+  padding: 18px;
+}
+/* line 50, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.profession .profession1 .profession2 .profession3 .semi_pro {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  border-radius: 4px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 66, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.dogo-go {
+  width: 700px;
+  height: 130px;
+  padding: 0px;
+}
+
+/* line 71, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.suo-go {
+  width: 300px;
+  height: 130px;
+  padding: 0px;
+}
+
+/* line 77, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.hogo-go {
+  width: 700px;
+  height: 610px;
+  padding: 40px;
+}
+
+/* line 82, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.go-go {
+  width: 300px;
+  height: 130px;
+  padding: 0px;
+}
+
+/* line 87, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.suo-go {
+  width: 300px;
+  height: 130px;
+  padding: 0px;
+}
+
+/* line 92, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.gogo {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  right: 335px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+}
+
+/* line 103, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.go_chance {
+  text-align: center;
+  width: 560px;
+  height: 300px;
+  margin-top: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+}
+
+/* line 112, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.bogo {
+  text-align: center;
+  width: 150px;
+  height: 100px;
+  right: 355px;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  border-radius: 5px;
+}
+
+/* line 124, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.dogo {
+  width: 700px;
+  height: 130px;
+  bottom: 255px;
+}
+
+/* line 131, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.evaluation {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 35px;
+  padding-right: 330px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  width: 740px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+/* line 143, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.evaluation input[type='radio'] {
+  display: none;
+}
+
+/* line 146, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.evaluation label {
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* line 153, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.evaluation label .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
+
+/* line 164, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.evaluation label:hover,
+.evaluation label:hover ~ label,
+.evaluation input[type='radio']:checked ~ label {
+  color: #ffcc00;
+}
+
+/* line 168, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.review {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 35px;
+  padding-right: 330px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  width: 740px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+/* line 180, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.review input[type='radio'] {
+  display: none;
+}
+
+/* line 183, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.review label {
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* line 190, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.review label .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
+
+/* line 201, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.review label:hover,
+.review label:hover ~ label,
+.review input[type='radio']:checked ~ label {
+  color: #ffcc00;
+}
+
+/* line 204, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.text-rule {
+  color: inherit;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+/* line 212, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.strange2 {
+  width: 1170px;
+  height: 37px;
+  display: block;
+}
+
+/* line 217, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.strange {
+  background-size: contain;
+  background-image: url("/images/search_button.png");
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid white;
+  border-radius: 3px;
+  transition: .4s;
+  float: right;
+}
+
+/* line 233, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.fas fa-plus-circle {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 238, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.sticky {
+  position: -webkit-sticky;
+  /* safari対応 */
+  position: sticky;
+  bottom: 110px;
+  left: 0;
+  top: 500px;
+}
+
+/* line 246, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+span.text {
+  padding-bottom: 5px;
+  text-align: center;
+  display: block;
+}
+
+/* line 251, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.thoso {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 255, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.star-color {
+  color: #E47911;
+  font-size: 20px;
+}
+
+/* line 259, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.nickname {
+  margin: 18px 0 0 0;
+}
+
+/* line 262, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.lesson {
+  font-size: 25px;
+}
+
+/* line 265, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.prepro {
+  font-size: 18px;
+  color: inherit;
+}
+
+/* line 269, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.starship {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  padding: 0px 30px 30px 0px;
+}
+
+/* line 275, /Users/hiroshi/break/app/assets/stylesheets/_profession.scss */
+.starship1 {
+  position: absolute;
+  width: 560px;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 25, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+body, html {
+  height: 100%;
+  background-color: #f5f5f3;
+}
+
+/* line 30, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+body {
+  padding-top: 60px;
+}
+
+/* line 34, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.photo {
+  padding: 0;
+  background-color: #fff;
+  height: auto;
+}
+
+/* line 40, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.imagine {
+  background-color: #fff;
+  height: auto;
+  padding: 0;
+}
+
+/* line 46, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+h1, h2, h3, h4, h5, h6, body {
+  line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 17px;
+  color: #666666;
+  margin: 0;
+}
+
+/* line 54, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* line 58, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a:hover {
+  color: #E47911;
+}
+
+/* line 63, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 67, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.serif, div.contents.center div.content_post p, div.contents.center .edm_post p, div.contents.center .ichiran p, .sign_up div.content_post p, .sign_up .edm_post p, .sign_up .ichiran p, .life div.content_post p, .life .edm_post p, .life .ichiran p, .free div.content_post p, .free .edm_post p, .free .ichiran p, .info div.content_post p, .info .edm_post p, .info .ichiran p, .own div.content_post p, .own .edm_post p, .own .ichiran p, .avicii div.content_post p, .avicii .edm_post p, .avicii .ichiran p, .graph div.content_post p, .graph .edm_post p, .graph .ichiran p, .gonext div.content_post p, .gonext .edm_post p, .gonext .ichiran p, .surfing div.content_post p, .surfing .edm_post p, .surfing .ichiran p, div.contents.center div.kanren p, .sign_up div.kanren p, .life div.kanren p, .free div.kanren p, .info div.kanren p, .own div.kanren p, .avicii div.kanren p, .graph div.kanren p, .gonext div.kanren p, .surfing div.kanren p, div.contents.center div.ichiran p, .sign_up div.ichiran p, .life div.ichiran p, .free div.ichiran p, .info div.ichiran p, .own div.ichiran p, .avicii div.ichiran p, .graph div.ichiran p, .gonext div.ichiran p, .surfing div.ichiran p {
+  font-family: 'ほのか明朝',serif;
+}
+
+/* line 71, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.ultra {
+  font-size: 2em !important;
+}
+
+/* line 75, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+::selection {
+  background: #d8d8d8;
+}
+
+/* line 79, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.transition, a, div.contents.center form input[type="submit"], div.contents.center mogi input[type="submit"], .sign_up form input[type="submit"], .sign_up mogi input[type="submit"], .life form input[type="submit"], .life mogi input[type="submit"], .free form input[type="submit"], .free mogi input[type="submit"], .info form input[type="submit"], .info mogi input[type="submit"], .own form input[type="submit"], .own mogi input[type="submit"], .avicii form input[type="submit"], .avicii mogi input[type="submit"], .graph form input[type="submit"], .graph mogi input[type="submit"], .gonext form input[type="submit"], .gonext mogi input[type="submit"], .surfing form input[type="submit"], .surfing mogi input[type="submit"] {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+/* line 85, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #E47911;
+  color: #E47911;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+}
+/* line 94, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.btn:hover {
+  border-color: #f2a050;
+  color: #f2a050;
+}
+
+/* line 103, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.title {
+  font-weight: bold;
+}
+
+/* line 107, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.title--big {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 110, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.title--big i {
+  font-style: italic;
+  font-size: 1.8em;
+}
+
+/* line 115, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.sign {
+  font-size: 22px;
+}
+
+/* line 118, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.eureka {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  font-size: 30px;
+  color: inherit;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  margin-bottom: 11px;
+  margin-top: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* home */
+/* line 137, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.main-container {
+  background-image: url("/images/books.jpg");
+  height: 865px;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+  animation-name: keyframe_18jn58a !important;
+  animation-duration: 300ms !important;
+  animation-timing-function: ease-out !important;
+  border-bottom-left-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+  border-top-left-radius: 3px !important;
+  border-top-right-radius: 3px !important;
+  -moz-background-size: contain;
+  background-repeat: no-repeat !important;
+  background-position: center;
+}
+
+/* line 156, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bar {
+  display: block;
+  width: 1500px;
+  height: 2px;
+  background-color: white;
+  border: 0;
+  /*デフォルトデザインでは線がある場合があるので、消しておく。*/
+}
+
+/* line 164, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.middle-container {
+  height: 400px;
+}
+
+/* line 168, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bottom {
+  margin-top: 0px;
+  position: absolute;
+  top: 86%;
+  left: 29%;
+  color: white;
+}
+
+/* line 176, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bottom1 {
+  margin-top: 0px;
+  position: absolute;
+  top: 89%;
+  left: 29%;
+  color: white;
+}
+
+/*  home/index  */
+/* line 186, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.main-container h1 {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 5.0em;
+  top: 35%;
+  left: 79%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+}
+
+/* line 200, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  color: white;
+  font-size: 3.2em;
+  font-weight: bold;
+  border: solid 2px #E47911;
+  border-radius: 3px;
+  transition: .4s;
+  position: absolute;
+  top: 50%;
+  left: 30.5%;
+}
+
+/* line 214, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.btn-flat-border:hover {
+  background: #E47911;
+  color: white;
+}
+
+/*  home/search  */
+/* line 225, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.search {
+  list-style: none;
+  display: flex;
+  height: 75px;
+}
+
+/* line 230, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.search li {
+  width: 150px;
+  text-align: right;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  margin-top: 0.8%;
+  margin-bottom: 1%;
+  color: white;
+}
+
+/* line 241, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+li.chance {
+  width: 400px;
+  font-size: 40px;
+  margin-right: 5%;
+  color: #E47911;
+  font-weight: bold;
+}
+
+/* line 248, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.chance {
+  color: #E47911;
+}
+
+/* line 251, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.chance:hover {
+  color: #E47911;
+}
+
+/* line 256, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+li.traveller {
+  width: 630px;
+  margin-left: 20px;
+}
+
+/* line 260, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.traveller {
+  color: #E47911;
+  display: inline-block;
+  padding: 0.1em 0.8em 0.1em 1em;
+  text-decoration: none;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+/* line 269, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.traveller:hover {
+  background: white;
+  color: #E47911;
+}
+
+/* line 274, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+form.search {
+  height: 400px;
+  padding-top: 280px;
+  padding-left: 320px;
+}
+
+/* line 279, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+p.search_answer {
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* line 284, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+input#title.question::placeholder {
+  color: #67c5ff;
+}
+
+/* line 287, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+input#title.question:focus::placeholder {
+  color: transparent;
+  transition: .1s;
+}
+
+/* line 291, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+input.answer {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: .4s;
+  background-image: url("/images/search_button.png");
+  background-size: contain;
+  background-color: white;
+  height: 77px;
+  width: 80px;
+  margin-bottom: 35px;
+  margin-left: 20px;
+}
+
+/* line 305, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+input.question {
+  width: 700px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+/* line 315, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.fine {
+  display: flex;
+  width: 900px;
+}
+
+/* line 320, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.full_max {
+  width: 700px;
+  display: flex;
+  margin-left: 126px;
+}
+
+/* line 326, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.full {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+/* line 332, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.gopro {
+  width: 750px;
+  display: flex;
+  margin-left: 20px;
+}
+
+/* line 337, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.gobro {
+  width: 300px;
+  display: inline-block;
+  height: 350px;
+}
+
+/* line 343, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.question_answer {
+  margin-top: 0;
+  width: 75%;
+  margin-right: 0;
+  display: flex;
+  margin-left: 20px;
+}
+
+/* line 350, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.question_answer1 {
+  width: 650px;
+  margin-top: 0;
+  margin-right: 0;
+  display: flex;
+  margin-left: 20px;
+}
+
+/* line 357, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.question_answer3 {
+  width: 300px;
+  margin-top: 0;
+  margin-right: 0;
+  display: flex;
+}
+
+/* line 364, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.fun_interview {
+  width: 576px;
+  height: 40px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  font-size: 30px;
+}
+
+/* line 376, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.gogo_interview {
+  width: 700px;
+  height: 50px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+/* line 387, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bobo_interview {
+  width: 300px;
+  height: 50px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+/* line 398, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview_answer {
+  margin-top: 0;
+  width: 25%;
+  display: flex;
+  margin-right: 70px;
+  margin-left: 6px;
+}
+
+/* line 406, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview_answer3 {
+  margin-top: 0;
+  width: 25%;
+  display: flex;
+  margin-right: 13px;
+  float: right;
+  margin-top: 30px;
+}
+
+/* line 414, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview_answer1 {
+  width: 25%;
+  display: flex;
+  width: 42px;
+}
+
+/* line 421, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview {
+  background-image: url("/images/search_button.png");
+  background-size: contain;
+  background-color: #febd69;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+/* line 435, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview1 {
+  background-image: url("/images/search_button.png");
+  background-size: contain;
+  background-color: #febd69;
+  width: 40px;
+  height: 35px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 12px;
+}
+
+/* line 451, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview2 {
+  background-image: url("/images/search_button.png");
+  background-size: contain;
+  background-color: #febd69;
+  width: 35px;
+  height: 32px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+/* line 468, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.interview3 {
+  background-size: contain;
+  background-color: #febd69;
+  width: 90px;
+  height: 40px;
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  color: black;
+  border: solid #febd69;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*  header  */
+/* line 487, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.head-container {
+  background-color: #fff;
+}
+
+/* line 491, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.mbar {
+  display: block;
+  width: 1500px;
+  border-bottom: 1px solid #e4e4e4 !important;
+  /*デフォルトデザインでは線がある場合があるので、消しておく。*/
+}
+
+/* line 497, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.dbar {
+  display: block;
+  width: 1500px;
+  border-bottom: 1px solid #e4e4e4 !important;
+  height: 1px;
+  margin-top: 40px;
+}
+
+/* line 505, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.headed {
+  list-style: none;
+  display: flex;
+  height: 50px;
+}
+
+/* line 510, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.headed li {
+  width: 150px;
+  text-align: right;
+  height: 50px;
+  line-height: 50px;
+  font-size: 19px;
+  margin-top: 0.8%;
+  margin-bottom: 1%;
+  color: #E47911;
+  margin-bottom: 10px;
+}
+
+/* line 523, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+li.left {
+  font-size: 35px;
+  margin-right: 5%;
+  margin-top: 10px;
+}
+
+/* line 530, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.home {
+  color: #E47911;
+  font-weight: bold;
+}
+
+/* line 534, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.home:hover {
+  color: #E47911;
+}
+
+/* header/guider */
+/* line 541, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav {
+  height: 100px;
+  width: 400px;
+  margin-left: 800px;
+  position: relative;
+  right: 0;
+  z-index: 3;
+}
+/* line 548, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav span {
+  top: 5px;
+  display: block;
+  float: left;
+  margin-left: 0px;
+  margin-top: 11px;
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  color: #E47911;
+  left: 48px;
+}
+/* line 561, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav span:after {
+  content: '▼';
+  font-size: .7em;
+  margin-left: -4px;
+}
+/* line 566, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav span:hover ul {
+  color: e #e47911;
+  display: block;
+}
+/* line 571, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav ul {
+  display: none;
+  position: absolute;
+  top: 46px;
+  right: 0;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* line 579, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav ul li {
+  background-color: #f0f0f0;
+}
+/* line 581, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.guider_nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/* line 591, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+li.category {
+  font-size: 19px;
+  width: 150px;
+  background-color: white;
+  height: 200px;
+  text-align: center;
+  left: 25px;
+}
+
+/* line 599, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.guider-category {
+  color: #E47911;
+  background-color: white;
+}
+
+/* line 603, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.guider-category:hover {
+  background: #E47911;
+  color: white;
+}
+
+/* line 607, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.plan {
+  font-size: 23px;
+  color: #E47911;
+  display: inline-block;
+  padding: 0.6em 0.8em 0.5em 1em;
+  text-decoration: none;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+  float: right;
+  margin-right: 160px;
+  margin-top: 4px;
+}
+
+/* line 620, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.plan:hover {
+  background: #E47911;
+  color: white;
+}
+
+/* header/tourist or first visit */
+/* line 627, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+li.first {
+  width: 125px;
+  margin-left: 725px;
+  margin-top: 10px;
+}
+
+/* line 632, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.logout {
+  display: inline-block;
+  color: #E47911;
+  margin-top: 3.0px;
+  margin-right: 10.0px;
+  padding-right: 5.0px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+/* line 643, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+li.second {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* line 647, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.post {
+  color: #E47911;
+  display: flex;
+  padding: 0.1em 0.8em 0.1em 1em;
+  text-decoration: none;
+  border: solid 2px #E47911;
+  border-radius: 3px;
+  transition: .4s;
+  height: 40px;
+  width: 130px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  margin-left: 50px;
+}
+
+/* line 663, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.visited {
+  color: #E47911;
+}
+
+/* line 666, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.post:hover {
+  background: #E47911;
+  color: white;
+}
+
+/* footer */
+/* line 672, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shita {
+  width: 100%;
+  height: 330px;
+  padding: 5px 0 20px 0;
+  bottom: 0;
+  /*下に固定*/
+}
+
+/* line 679, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shita2 {
+  width: 100%;
+  height: 100px;
+  padding: 5px 0 20px 0;
+  bottom: 0;
+  /*下に固定*/
+  text-align: center;
+}
+
+/* line 687, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-footer {
+  width: 1450px;
+  height: 300px;
+  display: flex;
+  padding: 30px 200px;
+  background-color: #232F3E;
+}
+
+/* line 695, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-footer2 {
+  width: 262.5px;
+  height: 300px;
+  display: flex;
+}
+/* line 699, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-footer2 .footer-word {
+  text-align: left;
+  font-weight: 700;
+  color: #FFF;
+  width: 262.5px;
+  display: block;
+  margin: 6px 0px 14px 0px;
+  white-space: nowrap;
+  line-height: 120%;
+}
+/* line 709, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-footer2 .footer-word1 {
+  text-align: left;
+  margin-left: 1px;
+  margin-bottom: 15px;
+  color: #DDD;
+  font-size: 13px;
+  display: block;
+  white-space: nowrap;
+  line-height: 120%;
+}
+
+/* line 720, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shita1 {
+  height: 60px;
+  padding: 10px 0px 20px 0px;
+  margin-top: 0px;
+  background-color: #131A22;
+}
+
+/* line 731, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.ac:hover {
+  color: #E47911;
+}
+
+/* line 734, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.accept-1 {
+  margin: 32px 0 0;
+  font-size: 16px;
+}
+
+/* line 739, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.accept {
+  font-size: 22px;
+  line-height: 1.4;
+  display: block;
+  color: #333;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  padding: 20px 60px 0 45px;
+}
+
+/* line 753, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.accepted {
+  margin: 20px 0;
+  padding: 20px 4.6875%;
+  background: #fff;
+}
+
+/* form structure */
+/* line 760, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.form {
+  background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
+  background-size: cover;
+}
+/* line 764, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.form .contents {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  bottom: 0;
+  right: 0;
+}
+/* line 770, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.form .contents .david {
+  width: 250px;
+  height: 0px;
+  padding-left: 10px;
+}
+/* line 776, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.form footer {
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+/* plan/index */
+/* line 785, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.mainpage {
+  background-color: #fff;
+  height: 2000px;
+}
+
+/* line 789, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.topic {
+  margin-top: 30px;
+}
+
+/* line 792, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.topic1, .all-topic {
+  font-weight: 700 !important;
+  font-size: 23px !important;
+  line-height: 30px !important;
+  letter-spacing: normal !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  color: #484848 !important;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+/* line 804, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.post_post {
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  line-height: 30px !important;
+  text-align: center;
+  letter-spacing: normal !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  color: #484848 !important;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding-right: 83px;
+  padding-bottom: 20px;
+}
+
+/* line 817, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.mix-change {
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* line 823, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.mix {
+  width: 160px;
+  font-weight: 400px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-size: 1.17em;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  display: block;
+  text-align: center;
+}
+
+/* line 835, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.mix1 {
+  width: 160px;
+  font-weight: 400px;
+  margin-left: 0px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-size: 1.17em;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  display: block;
+  text-align: center;
+}
+
+/* line 848, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.topic2 {
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  line-height: 30px !important;
+  letter-spacing: normal !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  color: #484848 !important;
+  margin-bottom: px;
+  margin-top: 15px;
+}
+
+/* line 860, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.story {
+  width: 1600px;
+  height: 70px;
+  margin-bottom: 48px;
+}
+
+/* line 866, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.story-1 {
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  padding-top: 11px;
+  text-decoration: none;
+  color: #03A9F4;
+  background: #FFF;
+  /*色*/
+  border: solid 1px #0f9ada;
+  /*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* plan/show 画像 */
+/* line 885, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.headquarter {
+  background-color: #fff;
+}
+
+/* line 888, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.image-all {
+  display: flex;
+  width: 1200px;
+  height: 630px;
+  padding: 0px;
+  margin: 70px 180px 0 340px;
+}
+
+/* line 895, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.image-five {
+  display: flex;
+}
+
+/* line 898, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.image-parts {
+  width: 1000px;
+  width: 100%;
+  display: flex;
+}
+
+/* plans/show 情報 */
+/* line 905, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.macro {
+  display: flex;
+  width: 800px;
+  height: 1800px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 914, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.detail {
+  display: flex;
+}
+
+/* line 917, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.micro {
+  width: 100%;
+  display: flex;
+}
+
+/* line 921, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.specific {
+  width: 550px;
+  margin-right: 0;
+}
+
+/* line 926, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.payment {
+  width: 420px;
+  height: 366px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
+  left: 20px;
+  float: right;
+}
+
+/* guider/show */
+/* line 938, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.all {
+  display: flex;
+}
+
+/* line 941, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.parts {
+  width: 1440px;
+  height: 1200px;
+  display: flex;
+}
+
+/* line 946, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.little {
+  width: 100%;
+  display: flex;
+  margin-left: 10px;
+}
+
+/* line 951, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bookdo {
+  height: 233.91px;
+  width: 159.98px;
+  display: inline-block;
+}
+
+/* line 957, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bookdo1 {
+  height: 180.91px;
+  width: 120.98px;
+  display: inline-block;
+}
+
+/* line 964, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.magic-master {
+  position: absolute;
+  left: 0px;
+  width: 159.97px;
+  height: 233.91px;
+}
+
+/* line 970, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.magic-master2 {
+  position: absolute;
+  left: 0;
+  width: 159.97px;
+  height: 233.91px;
+}
+
+/* line 977, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.magic-master1 {
+  position: absolute;
+  left: 0px;
+  width: 120px;
+  height: 60px;
+}
+
+/* plan/index and guider/show */
+/* line 985, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center, .sign_up, .life, .free, .info, .own, .avicii, .graph, .gonext, .surfing {
+  /* plan/show */
+  /* plan/index and guider/show */
+  /* plan/index */
+  /* guider/show */
+  /* plan/new and show */
+  /* guider or tourist login/sign up */
+  /* plan/edit, update, destory, create */
+}
+/* line 986, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center h2, .sign_up h2, .life h2, .free h2, .info h2, .own h2, .avicii h2, .graph h2, .gonext h2, .surfing h2 {
+  font-weight: normal;
+}
+/* line 988, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center h2 strong, .sign_up h2 strong, .life h2 strong, .free h2 strong, .info h2 strong, .own h2 strong, .avicii h2 strong, .graph h2 strong, .gonext h2 strong, .surfing h2 strong {
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 1.2em;
+}
+/* line 995, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.martin.garrix, .sign_up div.martin.garrix, .life div.martin.garrix, .free div.martin.garrix, .info div.martin.garrix, .own div.martin.garrix, .avicii div.martin.garrix, .graph div.martin.garrix, .gonext div.martin.garrix, .surfing div.martin.garrix {
+  top: 12%;
+  bottom: 0;
+  right: 0;
+  font-size: 15px;
+  padding: 0 auto;
+}
+/* line 1001, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.martin.garrix .clear, .sign_up div.martin.garrix .clear, .life div.martin.garrix .clear, .free div.martin.garrix .clear, .info div.martin.garrix .clear, .own div.martin.garrix .clear, .avicii div.martin.garrix .clear, .graph div.martin.garrix .clear, .gonext div.martin.garrix .clear, .surfing div.martin.garrix .clear {
+  clear: left;
+}
+/* line 1006, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .new_user, .sign_up .new_user, .life .new_user, .free .new_user, .info .new_user, .own .new_user, .avicii .new_user, .graph .new_user, .gonext .new_user, .surfing .new_user {
+  font-family: "游ゴシック", "YuGothic";
+}
+/* line 1010, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post, div.contents.center .edm_post, div.contents.center .ichiran, .sign_up div.content_post, .sign_up .edm_post, .sign_up .ichiran, .life div.content_post, .life .edm_post, .life .ichiran, .free div.content_post, .free .edm_post, .free .ichiran, .info div.content_post, .info .edm_post, .info .ichiran, .own div.content_post, .own .edm_post, .own .ichiran, .avicii div.content_post, .avicii .edm_post, .avicii .ichiran, .graph div.content_post, .graph .edm_post, .graph .ichiran, .gonext div.content_post, .gonext .edm_post, .gonext .ichiran, .surfing div.content_post, .surfing .edm_post, .surfing .ichiran {
+  position: relative;
+  height: 100%;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+}
+/* line 1016, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post .more, div.contents.center .edm_post .more, div.contents.center .ichiran .more, .sign_up div.content_post .more, .sign_up .edm_post .more, .sign_up .ichiran .more, .life div.content_post .more, .life .edm_post .more, .life .ichiran .more, .free div.content_post .more, .free .edm_post .more, .free .ichiran .more, .info div.content_post .more, .info .edm_post .more, .info .ichiran .more, .own div.content_post .more, .own .edm_post .more, .own .ichiran .more, .avicii div.content_post .more, .avicii .edm_post .more, .avicii .ichiran .more, .graph div.content_post .more, .graph .edm_post .more, .graph .ichiran .more, .gonext div.content_post .more, .gonext .edm_post .more, .gonext .ichiran .more, .surfing div.content_post .more, .surfing .edm_post .more, .surfing .ichiran .more {
+  position: absolute;
+  z-index: 2;
+  height: 210px;
+  width: 160px;
+  top: 2px;
+  right: 2px;
+}
+/* line 1023, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post .more:hover ul.more_list, div.contents.center .edm_post .more:hover ul.more_list, div.contents.center .ichiran .more:hover ul.more_list, .sign_up div.content_post .more:hover ul.more_list, .sign_up .edm_post .more:hover ul.more_list, .sign_up .ichiran .more:hover ul.more_list, .life div.content_post .more:hover ul.more_list, .life .edm_post .more:hover ul.more_list, .life .ichiran .more:hover ul.more_list, .free div.content_post .more:hover ul.more_list, .free .edm_post .more:hover ul.more_list, .free .ichiran .more:hover ul.more_list, .info div.content_post .more:hover ul.more_list, .info .edm_post .more:hover ul.more_list, .info .ichiran .more:hover ul.more_list, .own div.content_post .more:hover ul.more_list, .own .edm_post .more:hover ul.more_list, .own .ichiran .more:hover ul.more_list, .avicii div.content_post .more:hover ul.more_list, .avicii .edm_post .more:hover ul.more_list, .avicii .ichiran .more:hover ul.more_list, .graph div.content_post .more:hover ul.more_list, .graph .edm_post .more:hover ul.more_list, .graph .ichiran .more:hover ul.more_list, .gonext div.content_post .more:hover ul.more_list, .gonext .edm_post .more:hover ul.more_list, .gonext .ichiran .more:hover ul.more_list, .surfing div.content_post .more:hover ul.more_list, .surfing .edm_post .more:hover ul.more_list, .surfing .ichiran .more:hover ul.more_list {
+  display: block;
+}
+/* line 1026, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post .more ul.more_list, div.contents.center .edm_post .more ul.more_list, div.contents.center .ichiran .more ul.more_list, .sign_up div.content_post .more ul.more_list, .sign_up .edm_post .more ul.more_list, .sign_up .ichiran .more ul.more_list, .life div.content_post .more ul.more_list, .life .edm_post .more ul.more_list, .life .ichiran .more ul.more_list, .free div.content_post .more ul.more_list, .free .edm_post .more ul.more_list, .free .ichiran .more ul.more_list, .info div.content_post .more ul.more_list, .info .edm_post .more ul.more_list, .info .ichiran .more ul.more_list, .own div.content_post .more ul.more_list, .own .edm_post .more ul.more_list, .own .ichiran .more ul.more_list, .avicii div.content_post .more ul.more_list, .avicii .edm_post .more ul.more_list, .avicii .ichiran .more ul.more_list, .graph div.content_post .more ul.more_list, .graph .edm_post .more ul.more_list, .graph .ichiran .more ul.more_list, .gonext div.content_post .more ul.more_list, .gonext .edm_post .more ul.more_list, .gonext .ichiran .more ul.more_list, .surfing div.content_post .more ul.more_list, .surfing .edm_post .more ul.more_list, .surfing .ichiran .more ul.more_list {
+  position: absolute;
+  text-align: left;
+  width: 160px;
+  height: 210px;
+  right: 0;
+  display: none;
+}
+/* line 1038, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post .more ul.more_list li a, div.contents.center .edm_post .more ul.more_list li a, div.contents.center .ichiran .more ul.more_list li a, .sign_up div.content_post .more ul.more_list li a, .sign_up .edm_post .more ul.more_list li a, .sign_up .ichiran .more ul.more_list li a, .life div.content_post .more ul.more_list li a, .life .edm_post .more ul.more_list li a, .life .ichiran .more ul.more_list li a, .free div.content_post .more ul.more_list li a, .free .edm_post .more ul.more_list li a, .free .ichiran .more ul.more_list li a, .info div.content_post .more ul.more_list li a, .info .edm_post .more ul.more_list li a, .info .ichiran .more ul.more_list li a, .own div.content_post .more ul.more_list li a, .own .edm_post .more ul.more_list li a, .own .ichiran .more ul.more_list li a, .avicii div.content_post .more ul.more_list li a, .avicii .edm_post .more ul.more_list li a, .avicii .ichiran .more ul.more_list li a, .graph div.content_post .more ul.more_list li a, .graph .edm_post .more ul.more_list li a, .graph .ichiran .more ul.more_list li a, .gonext div.content_post .more ul.more_list li a, .gonext .edm_post .more ul.more_list li a, .gonext .ichiran .more ul.more_list li a, .surfing div.content_post .more ul.more_list li a, .surfing .edm_post .more ul.more_list li a, .surfing .ichiran .more ul.more_list li a {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+/* line 1046, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post p, div.contents.center .edm_post p, div.contents.center .ichiran p, .sign_up div.content_post p, .sign_up .edm_post p, .sign_up .ichiran p, .life div.content_post p, .life .edm_post p, .life .ichiran p, .free div.content_post p, .free .edm_post p, .free .ichiran p, .info div.content_post p, .info .edm_post p, .info .ichiran p, .own div.content_post p, .own .edm_post p, .own .ichiran p, .avicii div.content_post p, .avicii .edm_post p, .avicii .ichiran p, .graph div.content_post p, .graph .edm_post p, .graph .ichiran p, .gonext div.content_post p, .gonext .edm_post p, .gonext .ichiran p, .surfing div.content_post p, .surfing .edm_post p, .surfing .ichiran p {
+  position: absolute;
+  left: 30px;
+  right: 100px;
+  bottom: 30px;
+  margin: 0;
+  font-size: 20px;
+  z-index: 2;
+  font-weight: bold;
+}
+/* line 1057, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post span.name, div.contents.center .edm_post span.name, div.contents.center .ichiran span.name, .sign_up div.content_post span.name, .sign_up .edm_post span.name, .sign_up .ichiran span.name, .life div.content_post span.name, .life .edm_post span.name, .life .ichiran span.name, .free div.content_post span.name, .free .edm_post span.name, .free .ichiran span.name, .info div.content_post span.name, .info .edm_post span.name, .info .ichiran span.name, .own div.content_post span.name, .own .edm_post span.name, .own .ichiran span.name, .avicii div.content_post span.name, .avicii .edm_post span.name, .avicii .ichiran span.name, .graph div.content_post span.name, .graph .edm_post span.name, .graph .ichiran span.name, .gonext div.content_post span.name, .gonext .edm_post span.name, .gonext .ichiran span.name, .surfing div.content_post span.name, .surfing .edm_post span.name, .surfing .ichiran span.name {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+  font-size: 13px;
+}
+/* line 1063, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post span.name a, div.contents.center .edm_post span.name a, div.contents.center .ichiran span.name a, .sign_up div.content_post span.name a, .sign_up .edm_post span.name a, .sign_up .ichiran span.name a, .life div.content_post span.name a, .life .edm_post span.name a, .life .ichiran span.name a, .free div.content_post span.name a, .free .edm_post span.name a, .free .ichiran span.name a, .info div.content_post span.name a, .info .edm_post span.name a, .info .ichiran span.name a, .own div.content_post span.name a, .own .edm_post span.name a, .own .ichiran span.name a, .avicii div.content_post span.name a, .avicii .edm_post span.name a, .avicii .ichiran span.name a, .graph div.content_post span.name a, .graph .edm_post span.name a, .graph .ichiran span.name a, .gonext div.content_post span.name a, .gonext .edm_post span.name a, .gonext .ichiran span.name a, .surfing div.content_post span.name a, .surfing .edm_post span.name a, .surfing .ichiran span.name a {
+  display: block;
+  color: #aaa;
+}
+/* line 1066, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post span.name a:hover, div.contents.center .edm_post span.name a:hover, div.contents.center .ichiran span.name a:hover, .sign_up div.content_post span.name a:hover, .sign_up .edm_post span.name a:hover, .sign_up .ichiran span.name a:hover, .life div.content_post span.name a:hover, .life .edm_post span.name a:hover, .life .ichiran span.name a:hover, .free div.content_post span.name a:hover, .free .edm_post span.name a:hover, .free .ichiran span.name a:hover, .info div.content_post span.name a:hover, .info .edm_post span.name a:hover, .info .ichiran span.name a:hover, .own div.content_post span.name a:hover, .own .edm_post span.name a:hover, .own .ichiran span.name a:hover, .avicii div.content_post span.name a:hover, .avicii .edm_post span.name a:hover, .avicii .ichiran span.name a:hover, .graph div.content_post span.name a:hover, .graph .edm_post span.name a:hover, .graph .ichiran span.name a:hover, .gonext div.content_post span.name a:hover, .gonext .edm_post span.name a:hover, .gonext .ichiran span.name a:hover, .surfing div.content_post span.name a:hover, .surfing .edm_post span.name a:hover, .surfing .ichiran span.name a:hover {
+  text-decoration: underline;
+  color: #aaa;
+}
+/* line 1071, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.content_post span.name span, div.contents.center .edm_post span.name span, div.contents.center .ichiran span.name span, .sign_up div.content_post span.name span, .sign_up .edm_post span.name span, .sign_up .ichiran span.name span, .life div.content_post span.name span, .life .edm_post span.name span, .life .ichiran span.name span, .free div.content_post span.name span, .free .edm_post span.name span, .free .ichiran span.name span, .info div.content_post span.name span, .info .edm_post span.name span, .info .ichiran span.name span, .own div.content_post span.name span, .own .edm_post span.name span, .own .ichiran span.name span, .avicii div.content_post span.name span, .avicii .edm_post span.name span, .avicii .ichiran span.name span, .graph div.content_post span.name span, .graph .edm_post span.name span, .graph .ichiran span.name span, .gonext div.content_post span.name span, .gonext .edm_post span.name span, .gonext .ichiran span.name span, .surfing div.content_post span.name span, .surfing .edm_post span.name span, .surfing .ichiran span.name span {
+  font-size: 9px;
+  display: block;
+}
+/* line 1077, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .div.profile-photo, .sign_up .div.profile-photo, .life .div.profile-photo, .free .div.profile-photo, .info .div.profile-photo, .own .div.profile-photo, .avicii .div.profile-photo, .graph .div.profile-photo, .gonext .div.profile-photo, .surfing .div.profile-photo {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 70px;
+}
+/* line 1082, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .surfing, .sign_up .surfing, .life .surfing, .free .surfing, .info .surfing, .own .surfing, .avicii .surfing, .graph .surfing, .gonext .surfing, .surfing .surfing {
+  width: 900px;
+  height: 300px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  background-color: white;
+  box-sizing: border-box;
+  clear: both;
+  margin-left: 50px;
+}
+/* line 1094, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren, .sign_up div.kanren, .life div.kanren, .free div.kanren, .info div.kanren, .own div.kanren, .avicii div.kanren, .graph div.kanren, .gonext div.kanren, .surfing div.kanren {
+  position: relative;
+  height: 180px;
+  width: 180px;
+  color: #fff;
+  display: inline-block;
+}
+/* line 1100, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren .less, .sign_up div.kanren .less, .life div.kanren .less, .free div.kanren .less, .info div.kanren .less, .own div.kanren .less, .avicii div.kanren .less, .graph div.kanren .less, .gonext div.kanren .less, .surfing div.kanren .less {
+  position: absolute;
+  z-index: 2;
+  height: 150px;
+  width: 150px;
+  text-align: right;
+}
+/* line 1106, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren .less:hover ul.less_link, .sign_up div.kanren .less:hover ul.less_link, .life div.kanren .less:hover ul.less_link, .free div.kanren .less:hover ul.less_link, .info div.kanren .less:hover ul.less_link, .own div.kanren .less:hover ul.less_link, .avicii div.kanren .less:hover ul.less_link, .graph div.kanren .less:hover ul.less_link, .gonext div.kanren .less:hover ul.less_link, .surfing div.kanren .less:hover ul.less_link {
+  display: block;
+}
+/* line 1109, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren .less ul.less_link, .sign_up div.kanren .less ul.less_link, .life div.kanren .less ul.less_link, .free div.kanren .less ul.less_link, .info div.kanren .less ul.less_link, .own div.kanren .less ul.less_link, .avicii div.kanren .less ul.less_link, .graph div.kanren .less ul.less_link, .gonext div.kanren .less ul.less_link, .surfing div.kanren .less ul.less_link {
+  position: absolute;
+  text-align: left;
+  width: 150px;
+  height: 150px;
+  right: 30px;
+  bottom: 30px;
+  display: none;
+}
+/* line 1118, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren .less ul.less_link li:last-child, .sign_up div.kanren .less ul.less_link li:last-child, .life div.kanren .less ul.less_link li:last-child, .free div.kanren .less ul.less_link li:last-child, .info div.kanren .less ul.less_link li:last-child, .own div.kanren .less ul.less_link li:last-child, .avicii div.kanren .less ul.less_link li:last-child, .graph div.kanren .less ul.less_link li:last-child, .gonext div.kanren .less ul.less_link li:last-child, .surfing div.kanren .less ul.less_link li:last-child {
+  border-bottom: 0;
+}
+/* line 1121, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren .less ul.less_link li a, .sign_up div.kanren .less ul.less_link li a, .life div.kanren .less ul.less_link li a, .free div.kanren .less ul.less_link li a, .info div.kanren .less ul.less_link li a, .own div.kanren .less ul.less_link li a, .avicii div.kanren .less ul.less_link li a, .graph div.kanren .less ul.less_link li a, .gonext div.kanren .less ul.less_link li a, .surfing div.kanren .less ul.less_link li a {
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+}
+/* line 1130, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren p, .sign_up div.kanren p, .life div.kanren p, .free div.kanren p, .info div.kanren p, .own div.kanren p, .avicii div.kanren p, .graph div.kanren p, .gonext div.kanren p, .surfing div.kanren p {
+  position: absolute;
+  left: 30px;
+  right: 100px;
+  bottom: 30px;
+  margin: 0;
+  font-size: 20px;
+  z-index: 2;
+  font-weight: bold;
+}
+/* line 1141, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren span.namae, .sign_up div.kanren span.namae, .life div.kanren span.namae, .free div.kanren span.namae, .info div.kanren span.namae, .own div.kanren span.namae, .avicii div.kanren span.namae, .graph div.kanren span.namae, .gonext div.kanren span.namae, .surfing div.kanren span.namae {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+  font-size: 13px;
+}
+/* line 1147, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren span.namae a, .sign_up div.kanren span.namae a, .life div.kanren span.namae a, .free div.kanren span.namae a, .info div.kanren span.namae a, .own div.kanren span.namae a, .avicii div.kanren span.namae a, .graph div.kanren span.namae a, .gonext div.kanren span.namae a, .surfing div.kanren span.namae a {
+  display: block;
+  color: #aaa;
+}
+/* line 1150, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren span.namae a:hover, .sign_up div.kanren span.namae a:hover, .life div.kanren span.namae a:hover, .free div.kanren span.namae a:hover, .info div.kanren span.namae a:hover, .own div.kanren span.namae a:hover, .avicii div.kanren span.namae a:hover, .graph div.kanren span.namae a:hover, .gonext div.kanren span.namae a:hover, .surfing div.kanren span.namae a:hover {
+  text-decoration: underline;
+  color: #aaa;
+}
+/* line 1155, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.kanren span.namae span, .sign_up div.kanren span.namae span, .life div.kanren span.namae span, .free div.kanren span.namae span, .info div.kanren span.namae span, .own div.kanren span.namae span, .avicii div.kanren span.namae span, .graph div.kanren span.namae span, .gonext div.kanren span.namae span, .surfing div.kanren span.namae span {
+  font-size: 9px;
+  display: block;
+}
+/* line 1162, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran, .sign_up div.ichiran, .life div.ichiran, .free div.ichiran, .info div.ichiran, .own div.ichiran, .avicii div.ichiran, .graph div.ichiran, .gonext div.ichiran, .surfing div.ichiran {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  color: #fff;
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: auto;
+}
+/* line 1170, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran .mypost, .sign_up div.ichiran .mypost, .life div.ichiran .mypost, .free div.ichiran .mypost, .info div.ichiran .mypost, .own div.ichiran .mypost, .avicii div.ichiran .mypost, .graph div.ichiran .mypost, .gonext div.ichiran .mypost, .surfing div.ichiran .mypost {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  height: 50px;
+  width: 150px;
+  text-align: right;
+}
+/* line 1177, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran .mypost:hover ul.mypost_list, .sign_up div.ichiran .mypost:hover ul.mypost_list, .life div.ichiran .mypost:hover ul.mypost_list, .free div.ichiran .mypost:hover ul.mypost_list, .info div.ichiran .mypost:hover ul.mypost_list, .own div.ichiran .mypost:hover ul.mypost_list, .avicii div.ichiran .mypost:hover ul.mypost_list, .graph div.ichiran .mypost:hover ul.mypost_list, .gonext div.ichiran .mypost:hover ul.mypost_list, .surfing div.ichiran .mypost:hover ul.mypost_list {
+  display: block;
+}
+/* line 1180, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran .mypost ul.mypost_list, .sign_up div.ichiran .mypost ul.mypost_list, .life div.ichiran .mypost ul.mypost_list, .free div.ichiran .mypost ul.mypost_list, .info div.ichiran .mypost ul.mypost_list, .own div.ichiran .mypost ul.mypost_list, .avicii div.ichiran .mypost ul.mypost_list, .graph div.ichiran .mypost ul.mypost_list, .gonext div.ichiran .mypost ul.mypost_list, .surfing div.ichiran .mypost ul.mypost_list {
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  right: 0;
+  font-size: 18px;
+  display: none;
+}
+/* line 1188, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran .mypost ul.mypost_list li, .sign_up div.ichiran .mypost ul.mypost_list li, .life div.ichiran .mypost ul.mypost_list li, .free div.ichiran .mypost ul.mypost_list li, .info div.ichiran .mypost ul.mypost_list li, .own div.ichiran .mypost ul.mypost_list li, .avicii div.ichiran .mypost ul.mypost_list li, .graph div.ichiran .mypost ul.mypost_list li, .gonext div.ichiran .mypost ul.mypost_list li, .surfing div.ichiran .mypost ul.mypost_list li {
+  border-bottom: 1px solid #ddd;
+}
+/* line 1193, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran .mypost ul.mypost_list li a, .sign_up div.ichiran .mypost ul.mypost_list li a, .life div.ichiran .mypost ul.mypost_list li a, .free div.ichiran .mypost ul.mypost_list li a, .info div.ichiran .mypost ul.mypost_list li a, .own div.ichiran .mypost ul.mypost_list li a, .avicii div.ichiran .mypost ul.mypost_list li a, .graph div.ichiran .mypost ul.mypost_list li a, .gonext div.ichiran .mypost ul.mypost_list li a, .surfing div.ichiran .mypost ul.mypost_list li a {
+  display: block;
+  padding: 5px;
+  height: 50px;
+  width: 150px;
+  background-color: white;
+}
+/* line 1207, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran p, .sign_up div.ichiran p, .life div.ichiran p, .free div.ichiran p, .info div.ichiran p, .own div.ichiran p, .avicii div.ichiran p, .graph div.ichiran p, .gonext div.ichiran p, .surfing div.ichiran p {
+  position: absolute;
+  left: 30px;
+  right: 100px;
+  bottom: 30px;
+  margin: 0;
+  font-size: 20px;
+  z-index: 2;
+  font-weight: bold;
+}
+/* line 1218, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran span.name, .sign_up div.ichiran span.name, .life div.ichiran span.name, .free div.ichiran span.name, .info div.ichiran span.name, .own div.ichiran span.name, .avicii div.ichiran span.name, .graph div.ichiran span.name, .gonext div.ichiran span.name, .surfing div.ichiran span.name {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+  font-size: 17px;
+}
+/* line 1224, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran span.name a, .sign_up div.ichiran span.name a, .life div.ichiran span.name a, .free div.ichiran span.name a, .info div.ichiran span.name a, .own div.ichiran span.name a, .avicii div.ichiran span.name a, .graph div.ichiran span.name a, .gonext div.ichiran span.name a, .surfing div.ichiran span.name a {
+  display: block;
+  color: #aaa;
+}
+/* line 1227, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran span.name a:hover, .sign_up div.ichiran span.name a:hover, .life div.ichiran span.name a:hover, .free div.ichiran span.name a:hover, .info div.ichiran span.name a:hover, .own div.ichiran span.name a:hover, .avicii div.ichiran span.name a:hover, .graph div.ichiran span.name a:hover, .gonext div.ichiran span.name a:hover, .surfing div.ichiran span.name a:hover {
+  text-decoration: underline;
+  color: #aaa;
+}
+/* line 1232, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center div.ichiran span.name span, .sign_up div.ichiran span.name span, .life div.ichiran span.name span, .free div.ichiran span.name span, .info div.ichiran span.name span, .own div.ichiran span.name span, .avicii div.ichiran span.name span, .graph div.ichiran span.name span, .gonext div.ichiran span.name span, .surfing div.ichiran span.name span {
+  font-size: 9px;
+  display: block;
+}
+/* line 1239, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form, div.contents.center mogi, .sign_up form, .sign_up mogi, .life form, .life mogi, .free form, .free mogi, .info form, .info mogi, .own form, .own mogi, .avicii form, .avicii mogi, .graph form, .graph mogi, .gonext form, .gonext mogi, .surfing form, .surfing mogi {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 1px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  clear: both;
+}
+/* line 1246, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form h3, div.contents.center mogi h3, .sign_up form h3, .sign_up mogi h3, .life form h3, .life mogi h3, .free form h3, .free mogi h3, .info form h3, .info mogi h3, .own form h3, .own mogi h3, .avicii form h3, .avicii mogi h3, .graph form h3, .graph mogi h3, .gonext form h3, .gonext mogi h3, .surfing form h3, .surfing mogi h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666666;
+}
+/* line 1253, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form input, div.contents.center form textarea, div.contents.center form p, div.contents.center mogi input, div.contents.center mogi textarea, div.contents.center mogi p, .sign_up form input, .sign_up form textarea, .sign_up form p, .sign_up mogi input, .sign_up mogi textarea, .sign_up mogi p, .life form input, .life form textarea, .life form p, .life mogi input, .life mogi textarea, .life mogi p, .free form input, .free form textarea, .free form p, .free mogi input, .free mogi textarea, .free mogi p, .info form input, .info form textarea, .info form p, .info mogi input, .info mogi textarea, .info mogi p, .own form input, .own form textarea, .own form p, .own mogi input, .own mogi textarea, .own mogi p, .avicii form input, .avicii form textarea, .avicii form p, .avicii mogi input, .avicii mogi textarea, .avicii mogi p, .graph form input, .graph form textarea, .graph form p, .graph mogi input, .graph mogi textarea, .graph mogi p, .gonext form input, .gonext form textarea, .gonext form p, .gonext mogi input, .gonext mogi textarea, .gonext mogi p, .surfing form input, .surfing form textarea, .surfing form p, .surfing mogi input, .surfing mogi textarea, .surfing mogi p {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+/* line 1261, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form .paypal, div.contents.center mogi .paypal, .sign_up form .paypal, .sign_up mogi .paypal, .life form .paypal, .life mogi .paypal, .free form .paypal, .free mogi .paypal, .info form .paypal, .info mogi .paypal, .own form .paypal, .own mogi .paypal, .avicii form .paypal, .avicii mogi .paypal, .graph form .paypal, .graph mogi .paypal, .gonext form .paypal, .gonext mogi .paypal, .surfing form .paypal, .surfing mogi .paypal {
+  width: 328px;
+}
+/* line 1264, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form .image-size, div.contents.center mogi .image-size, .sign_up form .image-size, .sign_up mogi .image-size, .life form .image-size, .life mogi .image-size, .free form .image-size, .free mogi .image-size, .info form .image-size, .info mogi .image-size, .own form .image-size, .own mogi .image-size, .avicii form .image-size, .avicii mogi .image-size, .graph form .image-size, .graph mogi .image-size, .gonext form .image-size, .gonext mogi .image-size, .surfing form .image-size, .surfing mogi .image-size {
+  margin-top: 32px;
+  width: 198px;
+  height: 48px;
+  margin-left: 62px;
+  padding: 0;
+  object-fit: contain;
+}
+/* line 1273, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form .firebird, div.contents.center mogi .firebird, .sign_up form .firebird, .sign_up mogi .firebird, .life form .firebird, .life mogi .firebird, .free form .firebird, .free mogi .firebird, .info form .firebird, .info mogi .firebird, .own form .firebird, .own mogi .firebird, .avicii form .firebird, .avicii mogi .firebird, .graph form .firebird, .graph mogi .firebird, .gonext form .firebird, .gonext mogi .firebird, .surfing form .firebird, .surfing mogi .firebird {
+  font-size: 19px;
+}
+/* line 1276, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form .superwave, div.contents.center mogi .superwave, .sign_up form .superwave, .sign_up mogi .superwave, .life form .superwave, .life mogi .superwave, .free form .superwave, .free mogi .superwave, .info form .superwave, .info mogi .superwave, .own form .superwave, .own mogi .superwave, .avicii form .superwave, .avicii mogi .superwave, .graph form .superwave, .graph mogi .superwave, .gonext form .superwave, .gonext mogi .superwave, .surfing form .superwave, .surfing mogi .superwave {
+  font-family: "游ゴシック", "YuGothic";
+  font-size: 19px;
+}
+/* line 1280, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form input[type="submit"], div.contents.center mogi input[type="submit"], .sign_up form input[type="submit"], .sign_up mogi input[type="submit"], .life form input[type="submit"], .life mogi input[type="submit"], .free form input[type="submit"], .free mogi input[type="submit"], .info form input[type="submit"], .info mogi input[type="submit"], .own form input[type="submit"], .own mogi input[type="submit"], .avicii form input[type="submit"], .avicii mogi input[type="submit"], .graph form input[type="submit"], .graph mogi input[type="submit"], .gonext form input[type="submit"], .gonext mogi input[type="submit"], .surfing form input[type="submit"], .surfing mogi input[type="submit"] {
+  background-color: #E47911;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+/* line 1287, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form input[type="submit"]:hover, div.contents.center mogi input[type="submit"]:hover, .sign_up form input[type="submit"]:hover, .sign_up mogi input[type="submit"]:hover, .life form input[type="submit"]:hover, .life mogi input[type="submit"]:hover, .free form input[type="submit"]:hover, .free mogi input[type="submit"]:hover, .info form input[type="submit"]:hover, .info mogi input[type="submit"]:hover, .own form input[type="submit"]:hover, .own mogi input[type="submit"]:hover, .avicii form input[type="submit"]:hover, .avicii mogi input[type="submit"]:hover, .graph form input[type="submit"]:hover, .graph mogi input[type="submit"]:hover, .gonext form input[type="submit"]:hover, .gonext mogi input[type="submit"]:hover, .surfing form input[type="submit"]:hover, .surfing mogi input[type="submit"]:hover {
+  background-color: #f09338;
+}
+/* line 1293, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form.mogi, .sign_up form.mogi, .life form.mogi, .free form.mogi, .info form.mogi, .own form.mogi, .avicii form.mogi, .graph form.mogi, .gonext form.mogi, .surfing form.mogi {
+  width: 594px;
+}
+/* line 1296, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .payment-1, .sign_up .payment-1, .life .payment-1, .free .payment-1, .info .payment-1, .own .payment-1, .avicii .payment-1, .graph .payment-1, .gonext .payment-1, .surfing .payment-1 {
+  width: 376px;
+  height: 350px;
+  margin-left: 36px;
+}
+/* line 1301, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form.kenichiro, .sign_up form.kenichiro, .life form.kenichiro, .free form.kenichiro, .info form.kenichiro, .own form.kenichiro, .avicii form.kenichiro, .graph form.kenichiro, .gonext form.kenichiro, .surfing form.kenichiro {
+  width: 375px;
+  height: 375px;
+}
+/* line 1306, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .guide, .sign_up .guide, .life .guide, .free .guide, .info .guide, .own .guide, .avicii .guide, .graph .guide, .gonext .guide, .surfing .guide {
+  font-size: 18px;
+  font-family: Circular;
+  line-height: 1.44444em;
+  font-weight: 550;
+  color: #484848;
+}
+/* line 1313, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .line, .sign_up .line, .life .line, .free .line, .info .line, .own .line, .avicii .line, .graph .line, .gonext .line, .surfing .line {
+  width: 326px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-divider, #ebebeb) !important;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+/* line 1321, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .dates, div.contents.center .price, .sign_up .dates, .sign_up .price, .life .dates, .life .price, .free .dates, .free .price, .info .dates, .info .price, .own .dates, .own .price, .avicii .dates, .avicii .price, .graph .dates, .graph .price, .gonext .dates, .gonext .price, .surfing .dates, .surfing .price {
+  font-size: 12px;
+  font-family: Circular;
+  font-weight: 600;
+  color: #484848;
+}
+/* line 1327, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center p.price, .sign_up p.price, .life p.price, .free p.price, .info p.price, .own p.price, .avicii p.price, .graph p.price, .gonext p.price, .surfing p.price {
+  margin-top: 10px;
+}
+/* line 1330, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center p.date, .sign_up p.date, .life p.date, .free p.date, .info p.date, .own p.date, .avicii p.date, .graph p.date, .gonext p.date, .surfing p.date {
+  height: 48px;
+  margin-bottom: 20px;
+  padding-top: 13px;
+}
+/* line 1335, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center a.finish, .sign_up a.finish, .life a.finish, .free a.finish, .info a.finish, .own a.finish, .avicii a.finish, .graph a.finish, .gonext a.finish, .surfing a.finish {
+  color: #E47911;
+  display: inline-block;
+  padding: 10px 0.8em 0.1em 1em;
+  text-decoration: none;
+  border: solid 2px #E47911;
+  border-radius: 3px;
+  transition: .4s;
+  width: 328px;
+  height: 46px;
+  margin-top: 24px;
+  font-size: 16px;
+  text-align: center;
+  line-height: var(--font-button-line-height, 24px) !important;
+  letter-spacing: var(--font-button-letter-spacing, normal) !important;
+}
+/* line 1351, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center a.finish:hover, .sign_up a.finish:hover, .life a.finish:hover, .free a.finish:hover, .info a.finish:hover, .own a.finish:hover, .avicii a.finish:hover, .graph a.finish:hover, .gonext a.finish:hover, .surfing a.finish:hover {
+  background: #E47911;
+  color: white;
+}
+/* line 1357, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form#new_guider, div.contents.center form#new_tourist, .sign_up form#new_guider, .sign_up form#new_tourist, .life form#new_guider, .life form#new_tourist, .free form#new_guider, .free form#new_tourist, .info form#new_guider, .info form#new_tourist, .own form#new_guider, .own form#new_tourist, .avicii form#new_guider, .avicii form#new_tourist, .graph form#new_guider, .graph form#new_tourist, .gonext form#new_guider, .gonext form#new_tourist, .surfing form#new_guider, .surfing form#new_tourist {
+  width: 450px;
+  height: 450px;
+  margin: 50px auto 10px;
+}
+/* line 1362, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form#new_guider.new_guider1, div.contents.center form#new_tourist, .sign_up form#new_guider.new_guider1, .sign_up form#new_tourist, .life form#new_guider.new_guider1, .life form#new_tourist, .free form#new_guider.new_guider1, .free form#new_tourist, .info form#new_guider.new_guider1, .info form#new_tourist, .own form#new_guider.new_guider1, .own form#new_tourist, .avicii form#new_guider.new_guider1, .avicii form#new_tourist, .graph form#new_guider.new_guider1, .graph form#new_tourist, .gonext form#new_guider.new_guider1, .gonext form#new_tourist, .surfing form#new_guider.new_guider1, .surfing form#new_tourist {
+  width: 450px;
+  height: 700px;
+  margin: 50px auto 10px;
+}
+/* line 1367, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center form#new_guider.new_guider2, div.contents.center form#new_tourist, .sign_up form#new_guider.new_guider2, .sign_up form#new_tourist, .life form#new_guider.new_guider2, .life form#new_tourist, .free form#new_guider.new_guider2, .free form#new_tourist, .info form#new_guider.new_guider2, .info form#new_tourist, .own form#new_guider.new_guider2, .own form#new_tourist, .avicii form#new_guider.new_guider2, .avicii form#new_tourist, .graph form#new_guider.new_guider2, .graph form#new_tourist, .gonext form#new_guider.new_guider2, .gonext form#new_tourist, .surfing form#new_guider.new_guider2, .surfing form#new_tourist {
+  width: 450px;
+  height: 320px;
+  margin: 50px auto 10px;
+}
+/* line 1372, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .ue, .sign_up .ue, .life .ue, .free .ue, .info .ue, .own .ue, .avicii .ue, .graph .ue, .gonext .ue, .surfing .ue {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.00;
+  letter-spacing: 0;
+  margin: 0 0 40px;
+  -webkit-font-smoothing: antialiased;
+  color: #484848 !important;
+}
+/* line 1381, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .other, .sign_up .other, .life .other, .free .other, .info .other, .own .other, .avicii .other, .graph .other, .gonext .other, .surfing .other {
+  right: 20px;
+}
+/* line 1385, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .shita, .sign_up .shita, .life .shita, .free .shita, .info .shita, .own .shita, .avicii .shita, .graph .shita, .gonext .shita, .surfing .shita {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+/* line 1389, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .field, .sign_up .field, .life .field, .free .field, .info .field, .own .field, .avicii .field, .graph .field, .gonext .field, .surfing .field {
+  font-size: 16px;
+}
+/* line 1394, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .success, .sign_up .success, .life .success, .free .success, .info .success, .own .success, .avicii .success, .graph .success, .gonext .success, .surfing .success {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  box-sizing: border-box;
+  text-align: center;
+  width: 1080px;
+}
+/* line 1400, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.contents.center .success h3, .sign_up .success h3, .life .success h3, .free .success h3, .info .success h3, .own .success h3, .avicii .success h3, .graph .success h3, .gonext .success h3, .surfing .success h3 {
+  margin: 10px auto;
+}
+
+/* line 1406, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div#payjp_checkout_box {
+  width: 326px;
+}
+
+/* line 1410, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+#payjp_checkout_box input[type=button] {
+  height: 40px;
+  background-image: linear-gradient(#e47911 0%, #e47911 48%, #e47911 100%);
+  border: 1px solid #E47911;
+}
+
+/* line 1415, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.posts {
+  width: 160px;
+  height: 210px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 150px;
+  margin-right: 30px;
+}
+
+/* line 1425, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.box {
+  width: 740px;
+  height: 48px;
+  margin-bottom: 15px;
+}
+
+/* plans/show */
+/* line 1431, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.main {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin-right: 175px;
+  margin-left: 165px;
+  text-align: center;
+}
+
+/* line 1439, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+img#target.hall {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+
+/* line 1446, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.here {
+  width: 200px;
+  height: 200px;
+  position: absolute !important;
+  background-size: contain !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+
+/* line 1455, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+#prev, #next {
+  cursor: pointer;
+  font-size: 42px;
+  color: #bbb;
+  position: absolute;
+  top: 90px;
+}
+
+/* line 1462, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+#prev {
+  top: 180px;
+  left: -60px;
+}
+
+/* line 1466, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+#next {
+  top: 180px;
+  right: -60px;
+}
+
+/* line 1471, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.king {
+  width: 900px;
+  height: 200px;
+  padding: 0px 40px;
+}
+
+/* line 1477, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+div.example {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 1482, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.contain {
+  width: 300px;
+  max-width: 100%;
+  height: 400px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  background-size: contain;
+}
+
+/* line 1491, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.example ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 1496, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.example li {
+  float: left;
+  vertical-align: middle;
+  width: 150px;
+  height: 220px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/* line 1507, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.example li:hover {
+  opacity: 1;
+}
+
+/* line 1510, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.example li.current {
+  opacity: 1;
+}
+
+/* line 1515, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb1 {
+  width: 400px;
+  height: 100px;
+  display: flex;
+}
+
+/* line 1521, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb-plus {
+  display: flex;
+}
+
+/* line 1524, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb-minus {
+  width: 100%;
+  display: flex;
+}
+
+/* line 1529, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb1-1 {
+  width: 400px;
+  height: 116px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* line 1535, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb2-2 {
+  width: 400px;
+  height: 72px;
+}
+
+/* line 1539, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.nini {
+  width: 398.84px;
+  height: 54px;
+  font-size: 32px;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  color: #484848 !important;
+  line-height: 1.125em;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* line 1550, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb2-3 {
+  width: 400px;
+  height: 22px;
+}
+
+/* line 1554, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.sansan {
+  width: 55.99px;
+  height: 22px;
+}
+
+/* line 1558, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb1-2 {
+  width: 85.66px;
+  height: 82px;
+  margin: 0 0 0 auto;
+}
+
+/* line 1564, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb2-5 {
+  width: 85.66px;
+  height: 64px;
+}
+
+/* line 1568, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb2-7 {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+/* line 1573, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb2-6 {
+  width: 85.66px;
+  height: 18px;
+}
+
+/* line 1577, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.airbnb2-8 {
+  width: 85.66px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+/* line 1583, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.arasuji {
+  width: 400px;
+  height: 270px;
+}
+
+/* line 1587, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.arasuji1 {
+  width: 400px;
+  height: 249px;
+}
+
+/* line 1591, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.arasuji2 {
+  width: 400px;
+  height: 44px;
+}
+
+/* line 1595, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shashin {
+  width: 24px;
+  height: 0px;
+}
+
+/* line 1599, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.bg {
+  width: 16px;
+  height: 20px;
+}
+
+/* line 1603, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.place {
+  width: 570px;
+  height: 44px;
+}
+
+/* line 1607, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.dg {
+  width: 570px;
+  height: 22px;
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+}
+
+/* line 1616, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.dg1 {
+  width: 370.69px;
+  height: 22px;
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #484848 !important;
+  line-height: 1.375em !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1627, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shashin-bar {
+  width: 400px;
+  height: 1px;
+  border-bottom-width: var(--border-rule-border-width, 1px) !important;
+  border-bottom-color: var(--color-divider, #ebebeb) !important;
+  border-bottom-style: solid !important;
+}
+
+/* line 1634, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shosai {
+  width: 400px;
+  height: 794px;
+}
+
+/* line 1638, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shosai2 {
+  width: 400px;
+  height: 44px;
+}
+
+/* line 1642, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shosai3 {
+  width: 400px;
+  height: 44px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+}
+
+/* line 1652, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shosai4 {
+  width: 400px;
+  height: 43px;
+}
+
+/* line 1656, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.shosai5 {
+  width: 400px;
+  height: 602px;
+}
+
+/* tourist/done */
+/* line 1661, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+h3.done {
+  font-size: 20px;
+}
+
+/* line 1665, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-id {
+  color: inherit;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+/* line 1673, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-is {
+  color: inherit;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+/* line 1680, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-ih {
+  color: inherit;
+  font-size: 16px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+/* line 1686, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.category-if {
+  color: inherit;
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+/* line 1695, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.half-score {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 1699, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.open-score {
+  display: flex;
+  align-items: center;
+}
+
+/* line 1703, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.opened-score {
+  isplay: flex;
+  align-items: center;
+}
+
+/* line 1707, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.closed-score {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 380px;
+}
+
+/* line 1713, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.close-score {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 380px;
+}
+
+/* line 1719, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.standard-score {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+/* line 1724, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.basic-score {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+/* line 1731, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+#editor {
+  margin: 4px;
+  width: 45%;
+  height: 500px;
+  box-sizing: border-box;
+  float: left;
+  font-size: 16px;
+}
+
+/* line 1739, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+span.page {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+/* line 1745, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+a.next, .last, .current {
+  color: #333;
+}
+
+/* line 1750, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.goster {
+  line-height: 30px;
+}
+
+/* line 1753, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.superpark, .select#university.superpark {
+  height: 45px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+/* line 1760, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.payment-go {
+  float: center;
+  width: 328px;
+  height: 48px;
+}
+
+/* line 1765, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.stripe-button-el span {
+  width: 100px;
+  height: 48px;
+  background: #EBEBEB;
+  background-color: #EBEBEB;
+  background-image: -webkit-linear-gradient(#ebebeb);
+}
+
+/* line 1772, /Users/hiroshi/break/app/assets/stylesheets/_style.scss */
+.post_photo {
+  width: 100px;
+  height: 150px;
+}
+
+/* line 1, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.firstwrap {
+  display: flex;
+  justify-content: center;
+  height: 1300px;
+}
+/* line 6, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.firstwrap .secondwrap {
+  width: 1200px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+}
+/* line 12, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.firstwrap .secondwrap .nakabox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* line 16, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.firstwrap .secondwrap .nakabox .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 1200px;
+}
+
+/* line 27, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line1 {
+  display: flex;
+  justify-content: center;
+}
+/* line 31, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line1 .line2 {
+  width: 1100px;
+  display: flex;
+  align-items: center;
+}
+/* line 36, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line1 .line2 .line3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* line 40, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line1 .line2 .line3 .line4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 168px;
+  width: 750px;
+}
+/* line 48, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line1 .line2 .line3 .line5 {
+  display: block;
+  width: 30%;
+  height: 1000px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+/* line 59, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+form.test_center {
+  height: 1200px;
+  margin-top: 0px;
+  width: 600px;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+/* line 67, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+form.test_ielts {
+  height: 600px;
+  margin-top: 0px;
+  width: 599px;
+  padding: 0px;
+}
+
+/* line 74, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+div#preview.preview {
+  height: 550px;
+  width: 596px;
+  margin: 0px;
+}
+
+/* line 79, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+#preview {
+  padding: 30px;
+  background-color: white;
+  box-sizing: border-box;
+  clear: both;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textarea;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  flex-direction: column;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 0em;
+  font: 400 14px system-ui;
+  border-width: 1px;
+  border-color: initial;
+  border-image: initial;
+}
+
+/* line 109, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.go_form {
+  width: 1200px;
+  height: 72px;
+  padding: 0 6px;
+  width: 75%;
+}
+
+/* line 116, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+go2_form {
+  width: 300px;
+  height: 36px;
+  padding: 0 6px;
+  width: 75%;
+  margin-right: 150px;
+}
+
+/* line 123, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.go_form1 {
+  width: 1200px;
+  height: 36px;
+  padding: 0 6px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+}
+
+/* line 130, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.go_gorm1 {
+  width: 1200px;
+  height: 36px;
+  padding: 0 6px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  border: 1px solid #e4e4e4 !important;
+  padding-top: 6px;
+}
+
+/* line 139, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.gonext_form {
+  width: 150px;
+  height: 36px;
+  padding: 0 6px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  padding: 9px 27px;
+  font-size: 16px;
+  border-color: #ff5a5f;
+  background-color: #ff5a5f;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* line 152, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.teratail {
+  height: 200px;
+  padding: 30px;
+  border: 1px solid #e4e4e4 !important;
+}
+
+/* line 158, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line6 {
+  width: 40%;
+  height: 168px;
+}
+
+/* line 162, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line_go {
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  font-family: "游ゴシック体", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+}
+
+/* line 169, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line7 {
+  width: 60%;
+  padding: 15px 8px;
+  height: 168px;
+}
+
+/* line 174, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.create {
+  width: 180px;
+  max-width: 100%;
+  height: 220px;
+  margin-top: 3px;
+  margin-left: 2px;
+  display: inline-block;
+  background-size: contain;
+}
+
+/* line 183, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.creat {
+  width: 200px;
+  max-width: 100%;
+  height: 250px;
+  margin-top: 3px;
+  margin-left: 2px;
+  display: inline-block;
+  background-size: contain;
+}
+
+/* line 193, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.creativity {
+  border: 1px solid #e4e4e4 !important;
+  width: 400px;
+  margin-left: 110px;
+  margin-top: 30px;
+  max-width: 100%;
+  height: 450px;
+  display: block;
+  background-size: contain;
+}
+
+/* line 203, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.advertise {
+  width: 300px;
+  height: 250px;
+  display: block;
+}
+
+/* line 208, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.recent {
+  display: block;
+  width: 300px;
+  height: 500px;
+  padding: 15px;
+}
+
+/* line 214, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.paper {
+  font-size: 20px;
+  color: #E47911;
+}
+
+/* line 218, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.line_pay {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #524e4d;
+  font-family: 'Noto Sans Japanese',sans-serif;
+  width: 699px;
+  height: 72px;
+  margin: 0px;
+}
+
+/* line 230, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.faster {
+  letter-spacing: .05em;
+  line-height: 1.8em;
+  font-size: 1.05rem;
+  color: #524e4d;
+  font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+}
+
+/* line 237, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.gostar {
+  line-height: 1.8em;
+}
+
+/* line 241, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.good_d {
+  background-color: #ffba44 !important;
+  font-size: 1.65rem;
+  line-height: 2rem;
+  padding: 12px 14px;
+  color: #fff;
+  border-bottom: 0;
+  border-radius: 6px;
+}
+
+/* line 250, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.good_e {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 10px 15px;
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0;
+  font-weight: 500;
+  position: relative;
+}
+
+/* line 260, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.h3-style02 {
+  background-color: #ffba44 !important;
+  top: 5px;
+  height: 40px;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 5px;
+  /* background: #000; */
+  opacity: .5;
+  border-radius: 1px;
+}
+
+/* line 272, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.h3-style01 {
+  top: 5px;
+  height: 20px;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 5px;
+  background: red;
+  background-color: #ffba44 !important;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+
+/* line 285, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.advertising {
+  height: 260px;
+  width: 500px;
+  margin: 20px 50px 15px 50px;
+  padding: 0px 14px 0px 14px;
+  display: flex;
+}
+
+/* line 293, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.gostart {
+  width: 572px;
+  height: 198px;
+}
+
+/* line 297, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.power {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  left: 4px;
+  border: 1px solid #ccc;
+  width: 38px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: #ffba44;
+  border-color: #ffba44 !important;
+}
+
+/* line 311, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.recent_post {
+  margin-top: 20px;
+  width: 675px;
+  height: 268px;
+  display: flex;
+  margin-right: 0px;
+}
+
+/* line 318, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.three_million {
+  width: 200px;
+  height: 180px;
+}
+
+/* line 322, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.image_film {
+  width: 750px;
+  height: 168px;
+  position: relative;
+}
+
+/* line 327, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.image_movie {
+  width: 750px;
+  height: 168px;
+  padding: 15px;
+}
+
+/* line 332, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.hah {
+  width: 250px;
+  height: 270px;
+  margin-right: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 341, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.hat {
+  width: 180px;
+  height: 230px;
+  position: absolute;
+  margin-right: 30px;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 350, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.heart {
+  position: absolute;
+  width: 400px;
+  height: 168px;
+  left: 489px;
+  bottom: 245px;
+}
+
+/* line 359, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.mouth3 {
+  display: flex;
+  width: 1200px;
+}
+
+/* line 363, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.year {
+  font-size: 14px;
+  color: #524e4d;
+  font-family: 'Noto Sans Japanese', sans-serif;
+}
+
+/* line 367, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+span.author {
+  width: 236px;
+  text-align: center;
+  font-size: 1.0rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #524e4d;
+  font-family: 'Noto Sans Japanese',sans-serif;
+}
+
+/* line 377, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.bookname {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: black;
+  font-family: 'Noto Sans Japanese',sans-serif;
+}
+
+/* line 386, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.sansan {
+  color: inherit;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 36px;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+/* line 395, /Users/hiroshi/break/app/assets/stylesheets/_test.scss */
+.sangon {
+  margin: 50px 0px;
+  width: 800px;
+  height: 400px;
+}
+/* line 1, /Users/hiroshi/break/app/assets/stylesheets/custom.scss */
+section.message_box {
+  padding: 10px;
+  border: 1px solid;
+  overflow: scroll;
+}
+/* line 5, /Users/hiroshi/break/app/assets/stylesheets/custom.scss */
+section.message_box #messages {
+  height: 400px;
+}
+
+/* line 10, /Users/hiroshi/break/app/assets/stylesheets/custom.scss */
+div.message_form {
+  padding-top: 10px;
+}
+
+/* line 14, /Users/hiroshi/break/app/assets/stylesheets/custom.scss */
+#message_sender {
+  font-size: 1.1em;
+}
+
+/* line 18, /Users/hiroshi/break/app/assets/stylesheets/custom.scss */
+#message_content {
+  font-size: 1.0em;
+}
+@media (max-width: 1030px ) {
+	.content_post {
+		width: 100%;
+		height: auto;
+	}
+	form.mogi, .kenichiro {
+	  	width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 670px ) {
+	.content_post {
+		width: 100%;
+		height: auto;
+	}
+	.edm_post, form.hori {
+		width: 100%;
+		height: auto;
+	}
+	form.mogi, .kenichiro {
+		width: 100%;
+		height: auto;
+	}
+}
+
+/* line 1, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: 'ほのか明朝';
+  font-size: 15px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+a a.visited {
+  color: #E47911;
+}
+/* line 25, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #febd69;
+}
+
+/* line 31, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 36, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 40, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 46, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 53, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 63, /Users/hiroshi/break/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 15px;
+  list-style: square;
+}
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+ * HTML5 display definitions
+ * ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9. */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9. */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices. */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+ * Base
+ * ===============================
+ =========================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom. */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Remove default margin. */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+ * Links
+ * ========================================================================== */
+/*
+ * Remove the gray background color from active links in IE 10. */
+a {
+  background: transparent;
+}
+
+/*
+ * Address `outline` inconsistency between Chrome and other browsers. */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers. */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+ * Typography
+ * ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Address styling not present in Safari 5 and Chrome. */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Address differences between Firefox and other browsers. */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9. */
+mark {
+  background: yellow;
+  color: black;
+}
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome. */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text in all browsers. */
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+ * Set consistent quote types. */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Address inconsistent and variable font size in all browsers. */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+ * Embedded content
+ * ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9. */
+img {
+  border: 0;
+}
+
+/*
+ * Correct overflow displayed oddly in IE 9. */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+ * Figures
+ * ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5. */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+ * Forms
+ * ========================================================================== */
+/*
+ * Define consistent border, margin, and padding. */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button,
+input,
+select,
+textarea {
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet. */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera. */
+button,
+select {
+  text-transform: none;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others. */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements. */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10. */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof). */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X. */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers. */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+ * Tables
+ * ========================================================================== */
+/*
+ * Remove most spacing between table cells. */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ==========================================================================
+ * CSS SETTING
+ * by Hiroaki WAKATSUKI
+ * Converted 2014/2/16
+ * ========================================================================== */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.hide {
+  display: none;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+select {
+  width: 100%;
+}
+
+i {
+  font-style: normal;
+}
+
+.animate {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.button {
+  
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.agreement {
+  max-width: 2000px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+.show {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1440px;
+  *zoom: 1;
+}
+.center {
+  width: 100%;
+  margin-left: 125px;
+  margin-right: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1230px;
+  *zoom: 1;
+
+}
+.graph {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 0;
+  max-width: 800px;
+  height: 1300px;
+  *zoom: 1;
+}
+.gonext {
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 600px;
+  height: 600px;
+  *zoom: 1;
+}
+.life {
+  width: 600px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 160px;
+}
+.free {
+  width: 400px;
+  display: flex;
+  *zoom: 1;
+}
+
+.info {
+  display: flex;
+  width: 400px;
+  padding-left: 8px;
+  *zoom: 1;
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+.below {
+  width: 100%;
+  margin-left: 110px;
+  margin-right: 120px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1230px;
+  *zoom: 1;
+}
+.surfing {
+  width: 100%;
+  margin-left: 200px;
+  margin-right: 150px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1000px;
+  height: 500px;
+  *zoom: 1;
+}
+.avicii {
+    
+     max-width: 50%;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     width: 650px;
+     *zoom: 1;
+
+  }
+.own {
+
+     max-width: 50%;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     width: 700px;
+     *zoom: 1;
+  }
+  .guider-container {
+    width: 1440px;
+  }
+  .sign_up {
+    height: 500px;
+  }
+.row .grid-1,
+.row .grid-2,
+.row .grid-3,
+.row .grid-4,
+.row .grid-5,
+.row .grid-6,
+.row .grid-7,
+.row .grid-8,
+.row .grid-9,
+.row .grid-10,
+.row .grid-11,
+.row .grid-12 {
+  float: left;
+  margin-left: 0.9%;
+  margin-right: 0.9%;
+}
+.row .grid-1 {
+  width: 6.53333%;
+}
+.row .grid-2 {
+  width: 14.86667%;
+}
+.row .grid-3 {
+  width: 23.2%;
+}
+.row .grid-4 {
+  width: 31.53333%;
+}
+.row .grid-5 {
+  width: 39.86667%;
+}
+.row .grid-6 {
+  width: 48.2%;
+}
+.row .grid-7 {
+  width: 56.53333%;
+}
+.row .grid-8 {
+  width: 64.86667%;
+}
+.row .grid-9 {
+  width: 73.2%;
+}
+.row .grid-10 {
+  width: 81.53333%;
+}
+.row .grid-11 {
+  width: 89.86667%;
+}
+.row .grid-12 {
+  width: 98.2%;
+}
+
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.row.collapse > .column,
+.row.collapse > .columns {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+
+.row.collapse .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row .row {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+
+.row .row:before, .row .row:after {
+  content: " ";
+  display: table;
+}
+
+.row .row:after {
+  clear: both;
+}
+
+.row .row.collapse {
+  width: auto;
+  margin: 0;
+  max-width: none;
+  *zoom: 1;
+}
+
+.row .row.collapse:before, .row .row.collapse:after {
+  content: " ";
+  display: table;
+}
+
+.row .row.collapse:after {
+  clear: both;
+}
+
+@media screen and (min-width: 318px) and (max-width: 340px) {
+.pc { display: none; }
+.sp { display: block; }
+.row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
+.bushi {
+    width: 250px;
+    font-size: 19px;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__bar.row {
+    height: 20px;
+    width: 305px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: -5px;
+  }
+  .grid-6 {
+    height: 10px;
+  }
+  .user_nav.grid-6 {
+    height: 10px;
+    left: 0;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom-width: 25px;
+    margin-bottom: 0;
+    bottom: -50;
+    width: 0px;
+  }
+<<<<<<< HEAD
+=======
+   .footer {
+    margin-top: 0px;
+  }
+  .last {
+    width: 295px;
+  }
+>>>>>>> 7b8829748dd3007059a057df68ac96f42d39cd33
+}
+@media screen and (min-width: 360px) and (max-width: 380px) {
+  .pc { display: none; }
+  .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
+  .bushi {
+    width: 250px;
+    font-size: 19px;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__bar.row {
+    height: 25px;
+    width: 305px;
+    padding-right: 0px;
+    margin-left: 24px;
+    margin-right: -5px;
+  }
+  .grid-6 {
+    height: 10px;
+  }
+  .user_nav.grid-6 {
+    height: 10px;
+    left: 0;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom-width: 25px;
+    margin-bottom: 0;
+    bottom: -50;
+    width: 0px;
+  }
+   .footer {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 415px) {
+  .pc { display: none; }
+  .sp { display: block; }
+  .row {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px !important;
+  }
+  .bushi {
+    width: 250px;
+    font-size: 19px;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__bar.row {
+    height: 25px;
+    width: 305px;
+    padding-right: 0px;
+    margin-left: 43px;
+    margin-right: -5px;
+  }
+  .grid-6 {
+    height: 10px;
+  }
+  .user_nav.grid-6 {
+    height: 10px;
+    left: 0;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom-width: 25px;
+    margin-bottom: 0;
+    bottom: -50;
+    width: 0px;
+  }
+  .footer {
+    margin-top: 0px;
+  }
+}
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media screen and (min-width: 420px) and (max-width: 640px) {
+  .pc { display: block; }
+  .sp { display: none; }
+}
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media screen and (min-width: 641px) and (max-width: 1440px) {
+  .pc { display: block; }
+  .sp { display: none; }
+
+}
+

@@ -6,13 +6,19 @@
       <a class="category-id" href="/tests">過去問</a>
       <i class="fas fa-angle-right"></i>
       <div class="text-rule">
-        <%= @search_keyword1 %>
+        <%= @profession.university %>
       </div>
       <i class="fas fa-angle-right"></i>
       <div class="text-rule">
-        <%= @search_keyword2 %>
+        <%= @profession.faculty %>
+      </div>
+      <i class="fas fa-angle-right"></i>
+      <div class="text-rule">
+        <%= @profession.lesson %>
       </div>
    </div>
+
+
    <div class="strange2">
      <a class="strange" href="/professions/:id/category"></a>
    </div>
@@ -52,8 +58,8 @@
         <div style="display: block;">
 
         <% @professions.each do |profession| %>
-          <div class="semi" style="margin-top: 0px; margin-right: 0px; width: 300px; padding: 20px;">
-
+          <div class="semi" style="margin-top: 0px; margin-right: 0px; width: 300px; padding: 20px; position: relative;">
+             <%= link_to "","/professions/#{profession.id}", class: "starship" %>
             <div class="suo-go">
                
             <div>
@@ -76,22 +82,22 @@
                    <label for="star1"><span class="text">オススメ度</span><span class= "star-color">★</span></label>
                  <% end %>
               </div>
-              <div style="padding-left: 25px; text-align: center; display: inline-block; margin-bottom: 20px;">
-                  <% if profession.fun == 1 then %>
+              <div style="padding-left: 25px; text-align: center; display: inline-block; margin-bottom: 30px;">
+                  <% if profession.fun == 5 then %>
                     <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★★</span></label>
-                  <% elsif profession.fun == 2 then %>
+                  <% elsif profession.fun == 4 then %>
                     <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★★</span></label>
                   <% elsif profession.fun == 3 then %>
                     <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★★</span></label>
-                  <% elsif profession.fun == 4 then %>
+                  <% elsif profession.fun == 2 then %>
                     <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★★</span></label>
                   <% else %>
                     <label for="star1"><span class="text" style="display: block;">オススメ度</span><span class= "star-color">★</span></label>
                   <% end %>
               </div>
               <div style="margin-top: 25px; margin: 0 0;">
-                  <%= truncate(profession.content) do %>
-                       <p style="font-size: 14px;">(続きを読むには<%= link_to 'ここ', "/professions/#{profession.id}" %>をクリックしてください。<p>
+                  <%= truncate(profession.content, length: 40) do %>
+                      
                   <% end %>
                   
               </div>

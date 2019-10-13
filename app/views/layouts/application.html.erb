@@ -32,6 +32,7 @@
     </script>
     <%= csrf_meta_tags  %>
     <meta name="google-site-verification" content="uh4J6YQwgfL0Q9XnjCyjTV2xB16q7eXGFCHfdq2UNLQ" />
+    
   </head>  
 
   <body class="photo">
@@ -44,7 +45,7 @@
 
           <div class="full_max">
            <div class="full">
-            <h1 class="eureka"><a style="color: #E47911;" href="/plans/top">eureka</a></h1>
+            <h1 class="eureka"><a style="color: #E47911;" href="/plans/:id/top">eureka</a></h1>
             <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
                    <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
                    <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
@@ -127,7 +128,7 @@
           <i class="fas fa-book" style="margin-left: 15px;"></i>
           <a class="category-id" href="/plans" >教科書</a>
           <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
-          <a class="category-id" href="/tests">資格</a>
+          <a class="category-id" href="/tests">スキルアップ</a>
           <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
           <a class="category-id" href="/professions/:id/category">過去問</a>
         
@@ -142,11 +143,46 @@
     
     <footer class="shita">
       
-      <div class="dbar">
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div style="display: block;">
+               <h3 class="footer-word">Eurekaについて</h3>
+               <a class="footer-word1" href="">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div style="display: block;">
+               <h3 class="footer-word">ヘルプ＆ガイド</h3>
+               <a class="footer-word1"  href="">Eurekaガイド</a>
+               <a class="footer-word1"  href="">Eurekaアシスタント</a>
+               <a class="footer-word1" href="">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div style="display: block;">
+               <h3 class="footer-word">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="">プライバシーポリシー</a>
+               <a class="footer-word1"  href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div style="display: block;">
+              <h3 style="text-align: center;" class="footer-word">国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
       </div>
+
       <div class="shita1">
-        <p>
-         Copyright © 2018 Chance to Chance. All rights reserved.
+        <p style="font-size: 14px; color: inherit;">
+         © 2018 Eureka
         </p>
       </div>
       

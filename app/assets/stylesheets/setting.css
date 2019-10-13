@@ -443,9 +443,7 @@ i {
 }
 
 .button {
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0.2) 100%);
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0.2) 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0.2) 100%);
+  
 }
 
 ul {
@@ -487,7 +485,7 @@ ul li {
   margin-top: 50px;
   margin-bottom: 0;
   max-width: 800px;
-  height: 1200px;
+  height: 1300px;
   *zoom: 1;
 }
 .gonext {
@@ -558,7 +556,7 @@ ul li {
      margin-bottom: 0;
      margin-left: auto;
      margin-right: auto;
-     width: 650px;
+     width: 700px;
      *zoom: 1;
   }
   .guider-container {

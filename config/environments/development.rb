@@ -21,6 +21,9 @@ Rails.application.configure do
      authentication:       'plain',
      enable_starttls_auto:  true
    }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_mailer.asset_host = config.action_controller.asset_host
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

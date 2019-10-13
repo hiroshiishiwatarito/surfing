@@ -1,10 +1,11 @@
 .firstwrap{
    display:flex;
    justify-content: center;
+   height: 1300px;
 
   .secondwrap{
     width: 1200px; 
-    height: 500px;
+    height: 180px;
     display:flex;		
     align-items: center;	
 
@@ -16,8 +17,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
-        height: 500px;
+        width: 45%;
+        height: 1200px;
       }
 
     }
@@ -57,10 +58,11 @@
 }
 form.test_center {
  
-  height: 600px;
+  height: 1200px;
   margin-top: 0px;
   width: 600px;
-  padding: 15px;
+  padding: 30px;
+  border-radius: 4px;
 }
 form.test_ielts {
  
@@ -148,8 +150,7 @@ go2_form {
 }
 
 .teratail {
-  height: 520px;
-  width: 600px;
+  height: 200px;
   padding: 30px;
   border: 1px solid #e4e4e4 !important;
 }
@@ -171,9 +172,9 @@ go2_form {
   height: 168px;
 }
 .create {
-  width: 300px; 
+  width: 180px; 
   max-width: 100%; 
-  height: 161px; 
+  height: 220px; 
   margin-top: 3px;
   margin-left: 2px;
   display: inline-block;
@@ -193,6 +194,7 @@ go2_form {
   border: 1px solid #e4e4e4 !important;
   width: 400px; 
   margin-left: 110px;
+  margin-top: 30px;
   max-width: 100%; 
   height: 450px; 
   display: block;
@@ -328,10 +330,22 @@ go2_form {
   padding: 15px;
 }
 .hah {
-    position: absolute;
     width: 250px;
-    height: 168px;
-    bottom: 220px;
+    height: 270px;
+    margin-right: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+}
+.hat {
+    width: 180px;
+    height: 230px;
+    position: absolute;
+    margin-right: 30px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
 }
 .heart {
     position: absolute;
@@ -339,6 +353,7 @@ go2_form {
     height: 168px;
     left: 489px;
     bottom: 245px;
+
 }
 
 .mouth3 {
@@ -348,4 +363,37 @@ go2_form {
 .year {
   font-size: 14px; color: #524e4d;
   font-family: 'Noto Sans Japanese', sans-serif;
+}
+span.author {
+  width: 236px;
+  text-align: center; 
+  font-size: 1.0rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #524e4d;
+  font-family: 'Noto Sans Japanese',sans-serif;
+}
+.bookname {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: black;
+  font-family: 'Noto Sans Japanese',sans-serif;
+}
+.sansan {
+  color: inherit;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 36px;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+.sangon {
+  margin: 50px 0px;
+  width: 800px;
+  height: 400px;
 }

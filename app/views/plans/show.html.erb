@@ -1,11 +1,20 @@
 <div class= "headquarter">
  <div class= "image-all">
   <div class="image-five ">
-   <div class="image-parts">
+   <div class="image-parts" style="display: block; margin-left: 0px;">
     <div class="main">
        <i class="fas fa-chevron-circle-left" aria-hidden="true" id="prev"></i>
-       <%= image_tag(@plan.image.thumb.url , :id=> "target", :class => "contain") %>
+       <%= image_tag(@plan.image.thumb.url , :id=> "img", :class => "contain") %>
        <i class="fas fa-chevron-circle-right" aria-hidden="true" id="next"></i>
+    </div>
+    <div class="king">
+      <ul class="example" id="thumb_img">
+        <li class="current"><img class="active" onclick="changeimg('<%= @plan.image %>',this);" src="<%= @plan.image %>"></li>
+        <li><img onclick="changeimg('<%= @plan.copy_image %>',this);" style="width: 150px; height: 220px;" src="<%= @plan.copy_image %>"></li>
+        <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.third_image %>',this);" src="<%= @plan.third_image %>"></li>
+        <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.fourth_image %>',this);" src="<%= @plan.fourth_image %>"></li>
+        <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.five_image %>',this);" src="<%= @plan.five_image %>"></li>
+      </ul>
     </div>
     <script src="javascripts/main.js"></script>
     <script>
@@ -17,6 +26,7 @@
       '<%= @plan.five_image %>'
       ];
 　  </script>
+    
    </div>
   </div>
  </div>
@@ -116,12 +126,10 @@
      <div style="margin-top: 24px;">
      <div class="payment">
       <div class="payment-1">
-       <form class="kenichiro" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="RX4RQEFFCFRCG">
+       <form class="kenichiro">
          <table>
            <tr><td>
-              <input type="hidden" name="on0" value="Guider Fee"><span class="guide">購入代金</span><hr class="line">
+              <span class="guide">購入代金</span><hr class="line">
            </td></tr>
            <tr><td>
 
@@ -130,23 +138,36 @@
              <p class="date" >郵便配送</p>
 
            </td></tr>
-           <tr><td><span class="price">価格</span><select name="os0" style="height: 48px;">
-
-                <option value="500円">500円 </option>
-                <option value="1000円">1000円 </option>
-                <option value="1500円">1500円 </option>
-           </select> </td></tr>
+           
+          
          </table>
+         <span class="price" style="height: 48px;">価格</span>
+         <p class="date" ><%= @plan.price %>円</p>
+
+                
 
         <% if guider_signed_in? %>
-         
-           <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - オンラインでより安全・簡単にお支払い" style="width: 250px; height: 70px; margin-left: 35px; margin-top: 25px;">
-           <img alt="" border="0" src="https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif" width="1" height="1">
+          <div style="width: 328px; height: 48px; text-align: center; margin-top: 20px;">
+           <%= form_tag("/plans/#{@plan.id}/purchase") do %>
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                 data-amount="<%= @plan.price %>"
+                 data-currency="jpy"
+                 data-description="クレジット決済"
+                 data-name=<%= "#{@plan.title}を購入" %>
+                 data-email=<%= "#{current_guider.email}" %>
+                 data-label="購入する"
+                 data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                 data-locale="auto"
+                 data-allow-remember-me="false">
+              </script>
+           <% end %>
+          </div>
          </form>
 
         <% else %>
          <div class="sign">
-           <%= link_to "Can you Sign up before payment? ", new_tourist_registration_path, class: 'finish' %>
+           <%= link_to "Can you Sign up before payment? ", new_guider_registration_path, class: 'finish' %>
          </div>
         <% end %>
 
@@ -161,23 +182,5 @@
  </div>
 </div>
 
-<%= form_tag charge_path(@plan) do %>
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-amount="<%= @plan.price %>"
-    data-currency="jpy"
-    data-description="クレジット決済"
-    data-name=<%= "#{@plan.title}を購入" %>
-    data-email=<%= "#{current_guider.email}" %>
-    data-label="購入する"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto"
-    data-allow-remember-me="false">
-  </script>
-<% end %>
 
-
-
-
-
-
+<%= @plan.guider.email %>
