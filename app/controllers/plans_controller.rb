@@ -1,7 +1,5 @@
 class PlansController < ApplicationController
 
-	require 'payjp'
-
 	before_action :move_to_index, except: [:index, :show, :category, :next, :tokyo, :kyoto, :fail]
 
 	  def index
