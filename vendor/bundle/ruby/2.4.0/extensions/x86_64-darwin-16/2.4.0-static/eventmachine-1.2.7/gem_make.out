@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191013-6821-bvdbss.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-od0va9.rb extconf.rb
 creating Makefile
 
 To see why this extension failed to compile, please check the mkmf.log which can be found here:
@@ -17,4 +17,4 @@ linking shared-object fastfilereaderext.bundle
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20191013-6821-28h7o9
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20191015-18234-1egrhdw

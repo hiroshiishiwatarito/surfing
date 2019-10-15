@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/rmagick-4.0.0/ext/RMagick
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191014-88602-jdtl8o.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-16kxw5u.rb extconf.rb
 checking for brew... yes
 checking for clang... yes
 checking for pkg-config... yes
@@ -14,7 +14,7 @@ creating Makefile
 
 
 ======================================================================
-Mon 14 Oct 19 00:07:27
+Tue 15 Oct 19 23:29:29
 This installation of RMagick 4.0.0 is configured for
 Ruby 2.4.0 (x86_64-darwin16) and ImageMagick 6.9.10
 ======================================================================
@@ -55,4 +55,4 @@ linking shared-object RMagick2.bundle
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/rmagick-4.0.0/ext/RMagick
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20191014-88602-1dctwgy
+/usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20191015-18234-1etbj1e

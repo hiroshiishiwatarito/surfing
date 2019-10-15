@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/redcarpet-2.3.0/ext/redcarpet
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191014-88602-12vju9q.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-1mvzje4.rb extconf.rb
 creating Makefile
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/redcarpet-2.3.0/ext/redcarpet
@@ -21,4 +21,4 @@ linking shared-object redcarpet.bundle
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/redcarpet-2.3.0/ext/redcarpet
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20191014-88602-at10ee
+/usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20191015-18234-1w7podz

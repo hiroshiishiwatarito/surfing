@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/therubyracer-0.12.3/ext/v8
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191014-88602-1j4t399.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-1t64qmt.rb extconf.rb
 checking for -lpthread... yes
 checking for -lobjc... yes
 creating Makefile
@@ -87,4 +87,4 @@ linking shared-object v8/init.bundle
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/therubyracer-0.12.3/ext/v8
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 init.bundle ./.gem.20191014-88602-1fd3j60/v8
+/usr/bin/install -c -m 0755 init.bundle ./.gem.20191015-18234-1ttgdl6/v8

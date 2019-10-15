@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191013-6821-1ygl3s8.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-1mk4lpj.rb extconf.rb
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
 make "DESTDIR=" clean

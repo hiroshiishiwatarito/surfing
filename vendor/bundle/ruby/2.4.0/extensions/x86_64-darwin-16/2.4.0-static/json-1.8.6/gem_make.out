@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191013-6821-1utddqy.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-164dxgs.rb extconf.rb
 creating Makefile
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json

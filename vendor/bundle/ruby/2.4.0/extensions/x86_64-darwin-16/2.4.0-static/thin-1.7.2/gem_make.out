@@ -1,5 +1,5 @@
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/thin-1.7.2/ext/thin_parser
-/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191014-88602-8uxm21.rb extconf.rb
+/Users/hiroshi/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20191015-18234-dwyaje.rb extconf.rb
 checking for main() in -lc... yes
 creating Makefile
 
@@ -46,4 +46,4 @@ linking shared-object thin_parser.bundle
 
 current directory: /Users/hiroshi/break/vendor/bundle/ruby/2.4.0/gems/thin-1.7.2/ext/thin_parser
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 thin_parser.bundle ./.gem.20191014-88602-u9lj3y
+/usr/bin/install -c -m 0755 thin_parser.bundle ./.gem.20191015-18234-p142pd
