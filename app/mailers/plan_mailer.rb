@@ -5,7 +5,6 @@ class PlanMailer < ApplicationMailer
 	def guider_shipment_mail(plan)
        
         @plan = plan.guider
-        
        
         mail(
             from: "<chancetochance@gmail.com>",

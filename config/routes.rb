@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get  "plans/:id/purchase" => "plans#purchase"
   get  "/plans" => "plans#destory"
   get  "plans/:id/fail"     => "plans#fail"
+  get  "/plans/:id/eureka" => "plans#eureka"
+  get  "/plans/:id/inquire" => "plans#inquire"
 
   #テスト
   resources :professions
@@ -44,7 +46,15 @@ Rails.application.routes.draw do
   get "/guiders/:id/accepted" => "guiders#accepted"
   post "/guiders/:id/approve" => "guiders#approve_guider", as: "approve_guider"
   get  "/guiders/:id/approve" => "guiders#approve_guider"
- 
+  
+  #お問い合わせフォーム
+  get  '/plans/:id/inquirys' => 'inquirys#index'
+  post '/plans/inquirys/confirm' => 'inquirys#confirm'
+  get  '/plans/inquirys/confirm' => 'inquirys#confirm'
+  post '/plans/inquirys/thanks' => 'inquirys#thanks'
+  get  '/plans/inquirys/thanks' => 'inquirys#thanks'
+
+
 
   #観光客
   resources :tourists

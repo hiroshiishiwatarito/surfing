@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
 
-	before_action :move_to_index, except: [:index, :show, :category, :next, :tokyo, :kyoto, :fail]
+	before_action :move_to_index, except: [:index, :show, :category, :next, :tokyo, :kyoto, :fail, :eureka, :inquire]
 
 	  def index
 
@@ -57,6 +57,11 @@ class PlansController < ApplicationController
     def fail
       @plan = Plan.find(params[:id])
  
+    end
+
+    def eureka
+    end
+    def inquire
     end
 
     def show
