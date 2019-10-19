@@ -2,7 +2,7 @@ require 'aws-sdk'
 
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.chancetochance.world"
-SitemapGenerator::Sitemap.sitemaps_host = "https://s3-ap-northeast-1.amazonaws.com/#{ENV['AWS_S3_BUCKET']}"
+SitemapGenerator::Sitemap.sitemaps_host = "eureka-image.s3.amazonaws.com"
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.compress = false
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(

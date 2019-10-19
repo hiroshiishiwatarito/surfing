@@ -4,4 +4,4 @@
 # User-agent: *
 # Disallow: /
 
-Sitemap: https://chance-chance20180810/sitemap
+Sitemap: https://eureka-image.s3.amazonaws.com/sitemaps/sitemap.xml.gz
