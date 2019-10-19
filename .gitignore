@@ -13,3 +13,6 @@
 /tmp
 
 /.env
+
+# Ignore sitemap file
+public/sitemap.xml.gz

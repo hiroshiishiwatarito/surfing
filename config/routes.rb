@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/sitemap' => redirect('https://s3-ap-northeast-1.amazonaws.com/eureka-image/sitemap.xml.gz')
+  
   devise_for :tourists, controllers: {
     sessions:      'tourists/sessions',
     passwords:     'tourists/passwords',

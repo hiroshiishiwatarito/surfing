@@ -18,11 +18,4 @@ class Guider < ActiveRecord::Base
     AdminMailer.new_guider_confirmation(self).deliver_now
   end
 
-  def active_for_authentication? 
-    super && approved? 
-  end 
-  
-  def inactive_message 
-    approved? ? super : :not_approved
-  end
 end

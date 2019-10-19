@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11'
 # Use mysql as the database for Active Record
@@ -75,6 +74,10 @@ gem 'coderay'
 #円グラフ
 gem "chartkick"
 gem 'chartable'
-
 gem "bigdecimal", ">= 1.3.2"
+
+#SEO対策
+gem 'sitemap_generator'
+gem 'whenever', require: false
+gem 'aws-sdk'
 
