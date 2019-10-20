@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/sitemap' => redirect('https://eureka-image.s3.amazonaws.com/sitemaps/sitemap.xml.gz')
+  
   
   devise_for :tourists, controllers: {
     sessions:      'tourists/sessions',

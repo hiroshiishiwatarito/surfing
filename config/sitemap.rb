@@ -1,15 +1,6 @@
-require 'aws-sdk'
+
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://www.chancetochance.world"
-SitemapGenerator::Sitemap.sitemaps_host = "eureka-image.s3.amazonaws.com"
-SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
-SitemapGenerator::Sitemap.compress = false
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
-bucket: ENV["AWS_S3_BUCKET"],
-aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-region: ENV["AWS_REGION"])
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
