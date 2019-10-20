@@ -1,11 +1,11 @@
-<div class="mainpage" style="height: 2500px;">
+<div class="mainpage" style="height: 2560px;">
 <div class = "line1" style="margin-top: 30px;">
  <div class = "line2">
   <div class="line3">
 
-     <div class="line4" style="display: block; height: 2500px;">
+     <div class="line4" style="display: block; height: 2550px;">
       
-      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 2350px; padding: 50px;">   
+      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 2450px; padding: 50px;">   
         <div class="line6" style="display: block; width: 630px;">
           <div class="race" style="display: block;" >
               <!-- タイトル -->
@@ -147,11 +147,11 @@
           </div>
           <div class="recent_post">
             <% @tests.each do |test| %> 
-             <div class="posts" style="width: 225px; height: 250px; margin-bottom: 50px; position: relative;">
+             <div class="posts" style="width: 205px; height: 250px; position: relative;">
                <%= image_tag(test.book.thumb.url, :class => "create") %>
                <%= link_to "", test_path(test.id), class: "hat" %>
                <div class="mix-change">
-                  <h2 class="line_go" style="width: 200px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
+                  <h2 class="line_go" style="width: 180px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
                </div>
              </div>
             <% end %>

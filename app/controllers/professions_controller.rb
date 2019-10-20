@@ -8,7 +8,7 @@ class ProfessionsController < ApplicationController
 	def index
 		
 	    @professions = Profession.group(:lesson).where(["(university LIKE ?) AND (faculty LIKE ?) AND (season LIKE ?)" , "%#{params[:university]}%", "%#{params[:faculty]}%", "%#{params[:season]}%"]).page(params[:page]).per(20).order("created_at DESC")
-        @professions = Profession.group(:lesson).where(["(university LIKE ?) AND (faculty LIKE ?) AND (season LIKE ?) AND (detail LIKE?)" , "%#{params[:university]}%", "%#{params[:faculty]}%", "%#{params[:season]}%",  "%#{params[:detail]}%"]).page(params[:page]).per(20 ).order("created_at DESC")
+        @professions = Profession.group(:lesson).where(["(university LIKE ?) AND (faculty LIKE ?) AND (season LIKE ?) AND (detail LIKE?)" , "%#{params[:university]}%", "%#{params[:faculty]}%", "%#{params[:season]}%",  "%#{params[:detail]}%"]).page(params[:page]).per(20).order("created_at DESC")
 
 	    @search_keyword1 = params[:university]
 	    @search_keyword2 = params[:faculty]
