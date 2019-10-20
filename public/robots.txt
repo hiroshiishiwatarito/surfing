@@ -4,4 +4,3 @@
 # User-agent: *
 # Disallow: /
 
-Sitemap: https://eureka-image.s3.amazonaws.com/sitemaps/sitemap.xml.gz
