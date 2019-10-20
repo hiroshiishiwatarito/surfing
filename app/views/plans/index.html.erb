@@ -15,7 +15,7 @@
    <% @plans.each do |plan| %>
    <div class="posts">
     <div style="background-image: url(<%= plan.image.url %>); height: 233.91px; position: relative;" >
-    <%= image_tag(plan.image.url, class: "bookdo") %>
+    <%= image_tag(plan.to_s, class: "bookdo") %>
     <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master" %>
         <div class="more">
           

@@ -65,7 +65,7 @@ gem 'therubyracer', platforms: :ruby
 #画像
 gem 'carrierwave'
 gem 'rmagick'
-gem 'fog'
+gem 'fog-aws'
 gem 'mini_magick'
 
 gem 'stripe'
