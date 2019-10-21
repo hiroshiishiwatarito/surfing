@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191016144832) do
+ActiveRecord::Schema.define(version: 20191021043616) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -183,21 +183,23 @@ ActiveRecord::Schema.define(version: 20191016144832) do
   end
 
   create_table "tests", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "body",        limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.text     "description", limit: 65535
-    t.string   "image",       limit: 255
-    t.integer  "guider_id",   limit: 4
-    t.integer  "plan_id",     limit: 4
-    t.string   "secondword",  limit: 255
-    t.string   "thirdword",   limit: 255
-    t.text     "purpose",     limit: 65535
-    t.string   "book",        limit: 255
-    t.string   "summary",     limit: 255
-    t.string   "author",      limit: 255
-    t.string   "bookname",    limit: 255
+    t.string   "title",          limit: 255
+    t.text     "body",           limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.text     "description",    limit: 65535
+    t.string   "image",          limit: 255
+    t.integer  "guider_id",      limit: 4
+    t.integer  "plan_id",        limit: 4
+    t.string   "secondword",     limit: 255
+    t.string   "thirdword",      limit: 255
+    t.text     "purpose",        limit: 65535
+    t.string   "book",           limit: 255
+    t.string   "summary",        limit: 255
+    t.string   "author",         limit: 255
+    t.string   "bookname",       limit: 255
+    t.string   "category",       limit: 255
+    t.string   "small_category", limit: 255
   end
 
   create_table "tourists", force: :cascade do |t|

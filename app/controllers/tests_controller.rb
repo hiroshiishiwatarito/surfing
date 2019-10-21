@@ -7,7 +7,8 @@ class TestsController < ApplicationController
 	end
 
 	def new
-		
+		@category = ["ビジネス", "文学" , "医学" , "IT"]
+		@small_category = ["ビジネス", "文学" , "医学" , "IT"]
 	end
 
 	def destroy
@@ -36,7 +37,7 @@ class TestsController < ApplicationController
 	end
 
 	def create
-        Test.create(title: params[:title], body: params[:body], author: params[:author], bookname: params[:bookname], summary: params[:summary], description: params[:description], purpose: params[:purpose], secondword: params[:secondword], thirdword: params[:thirdword], image: params[:image], book: params[:book], guider_id: current_guider.id)
+        Test.create(title: params[:title], category: params[:category], small_category: params[:small_category], body: params[:body], author: params[:author], bookname: params[:bookname], summary: params[:summary], description: params[:description], purpose: params[:purpose], secondword: params[:secondword], thirdword: params[:thirdword], image: params[:image], book: params[:book], guider_id: current_guider.id)
 	end
 
 	private

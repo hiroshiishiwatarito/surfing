@@ -6,14 +6,20 @@
     <input placeholder="タイトル" type="text" name="title" autofocus="true" required>
     <input placeholder="著者名" type="string" name="place" autofocus="true" required>
     <input placeholder="授業名" type="string" name="times" autofocus="true" required>
+
     <%= select_tag :datetimes, options_for_select([["---"],["新品、未使用品"],["未使用品に近い"], ["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"], ["全体的に状態が悪い"]]) , class: "superpark" %>
+    
+    
+
     <input placeholder="価格" type="string" name="price" autofocus="true" required>
     <div class="field">
+
     <%= file_field_tag 'image' %>
     <%= file_field_tag 'copy_image' %>
     <%= file_field_tag 'third_image' %>
     <%= file_field_tag 'fourth_image' %>
     <%= file_field_tag 'five_image' %>
+
     </div>
     <textarea placeholder="商品の説明" name="contents" cols="30" rows="10"></textarea>
     <input type="submit" value="送信">

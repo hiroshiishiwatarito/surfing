@@ -78,6 +78,7 @@ gem "bigdecimal", ">= 1.3.2"
 
 #SEO対策
 gem 'sitemap_generator'
+gem 'roboto'
 gem 'whenever', require: false
 gem 'aws-sdk'
 
