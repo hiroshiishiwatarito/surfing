@@ -4,8 +4,8 @@ class PlansController < ApplicationController
 
 	  def index
 
- 	         @plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(20).order("created_at DESC")
-           @search_keyword = params[:search]
+ 	      @plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(20).order("created_at DESC")
+        @search_keyword = params[:search]
            
 
     end

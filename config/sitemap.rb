@@ -1,5 +1,5 @@
 SitemapGenerator::Sitemap.default_host =  'https://chancetochance.world'
-SitemapGenerator::Sitemap.sitemaps_host = 'https://s3-ap-northeast-1.amazonaws.com/eureka-image'
+SitemapGenerator::Sitemap.sitemaps_host = 'https://eureka-image.s3-ap-northeast-1.amazonaws.com'
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
   ENV['S3_BUCKET_NAME'],
