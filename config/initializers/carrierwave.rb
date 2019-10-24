@@ -16,7 +16,7 @@ CarrierWave.configure do |config|
   config.remove_previously_stored_files_after_update = false
 
   config.fog_directory = ENV['AWS_S3_BUCKET']
-  config.asset_host = ENV['AWS_S3_URL']
+  config.asset_host = 'https://eureka-image.s3-ap-northeast-1.amazonaws.com'
 
 end
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
