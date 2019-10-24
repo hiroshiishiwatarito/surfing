@@ -9,11 +9,11 @@ CarrierWave.configure do |config|
     provider: 'AWS',
     aws_access_key_id:      ENV['AWS_ACCESS_KEY_ID'],
     aws_secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
-    endpoint:               'https://eureka-image.s3-ap-northeast-1.amazonaws.com' ,
+    endpoint:               'https://s3.amazonaws.com' ,
     region:                 ENV['AWS_REGION'],
     path_style:true
   }
-  config.fog_public     = true # public-read
+  
   config.remove_previously_stored_files_after_update = false
 
   config.fog_directory = ENV['AWS_S3_BUCKET']
