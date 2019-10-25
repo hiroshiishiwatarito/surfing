@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/sitemap' => redirect('https://s3-ap-northeast-1.amazonaws.com/sitename/sitemap.xml.gz')
+  get '/sitemap' => redirect('https://eureka-image.s3.amazonaws.com/chancetochance.world/sitemap.xml.gz')
   
   devise_for :tourists, controllers: {
     sessions:      'tourists/sessions',
@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   }
 
   #本
-  resources :plans
+  resources :plans 
+
   root      'plans#top'
   get       'plans/:id/top' => "plans#top"
   post "plans/:id/purchase", to: "plans#purchase"
@@ -23,7 +24,8 @@ Rails.application.routes.draw do
   get  "plans/:id/fail"     => "plans#fail"
   get  "/plans/:id/eureka" => "plans#eureka"
   get  "/plans/:id/inquire" => "plans#inquire"
-
+  
+  get '/plans/:id/top', to: 'tests#index'
   #テスト
   resources :professions
   get '/professions/:id/category' => "professions#category"
@@ -57,9 +59,6 @@ Rails.application.routes.draw do
   get  '/plans/inquirys/thanks' => 'inquirys#thanks'
 
 
-
-  #観光客
-  resources :tourists
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

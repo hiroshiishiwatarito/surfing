@@ -933,6 +933,7 @@ GEM
     minitest (5.12.2)
     multi_json (1.14.1)
     mysql2 (0.3.21)
+    newrelic_rpm (6.7.0.359)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
@@ -1076,6 +1077,7 @@ DEPENDENCIES
   kaminari
   mini_magick
   mysql2 (~> 0.3.18)
+  newrelic_rpm
   paperclip
   pry-rails
   rails (= 4.2.11)

@@ -13,7 +13,7 @@ CarrierWave.configure do |config|
     region:                 ENV['AWS_REGION'],
     path_style:true
   }
-  
+  config.fog_public     = true # public-read
   config.remove_previously_stored_files_after_update = false
 
   config.fog_directory = ENV['AWS_S3_BUCKET']

@@ -1,19 +1,19 @@
 class PlansController < ApplicationController
 
-	before_action :move_to_index, except: [:index, :show, :category, :next, :tokyo, :kyoto, :fail, :eureka, :inquire]
+	before_action :move_to_index, except: [:index, :show, :category, :top, :next, :tokyo, :kyoto, :fail, :eureka, :inquire]
 
 	  def index
 
  	      @plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(20).order("created_at DESC")
         @search_keyword = params[:search]
-           
-
+        
     end
 
     def top
 
     	  @plans = Plan.where(["(times LIKE ?) OR (title LIKE ?)", "%#{params[:search]}%", "%#{params[:search]}%"]).page(params[:page]).per(10).order("created_at DESC")
         @search_keyword = params[:search]
+        @tests = Test.page(params[:page]).per(20).order("created_at DESC")
     end
 
     def category

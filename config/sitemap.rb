@@ -1,12 +1,6 @@
+
 SitemapGenerator::Sitemap.default_host =  'https://chancetochance.world'
-SitemapGenerator::Sitemap.sitemaps_host = 'https://eureka-image.s3-ap-northeast-1.amazonaws.com'
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
-  ENV['S3_BUCKET_NAME'],
-  aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-  aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-  aws_region: 'ap-northeast-1'
-)
 # Set the host name for URL creation
 
 SitemapGenerator::Sitemap.create do

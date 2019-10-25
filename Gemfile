@@ -82,3 +82,5 @@ gem 'roboto'
 gem 'whenever', require: false
 gem 'aws-sdk'
 
+gem 'newrelic_rpm'
+

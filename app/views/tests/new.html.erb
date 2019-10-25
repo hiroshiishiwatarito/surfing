@@ -1,4 +1,4 @@
-<div class = "firstwrap" style="height: 1500px;">
+<div class = "firstwrap" style="height: 2600px;">
   <div class = "secondwrap">
    
      <div class="box">
@@ -9,7 +9,7 @@
             <input id="for" class="go_form1" placeholder="タイトル" type="string" name="title" autofocus="true" required>
             <%= file_field_tag 'book' %>
 
-            <h4 class="sansan">投稿の内容:</h4>
+            <h4 class="sansan">投稿の内容①:</h4>
             <input id="for" class="go_form1" placeholder="書こうと思ったきっかけ" style="height: 150px;" type="text" name="purpose" autofocus="true" required>
             <input id="for" class="go_form1" placeholder="トップページの言葉" type="string" name="summary" autofocus="true" required>
             <input id="for" class="go_form1" placeholder="第二の見出し" type="string" name="secondword" autofocus="true" required>
@@ -20,6 +20,16 @@
             <input id="for" class="go_form1" placeholder="本のタイトル" type="string" name="bookname" autofocus="true" required>
             <input id="for" class="go_form1" placeholder="著者" type="string" name="author" autofocus="true" required>
             <textarea style="width: 540px; " class="teratail" id="src" placeholder="広告のコード" name="body" cols="30" rows="10"></textarea>
+
+            <h4 class="sansan">投稿の内容②:</h4>
+            <input id="for" class="go_form1" placeholder="第二の見出し" type="string" name="fourthword" autofocus="true" required>
+            <input id="for" class="go_form1" placeholder="第三の見出し" type="string" name="fiveword" autofocus="true" required>
+            <textarea style="height: 300px;" id="for" class="go_form1" placeholder="感想" type="text" name="detail" cols="30" rows="10" required></textarea>
+
+            <h4 class="sansan" style="display: inline-block;">広告:</h4><a href="/tests/new/guideline" style="border-bottom: 2px solid #d8d8d8;">広告の手順</a>
+            <input id="for" class="go_form1" placeholder="本のタイトル" type="string" name="material" autofocus="true" required>
+            <input id="for" class="go_form1" placeholder="著者" type="string" name="people" autofocus="true" required>
+            <textarea style="width: 540px; " class="teratail" id="src" placeholder="広告のコード" name="advertise" cols="30" rows="10"></textarea>
        
            <div class="go2_form" style="float: right;"><input style="padding-top: 5px; margin-right: 15px;" class="gonext_form" type="submit" value="送信">
            </div>

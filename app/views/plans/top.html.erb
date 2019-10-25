@@ -4,18 +4,13 @@
 <div class="mainpage">
  
   <div class="contents center">
-   <% if @search_keyword.present? %> 
-    <div class="topic">
-     <span class="topic2"><%= @search_keyword %></span>
-     <span class="topic1">の検索結果</span>
-    </div>
-   <% end %>
-   <% if ! @search_keyword.present? %> 
+   
+   
     <div class="all-topic">
      <h1 class="post_post">最新の投稿一覧</h1>
      <span style="padding-left: 10px;">本の投稿</span>
     </div>
-   <% end %>
+   
    <% @plans.each do |plan| %>
    <div class="posts" style="margin-top: 20px; margin-left: 10px;">
     <div style="position: relative; height: 233.91px; background-image: url(<%= plan.image.url %>);" >
@@ -54,24 +49,28 @@
    <% end %>
   
  </div>
- <% if ! Plan.find_by(title: params[:title]).blank? %> 
+ <div class="mainpage">
+ 
   <div class="contents center">
-   <% @post.each do |plan| %>
-    <div class="kanren" style="background-image: url(<%= plan.image %>);">
-        <div class="less">
-           <ul class="less_link">
-            <li>
-              <%= link_to '', "/plans/#{plan.id}", method: :get %>
-            </li>
-           
-           </ul>
-        </div>
-        <%= simple_format(plan.title) %>
-       
+   <div class="second-go" style="height: 800px;">
+     <div class="all-topic">
+        <span style="padding-left: 10px;">まとめサイト</span>
+     </div>
+     <% @tests.each do |test| %>
+     <div class="posts" style="width: 170px; height: 130px; margin-bottom: 50px; margin-top: 20px; position: relative;">
+        <%= image_tag(test.book.thumb.url, :class => "creat") %>
+        <%= link_to "", test_path(test.id), class: "hah" %>
+        
+      <div class="mix-change">
+          <h2 class="line_go" style="width: 170px; height: 130px; margin-bottom: 30px;"><%= simple_format(test.summary) %></h2>
       </div>
-   <% end %>
-   
+
+     </div>
+
+     <% end %>
+
+    </div>
+　 </div>
   </div>
- <% end %>
-</div>
+ </div>
 
