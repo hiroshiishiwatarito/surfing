@@ -18,3 +18,5 @@
 public/sitemap.xml.gz
 
 /.vendor/bundle
+
+/config/s3.yml

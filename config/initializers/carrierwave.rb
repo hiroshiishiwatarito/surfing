@@ -9,14 +9,14 @@ CarrierWave.configure do |config|
     provider: 'AWS',
     aws_access_key_id:      ENV['AWS_ACCESS_KEY_ID'],
     aws_secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
-    region:                 ENV['AWS_REGION'],
-    path_style:true
+    region:                 'ap-northeast-1',
+    
   }
   config.fog_public     = true # public-read
   config.remove_previously_stored_files_after_update = false
 
-  config.fog_directory = ENV['AWS_S3_BUCKET']
-  config.asset_host = 'https://eureka-image.s3-ap-northeast-1.amazonaws.com'
+  config.fog_directory = 'eureka-image'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/eureka-image'
 
 end
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
