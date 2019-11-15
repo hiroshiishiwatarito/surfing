@@ -1,3 +1,287 @@
+<html lang="ja">
+  <head>
+    <!-- Goodle Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8830310600171711",
+    enable_page_level_ads: true
+     });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130237144-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-130237144-1');
+    </script>
+    <title>マイページ - ユリイカ</title>
+    <meta name="description" content="ユリイカで、本, スキルアップ, テスト対策のサービスを利用することができます。">
+    <meta name="keywords" content="ユリイカ, Eureka, 大学, 資格・体験談, テスト対策">
+    <meta name="viewport" content="width=devise-width,initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags  %>
+    <!-- Google Console Search -->
+    <meta name="google-site-verification" content="uh4J6YQwgfL0Q9XnjCyjTV2xB16q7eXGFCHfdq2UNLQ" />
+    
+  </head>  
+
+  <!-- header pc -->
+<body class="photo">
+   <div class="pc">
+   
+    <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; padding-top: 4px; text-align: left;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+             
+           </div>
+           
+
+          </div>
+         <div>
+
+        </li>
+       
+        <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+          
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+             
+             <li class="first"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="second"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+             
+          
+        <% end %>
+
+        <div class="sp">
+          <% if ! (guider_signed_in? or tourist_signed_in?) %>
+           <div class="grid-6">
+            <div class="user_nav grid-6">
+              <span class="samurai" style=" 
+                width: 300px;
+                height: 0px;
+                bottom: 5px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-left: 0px;
+                padding-right: 11px;">
+                <ul class="user__info">
+                 <li>
+                  <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
+                  <%= link_to "guider", new_guider_session_path, class: 'post' %>
+                 </li>
+                </ul>
+              </span>
+            </div>
+           </div>
+          <% end %>
+        </div>
+       
+
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/plans" >フリマ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/tests">スキルアップ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/professions/:id/category">テスト対策</a>
+        
+        </div>
+
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- タブレット用 -->
+<div class="sp">
+   <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+           </div>
+          </div>
+         <div>
+        </li>
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <div class="getgo_nav">
+           
+           <span class="fas fa-rule" style="display: inline-block;" >サービス
+              <ul>
+                  <li class="category">
+                     <a class="guider-category" href="/plans" >フリマ</a>
+                    <a class="guider-category" href="/tests">スキルアップ</a>
+                    <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                  </li>
+              </ul>
+            </span>
+          </div>
+
+          <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+            <div style="display: inline-block; width: 443px; text-align: right;">
+             <li class="category-id"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="category-id"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+            </div>
+             
+        <% end %>
+        </div>
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- 携帯用 -->
+<div class="sp1">
+  <header>
+    <div class="head-container">
+       <nav class="headed">
+         <li class="left">
+           <div class="fine">
+
+            <div class="full_max">
+              <div class="full">
+                 <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+                 <% if ! (guider_signed_in? or tourist_signed_in?) %>
+                 <div style="display: inline-block; width: 443px; text-align: right;">
+                    <li class="category-id up "><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+                    <li class="category-id loss"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+                 </div>
+                 <% end %>
+                 <% if guider_signed_in? %>
+                  <div class="guider_nav sp1">
+                   
+                    <span style="margin-top: 0px; top: -5px; width: 215px;">
+                      <a href="/guiders/:id/top_assistant" style="color: #E47911;">
+                        <%= current_guider.nickname %>
+                      </a>
+                    </span>
+                   
+                  </div>
+                 <% end %>
+              </div>
+            </div>
+           <div>
+         </li>
+        </nav>
+        <div class="sp1">
+        <nav class="headed">
+          <li class="left">
+            <div class="fine">
+
+              <div class="full_max">
+                <div class="full1">
+                <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+                <% end %>
+                </div>
+              </div>
+            <div>
+          </li>
+       </nav>
+       </div>
+       <div class="all-star sp1" style="margin-bottom: 10px;">
+          <div style="text-align: center; display: inline-block; width: 200px;">
+            <i class="fas fa-bars"></i>
+            <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          </div>
+          <div style="text-align: center; display: inline-block; width: 200px; ">
+              <i class="fas fa-book" style="margin-left: 15px;"></i>
+              <div class="getgo_nav">
+           
+                 <span class="fas fa-rule" style="display: inline-block;" >サービス
+                    <ul>
+                      <li class="category">
+                         <a class="guider-category" href="/plans" >フリマ</a>
+                         <a class="guider-category" href="/tests">スキルアップ</a>
+                         <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                      </li>
+                    </ul>
+                 </span>
+              </div>
+          </div>
+       </div>
+        
+
+       <div class="mbar sp1">
+       </div>
+    </div>
+  </header>
+  <%= yield %>
+</div>
+
+<!-- 中身 pc -->
+<div class="pc">
 <div class="guider-container">
   <div class="guider1-container">
      <div class="guider2-container">
@@ -21,7 +305,7 @@
                 <%= form_tag( "/guiders/#{@guiders.id}", method: :patch, class: "guider-form") do %>
                   <div class="pdf">
                       <div class="pdf-header">
-                        <h2 class="pdf-header1">本人情報</h2>
+                        <h2 class="pdf-header1">個人情報</h2>
                       </div>
                       <div class="pdf-body">
                         <div class="pdf-body1">
@@ -44,7 +328,7 @@
                           <% if Guider.find_by(gender: params[:gender]).blank? %>
                           <div class="select">
                            
-                            <select name="gender", id="user_sex" value="<%= @guiders.gender %>">
+                            <select name="gender", id="user_sex" value="<%= @guiders.gender %>" required>
                               <option value="性別">性別</option>
                               <option value="男">男性</option>
                               <option value="女">女性</option>
@@ -134,7 +418,8 @@
                        <div class="pdf-f1">
                         
                           <div class="gogo1">
-                            <div class="gogo2" style="background-image: url(<%= @guiders.photo %>);">
+                            <div class="gogo2" >
+                              <%= image_tag(@guiders.photo.url, class: "bookdo2") %>
                             </div>
                           </div>
                           <div class="image_form">
@@ -161,7 +446,8 @@
                        <div class="pdf-f1">
                         
                           <div class="gogo1">
-                            <div class="gogo2" style="background-image: url(<%= @guiders.driver %>);">
+                            <div class="gogo2" >
+                             <%= image_tag(@guiders.driver.url, class: "bookdo2") %>
                             </div>
                           </div>
                           <div class="image_form">
@@ -179,8 +465,9 @@
                         
                        </div>
                       </div>
-                    
-                      <button type="sumbit" value="Save" class="save">Save</button>
+                      <div style="width: 766px; text-align: right; padding-right: 40px; padding-top: 10px;">
+                         <button type="sumbit" value="Save" class="save">Save</button>
+                      </div>
 
                   </div>
 
@@ -193,3 +480,582 @@
   </div>
 
 </div>
+</div>
+
+<!-- 中身 sp -->
+<div class="sp">
+<div class="guider-container">
+  <div class="guider1-container">
+     <div class="guider2-container">
+        <div class="kg">
+            <div class="kobe1">
+               <ul class="profile">
+                  <li class="profile1-1">
+                    <span class="profile2"><a class="ac" href= "/guiders/<%= current_guider.id%>/edit"> プロフィール　</a></span>
+                  </li class="profile1-1">
+                  <li class="profile1-1">
+                    <span class="profile1"><a class="ac" href= "/guiders/<%= current_guider.id%>">投稿一覧</a></span>
+                  </li>
+                  
+               </ul>
+            </div>
+            
+        </div>
+        <div class="kg1">
+          <div class="kobe2">
+             <div class="kobe3">
+                <%= form_tag( "/guiders/#{@guiders.id}", method: :patch, class: "guider-form") do %>
+                  <div class="pdf">
+                      <div class="pdf-header">
+                        <h2 class="pdf-header1">個人情報</h2>
+                      </div>
+                      <div class="pdf-body">
+                        <div class="pdf-body1">
+                          <label class="name2">名前</label>
+                          <div class="name_form">
+                            <input placeholder="Name" type="string" name="lastname" value="<%= @guiders.lastname %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">苗字</label>
+                          <div class="name_form">
+                            
+                            <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1" style="margin-bottom: 0px;">
+                          <label class="name2">性別</label>
+                          <% if Guider.find_by(gender: params[:gender]).blank? %>
+                          <div class="select">
+                           
+                            <select name="gender", id="user_sex" value="<%= @guiders.gender %>" required>
+                              <option value="性別">性別</option>
+                              <option value="男">男性</option>
+                              <option value="女">女性</option>
+                              <option value="その他">その他</option>
+                            </select>
+                          </div>
+                          <% else %>
+                             <p class="birth"><input placeholder="性別" style="margin-left: 6px;" type="string" name="gender" value="<%= @guiders.gender %>" autofocus="true" class="name_form1" required></p>
+                           
+                          <% end %>
+                        </div>
+　　　　　　　　　　　
+                        <div class="pdf-body1">
+                          <label class="name2">職業</label>
+                          <% if Guider.find_by(occupation: params[:occupation]).blank? %>
+                          <div class="select">
+                            <select name="guider[occupation]" id="user_sex" value="<%= @guiders.occupation %>"  required>
+
+                              <option value="職業">職業</option>
+                              <option value="学生">学生</option>
+                              
+                            </select>
+                          </div>
+                          <% else %>
+                            <div class="name_form">
+                            <input placeholder="職業"  type="string" name="occupation" value="<%= @guiders.occupation %>" class="name_form1" autofocus="true" required>
+                          </div>
+                          <% end %>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">生年月日</label>
+                          <div class="name_form">
+                            <input placeholder="" type="string" name="birth" value="<%= @guiders.birth %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">メール</label>
+                          <div class="name_form">
+                             <input placeholder="Gmail" type="text" name="contact" value="<%= @guiders.contact %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">住所</label>
+                          <div class="describe">
+                             <input placeholder="" type="text" name="hometown" value="<%= @guiders.hometown %>" autofocus="true" class="describe1" required>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    
+                      <div class="pdf-header">
+                        <h2 class="pdf-header1">本人情報</h2>
+                      </div>
+                      <div class="pdf-footer2">
+                        <div class="pdf-body1">
+                          <label class="name2">大学</label>
+                          <div class="name_form">
+                            <input placeholder="" type="string" name="university" value="<%= @guiders.university %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">学部</label>
+                          <div class="name_form">
+                            <input placeholder="" type="string" name="faculty" value="<%= @guiders.faculty %>" autofocus="true" class="name_form1" required>
+                          </div>
+                        </div>
+
+                        <div class="pdf-body1">
+                          <label class="name2">学年</label>
+                          <div class="name_form">
+                            <input placeholder="" type="string" name="year" value="<%= @guiders.year %>" class="name_form1" autofocus="true" required>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+                      <div class="pdf-footer">
+                        <h2 class="pdf-header1">本人確認書類</h2>
+                      </div>
+                      <div class="pdf-footer1">
+                       <div class="pdf-f1">
+                        
+                          <div class="gogo1">
+                            <div class="gogo2" >
+                              <%= image_tag(@guiders.photo.url, class: "bookdo2") %>
+                            </div>
+                          </div>
+                          <div class="image_form">
+                            <div class="setumei">
+                               <p class="image_setumei">以下の書類のうち、住所、氏名、生年月日、書類発行元が確認できるものをご用意ください。
+                                </p>
+                               
+                               <p class="image_setumei2" style="margin-top: 30px;">・学生証</p>
+
+                               
+                            </div>
+                            <div class="file1">
+                                <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                               
+                            </div>
+                          </div>
+                        
+                       </div>
+                      </div>
+                      <div class="pdf-footer">
+                        <h2 class="pdf-header1">本人確認書類</h2>
+                      </div>
+                      <div class="pdf-footer1">
+                       <div class="pdf-f1">
+                        
+                          <div class="gogo1">
+                            <div class="gogo2" >
+                             <%= image_tag(@guiders.driver.url, class: "bookdo2") %>
+                            </div>
+                          </div>
+                          <div class="image_form">
+                            <div class="setumei">
+                                <p class="image_setumei">以下の書類のうち、住所、氏名、生年月日、書類発行元が確認できるものをご用意ください。
+                                </p>
+                               <p class="image_setumei1">・運転免許証</p>
+                               <p class="image_setumei2" style="margin-top: 20px;">・健康保険証</p>
+              
+                            </div>
+                            <div class="file1">
+                                <%= file_field_tag "Image", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                            </div>
+                          </div>
+                        
+                       </div>
+                      </div>
+                      <div style="width: 766px; text-align: right; padding-right: 40px; padding-top: 10px;">
+                         <button type="sumbit" value="Save" class="save">Save</button>
+                      </div>
+
+                  </div>
+
+                  
+                <% end %>
+             </div>
+          </div>
+        </div>
+     </div>
+  </div>
+
+</div>
+</div>
+
+<!-- 中身 sp1 -->
+<div class="sp1">
+  <% if @guiders.photo.blank? %> 
+     <div class="profile-go">
+  <% else %>
+     <div class="profile-go" style="height: 2200px;">
+  <% end %>
+        <h2 class="profile-big">個人情報</h2>
+  
+
+        <%= form_tag( "/guiders/#{@guiders.id}", method: :patch, class: "guider-form") do %>
+                  <!-- 苗字 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5">
+                       <div class="profile-small1">
+                        苗字
+                       </div>
+                       <div class="profile-small1">
+                        <div class="name_form">
+                         <input placeholder="Name" type="string" name="lastname" value="<%= @guiders.lastname %>" autofocus="true" class="name_form1" required>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                  
+                  <!-- 名前 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        名前
+                       </div>
+                       <div class="profile-small1">
+                        <div class="name_form">
+                         <input placeholder="Name" type="string" name="student_name" value="<%= @guiders.student_name %>" autofocus="true" class="name_form1" required>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+
+                  <!-- 性別 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        性別
+                       </div>
+                       <div class="profile-small1">
+                        <% if Guider.find_by(gender: params[:gender]).blank? %>
+                        <div class="select">
+                         <select name="gender", id="user_sex" value="<%= @guiders.gender %>" required>
+                              <option value="性別">性別</option>
+                              <option value="男">男性</option>
+                              <option value="女">女性</option>
+                              <option value="その他">その他</option>
+                          </select>
+                        </div>
+                        <% else %>
+                             <p class="birth"><input placeholder="性別" style="margin-left: 6px;" type="string" name="gender" value="<%= @guiders.gender %>" autofocus="true" class="name_form1" required></p>
+                        <% end %>
+                       </div>
+                    </div>
+                  </div>
+
+                  <!-- 職業 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        職業
+                       </div>
+                       <div class="profile-small1">
+                        <% if Guider.find_by(occupation: params[:occupation]).blank? %>
+                              <div class="select">
+                               <select name="guider[occupation]" id="user_sex" value="<%= @guiders.occupation %>"  required>
+
+                                  <option value="職業">職業</option>
+                                  <option value="学生">学生</option>
+                              
+                               </select>
+                              </div>
+                         <% else %>
+                              <div class="name_form">
+                                 <input placeholder="職業"  type="string" name="occupation" value="<%= @guiders.occupation %>" class="name_form1" autofocus="true" required>
+                              </div>
+                         <% end %>
+                       </div>
+                    </div>
+                  </div>
+
+                  <!-- 生年月日 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        生年月日
+                       </div>
+                       <div class="profile-small1">
+                         <div class="name_form">
+                          <input placeholder="" type="string" name="birth" value="<%= @guiders.birth %>" autofocus="true" class="name_form1" required>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+                   <!-- メール -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        メール
+                       </div>
+                       <div class="profile-small1">
+                         <div class="name_form">
+                          <input placeholder="Gmail" type="text" name="contact" value="<%= @guiders.contact %>" autofocus="true" class="name_form1" required>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+                   <!-- 住所 -->
+                  <div class="profile-small" style="height: 150px;">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        住所
+                       </div>
+                       <div class="profile-small1">
+                         <div class="name_form">
+                            <input placeholder="" type="text" name="hometown" value="<%= @guiders.hometown %>" autofocus="true" class="describe1" style="padding-left: 0px;" required>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+                   <!-- 大学 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        大学
+                       </div>
+                       <div class="profile-small1">
+                         <div class="name_form">
+                           <input placeholder="" type="string" name="university" value="<%= @guiders.university %>" autofocus="true" class="name_form1" required>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+                   <!-- 学部 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        学部
+                       </div>
+                       <div class="profile-small1">
+                         <div class="name_form">
+                           <input placeholder="" type="string" name="faculty" value="<%= @guiders.faculty %>" autofocus="true" class="name_form1" required>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+                   <!-- 学年 -->
+                  <div class="profile-small">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        学年
+                       </div>
+                       <div class="profile-small1">
+                         <div class="name_form">
+                            <input placeholder="" type="string" name="year" value="<%= @guiders.year %>" class="name_form1" autofocus="true" required>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+
+                  <h2 class="profile-big" style="padding-top: 24px;">本人確認書類</h2>
+
+                  <!-- 書類 -->
+                  <div class="profile-small" style="height: 120px;">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        書類
+                       </div>
+                       <div class="profile-small1">
+                        <%= file_field_tag "photo", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                       </div>
+                    </div>
+                  </div>
+                  <% if @guiders.photo.present? %> 
+                  <div style="margin-top: 24px; width: 360px;">
+                            <div style="padding: 0 60px; width: 360px; height: 240px;" >
+                              <%= image_tag(@guiders.photo, class: "bookdo2") %>
+                            </div>
+                  </div>
+                  <% end %>
+
+                  <!-- 書類 -->
+                  <div class="profile-small" style="height: 120px;">
+                    <div class="profile-small1-5" style="margin-top: 24px;">
+                       <div class="profile-small1">
+                        書類
+                       </div>
+                       <div class="profile-small1">
+                        <%= file_field_tag "driver", class: "self", placeholder: "Upload a file from your computer", type: "text", :autofocus => true %>
+                       </div>
+                    </div>
+                  </div>
+                  <% if @guiders.driver.present? %> 
+                  <div style="margin-top: 24px; width: 360px;">
+                            <div style="padding: 0 60px; width: 360px; height: 240px;" >
+                              <%= image_tag(@guiders.driver, class: "bookdo2") %>
+                            </div>
+                  </div>
+                  <% end %>
+
+                  <!-- 提出 -->
+                  <div style="width: 360px; text-align: right; padding-top: 24px;">
+                         <button type="sumbit" value="Save" class="save">送信</button>
+                  </div>
+        <% end %>
+    </div>
+</div>
+
+<!-- footer pc -->
+<div class="pc">
+ <footer class="shita">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ユリイカについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">ユリイカについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 ユリイカ
+        </p>
+      </div>
+  
+  </div>
+ </footer>
+</div>
+
+<!-- footer タブレット用 -->
+<div class="sp">
+ <footer class="shita">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ユリイカについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">ユリイカについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 ユリイカ
+        </p>
+      </div>
+  
+  </div>
+ </footer>
+</div>
+
+<!-- footer 携帯用 -->
+<div class="sp1">
+ <footer class="shita">
+      <div class="category-footer goto">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ユリイカについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">ユリイカについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+
+      </div>
+      <!--  -->
+      <div class="category-footer gotonext">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  style="width: 177px;" href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  style="width: 177px;" href="">コンプライアンスポリシー</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <div style="margin-top: 40px;"></div>
+              <a class="footer-word1"  href="">特定商取引に関する表記</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="category-footer nextgo">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: left;" >国</h3>
+              <a class="footer-word1" style="text-align: left;" href="">日本</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 ユリイカ
+        </p>
+      </div>
+  
+  
+ </footer>
+</div>
+</body>
+
+</html>
+

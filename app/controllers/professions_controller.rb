@@ -3,6 +3,7 @@ class ProfessionsController < ApplicationController
     before_action :move_to_index, except: [:category, :index, :top, :show]
 
     def category
+        render layout: false
     end
     
 	def index
@@ -12,6 +13,8 @@ class ProfessionsController < ApplicationController
 
 	    @search_keyword1 = params[:university]
 	    @search_keyword2 = params[:faculty]
+
+        render layout: false
 
 	end
 
@@ -54,19 +57,24 @@ class ProfessionsController < ApplicationController
         @chart10 = Profession.where(faculty: @profession.faculty, lesson: @profession.lesson).where(:fun => "5").count
         @chart109 = (@chart10 * 100 / @chart16) 
 	    @chart11 = [['大変不満足', @chart105], ["不満足",  @chart106], ["まあまあ",  @chart107], ["満足",  @chart108], ["すごい満足",  @chart109]]
-
+        
+        render layout: false
 	end
 
 	def new
+        render layout: false
+
 	end
 
     def destroy
         profession = Profession.find(params[:id])
         profession.destroy if profession.guider_id == current_guider.id
+        render layout: false
     end
 
     def edit
         @profession = Profession.find(params[:id])
+        render layout: false
     end
 
     def update
@@ -74,6 +82,7 @@ class ProfessionsController < ApplicationController
         if profession.guider_id == current_guider.id
             profession.update(profession_params)
         end
+        render layout: false
     end
 
 	def show 
@@ -88,11 +97,12 @@ class ProfessionsController < ApplicationController
        
         @high = Profession.where(lesson: @profession.lesson, pick_up: @professions.maximum(:pick_up))
         @low = Profession.where(lesson: @profession.lesson, pick_up: @professions.minimum(:pick_up))
-      
+        render layout: false
 	end
 
 	def create
 		Profession.create(university: params[:university], faculty: params[:faculty], teacher: params[:teacher], lesson: params[:lesson], book: params[:book], test: params[:test], thing: params[:thing], content: params[:content], year: params[:year], confirm: params[:confirm], recommendation: params[:recommendation], feel: params[:feel], star: params[:star], rate: params[:rate] , fun: params[:fun], season: params[:season], detail: params[:detail], guider_id: current_guider.id)
+        render layout: false
 	end
 
 	private

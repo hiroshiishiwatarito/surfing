@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/sitemap' => redirect('https://eureka-image.s3.amazonaws.com/chancetochance.world/sitemap.xml.gz')
+  get '/sitemap' => redirect('https://eureka-image.s3.amazonaws.com/eureka-campus/sitemap.xml.gz')
   
   devise_for :tourists, controllers: {
     sessions:      'tourists/sessions',
@@ -15,49 +16,47 @@ Rails.application.routes.draw do
 
   #本
   resources :plans 
-
+  get "/market" => "plans#index"
   root      'plans#top'
   get       'plans/:id/top' => "plans#top"
   post "plans/:id/purchase", to: "plans#purchase"
   get  "plans/:id/purchase" => "plans#purchase"
-  get  "/plans" => "plans#destory"
   get  "plans/:id/fail"     => "plans#fail"
-  get  "/plans/:id/eureka" => "plans#eureka"
-  get  "/plans/:id/inquire" => "plans#inquire"
   
-  get '/plans/:id/top', to: 'tests#index'
   #テスト
   resources :professions
-  get '/professions/:id/category' => "professions#category"
+  get '/test' => "professions#category"
+  get '/test/list' => "professions#index"
   get '/professions/:id/top' => "professions#top"
   
   #カテゴリー
-  resources :categorys
-  get '/categorys' => 'categorys#index'
+  get '/category' => 'category#index'
 
   #まとめサイト
   resources :tests
-  get '/tests' => 'tests#index'
-  get '/tests' => 'tests#new'
-  get 'tests/:id' => 'tests#show'
-  get '/tests/new/guideline' => 'tests#guideline'
+  get '/blog' => 'tests#index'
+  get '/blog/new' => 'tests#new'
+  get '/guideline' => 'tests#guideline'
   
   #ガイドナー
   resources :guiders
-  get "/guiders/:id/post" => "guiders#post"
-  get '/done' => 'guiders#done'
-  get 'guiders/:id/go' => 'guiders#go'
-  get "/guiders/:id/accepted" => "guiders#accepted"
+  get '/post' => "guiders#post"
   post "/guiders/:id/approve" => "guiders#approve_guider", as: "approve_guider"
   get  "/guiders/:id/approve" => "guiders#approve_guider"
+  get  "/mypage" => "guiders#top_assistant"
   
   #お問い合わせフォーム
-  get  '/plans/:id/inquirys' => 'inquirys#index'
-  post '/plans/inquirys/confirm' => 'inquirys#confirm'
-  get  '/plans/inquirys/confirm' => 'inquirys#confirm'
-  post '/plans/inquirys/thanks' => 'inquirys#thanks'
-  get  '/plans/inquirys/thanks' => 'inquirys#thanks'
-
+  get  '/help' => 'inquiry#index'
+  post '/help/confirm' => 'inquiry#confirm'
+  post '/help/thanks' => 'inquiry#thanks'
+  #事業概要
+  resources :about, :only => :index
+  #利用規約
+  resources :tos, :only => :index
+  #コンプライアンスポリシー
+  resources :compliance, :only => :index
+  #特定商取引
+  resources :tokutei, :only => :index
 
 
   # The priority is based upon order of creation: first created -> highest priority.

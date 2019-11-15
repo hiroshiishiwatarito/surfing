@@ -1,6 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Goodle Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8830310600171711",
+    enable_page_level_ads: true
+     });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130237144-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-130237144-1');
+    </script>
+    <title>フリマ - ユリイカ</title>
+    <meta name="description" content="ユリイカで、本・書籍, スキルアップ, テスト対策のサービスを利用することができます。">
+    <meta name="keywords" content="ユリイカ, Eureka, 大学, 資格・体験談, テスト対策,フリマ">
+    <meta name="viewport" content="width=devise-width,initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags  %>
+    <!-- Google Console Search -->
+    <meta name="google-site-verification" content="uh4J6YQwgfL0Q9XnjCyjTV2xB16q7eXGFCHfdq2UNLQ" />
+    
+  </head>  
+
+   <!-- header pc -->
+<body class="photo">
+   <div class="pc">
+   
+    <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; padding-top: 4px; text-align: left;" href="/">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+             
+           </div>
+           
+
+          </div>
+         <div>
+
+        </li>
+       
+        <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+          
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+             
+             <li class="first"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="second"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+             
+          
+        <% end %>
+
+        <div class="sp">
+          <% if ! (guider_signed_in? or tourist_signed_in?) %>
+           <div class="grid-6">
+            <div class="user_nav grid-6">
+              <span class="samurai" style=" 
+                width: 300px;
+                height: 0px;
+                bottom: 5px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-left: 0px;
+                padding-right: 11px;">
+                <ul class="user__info">
+                 <li>
+                  <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
+                  <%= link_to "guider", new_guider_session_path, class: 'post' %>
+                 </li>
+                </ul>
+              </span>
+            </div>
+           </div>
+          <% end %>
+        </div>
+       
+
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/plans" >フリマ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/tests">スキルアップ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/professions/:id/category">テスト対策</a>
+        
+        </div>
+
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- タブレット用 -->
+<div class="sp">
+   <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+           </div>
+          </div>
+         <div>
+        </li>
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <div class="getgo_nav">
+           
+           <span class="fas fa-rule" style="display: inline-block;" >サービス
+              <ul>
+                  <li class="category">
+                     <a class="guider-category" href="/plans" >フリマ</a>
+                    <a class="guider-category" href="/tests">スキルアップ</a>
+                    <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                  </li>
+              </ul>
+            </span>
+          </div>
+
+          <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+            <div style="display: inline-block; width: 443px; text-align: right;">
+             <li class="category-id"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="category-id"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+            </div>
+             
+        <% end %>
+        </div>
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- 携帯用 -->
+<div class="sp1">
+  <header>
+    <div class="head-container">
+       <nav class="headed">
+         <li class="left">
+           <div class="fine">
+
+            <div class="full_max">
+              <div class="full">
+                 <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+                 <% if ! (guider_signed_in? or tourist_signed_in?) %>
+                 <div style="display: inline-block; width: 443px; text-align: right;">
+                    <li class="category-id up "><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+                    <li class="category-id loss"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+                 </div>
+                 <% end %>
+                 <% if guider_signed_in? %>
+                  <div class="guider_nav sp1">
+                   
+                    <span style="margin-top: 0px; top: -5px; width: 215px;">
+                      <a href="/guiders/:id/top_assistant" style="color: #E47911;">
+                        <%= current_guider.nickname %>
+                      </a>
+                    </span>
+                   
+                  </div>
+                 <% end %>
+              </div>
+            </div>
+           <div>
+         </li>
+        </nav>
+        <div class="sp1">
+        <nav class="headed">
+          <li class="left">
+            <div class="fine">
+
+              <div class="full_max">
+                <div class="full1">
+                <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+                <% end %>
+                </div>
+              </div>
+            <div>
+          </li>
+       </nav>
+       </div>
+       <div class="all-star sp1" style="margin-bottom: 10px;">
+          <div style="text-align: center; display: inline-block; width: 200px;">
+            <i class="fas fa-bars"></i>
+            <a class="category-id" href="/category">カテゴリー<br /></a>
+          </div>
+          <div style="text-align: center; display: inline-block; width: 200px; ">
+              <i class="fas fa-book" style="margin-left: 15px;"></i>
+              <div class="getgo_nav">
+           
+                 <span class="fas fa-rule" style="display: inline-block;" >サービス
+                    <ul>
+                      <li class="category">
+                         <a class="guider-category" href="/plans" >フリマ</a>
+                         <a class="guider-category" href="/tests">スキルアップ</a>
+                         <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                      </li>
+                    </ul>
+                 </span>
+              </div>
+          </div>
+       </div>
+        
+
+       <div class="mbar sp1">
+       </div>
+    </div>
+  </header>
+  <%= yield %>
+</div>
+
+<!-- 中身用 pc -->
+<div class="pc">
 <div class="mainpage" style="height: 1650px;">
  
-  <div class="contents center">
+  <div class="contents center" style="width: 1100px; padding-left: 90px;">
    <% if @search_keyword.present? %> 
     <div class="topic">
      <span class="topic2"><%= @search_keyword %></span>
@@ -8,14 +293,16 @@
     </div>
    <% end %>
    <% if ! @search_keyword.present? %> 
-    <div class="all-topic" style="margin-bottom: 30px;">
-     <span>最新の投稿一覧</span>
+    <div class="all-topic" style="margin-bottom: 30px; ">
+     <span>本・書籍</span>
     </div>
    <% end %>
+  
    <% @plans.each do |plan| %>
+  
    <div class="posts">
-    <div style="background-image: url(<%= plan.image.url %>); height: 233.91px; position: relative;" >
-    <%= image_tag(plan.to_s, class: "bookdo") %>
+    <div style="position: relative; height: 233.91px; background-image: url(<%= plan.image.url %>);" >
+    <%= image_tag(plan.image.url, class: "bookdo") %>
     <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master" %>
         <div class="more">
           
@@ -34,6 +321,7 @@
       </span>
       
     </div>
+    
 
     <div class="mix-change">
      <span class="mix" style="margin-left: 0px;"><%= plan.title %></span>
@@ -41,9 +329,6 @@
      
     </div>
      
-
-  
-
    </div>
 
 
@@ -72,4 +357,324 @@
   </div>
  <% end %>
 </div>
+</div>
+
+<!-- 中身用 sp -->
+<div class="sp">
+<div class="mainpage" style="height: 1650px;">
+ 
+  <div class="contents center" style="width: 1100px; padding-left: 90px;">
+   <% if @search_keyword.present? %> 
+    <div class="topic">
+     <span class="topic2"><%= @search_keyword %></span>
+     <span class="topic1">の検索結果</span>
+    </div>
+   <% end %>
+   <% if ! @search_keyword.present? %> 
+    <div class="all-topic" style="margin-bottom: 30px; ">
+     <span>本・書籍</span>
+    </div>
+   <% end %>
+  
+   <% @plans.each do |plan| %>
+  
+   <div class="posts">
+    <div style="position: relative; height: 233.91px; background-image: url(<%= plan.image.url %>);" >
+    <%= image_tag(plan.image.url, class: "bookdo") %>
+    <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master" %>
+        <div class="more">
+          
+           <ul class="more_list">
+            <li>
+              <%= link_to '', "/plans/#{plan.id}", method: :get %>
+            </li>
+            
+           </ul>
+        </div>
+       
+      <span class="name">
+        <a href="/guiders/<%= plan.guider_id %>">
+          
+        </a>
+      </span>
+      
+    </div>
+    
+
+    <div class="mix-change">
+     <span class="mix" style="margin-left: 0px;"><%= plan.title %></span>
+     <span class="mix1">¥<%= plan.price %></span>
+     
+    </div>
+     
+   </div>
+
+
+   <% end %>
+   
+   <%= paginate(@plans) %>
+  
+ </div>
+ <% if ! Plan.find_by(title: params[:title]).blank? %> 
+  <div class="contents center">
+   <% @post.each do |plan| %>
+    <div class="kanren" style="background-image: url(<%= plan.image %>);">
+        <div class="less">
+           <ul class="less_link">
+            <li>
+              <%= link_to '', "/plans/#{plan.id}", method: :get %>
+            </li>
+           
+           </ul>
+        </div>
+        <%= simple_format(plan.title) %>
+       
+      </div>
+   <% end %>
+   
+  </div>
+ <% end %>
+</div>
+</div>
+
+<!-- 中身用 sp1 -->
+<div class="sp1">
+<div class="mainpage" style="height: 1650px;">
+ 
+  <div class="contents center" style="width: 416px;">
+   <% if @search_keyword.present? %> 
+    <div class="topic" style="padding-left: 18px; padding-bottom: 20px;">
+     <span class="topic2"><%= @search_keyword %></span>
+     <span class="topic1">の検索結果</span>
+    </div>
+   <% end %>
+   <% if ! @search_keyword.present? %> 
+    <div class="all-topic" style="margin-bottom: 30px; ">
+     <span style="padding-left: 18px;">本・書籍</span>
+    </div>
+   <% end %>
+  
+   <div style="padding: 0 8px;">
+   <% @plans.each do |plan| %>
+  
+   <div class="posts">
+    <div style="position: relative; width: 200px; height: 233.91px;" >
+    <%= image_tag(plan.image.url, class: "bookdo") %>
+    <%= link_to '', "/plans/#{plan.id}", method: :get, class: "magic-master" %>
+        <div class="more">
+          
+           <ul class="more_list">
+            <li>
+              <%= link_to '', "/plans/#{plan.id}", method: :get %>
+            </li>
+            
+           </ul>
+        </div>
+       
+      <span class="name">
+        <a href="/guiders/<%= plan.guider_id %>">
+          
+        </a>
+      </span>
+      
+    </div>
+    
+
+    <div class="mix-change">
+     <span class="mix" style="margin-left: 0px;"><%= plan.title %></span>
+     <span class="mix1">¥<%= plan.price %></span>
+     
+    </div>
+     
+   </div>
+
+
+   <% end %>
+   
+   <%= paginate(@plans) %>
+   </div>
+  
+ </div>
+
+ <div style="padding: 0 8px;">
+ <% if ! Plan.find_by(title: params[:title]).blank? %> 
+  <div class="contents center">
+   <% @post.each do |plan| %>
+    <div class="kanren" style="background-image: url(<%= plan.image %>);">
+        <div class="less">
+           <ul class="less_link">
+            <li>
+              <%= link_to '', "/plans/#{plan.id}", method: :get %>
+            </li>
+           
+           </ul>
+        </div>
+        <%= simple_format(plan.title) %>
+       
+      </div>
+   <% end %>
+   </div>
+   
+  </div>
+ <% end %>
+ </div>
+</div>
+</div>
+
+<!-- footer pc -->
+<div class="pc">
+ <footer class="shita" style="padding-top: 0px;">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">Eurekaについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="">プライバシーポリシー</a>
+               <a class="footer-word1"  href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center; height: 50px; background-color: #131A22; padding-top: 14px; margin-top: 0px; ">
+         © 2018 Eureka
+        </p>
+      </div>
+  
+ </footer>
+</div>
+
+<!-- footer タブレット用 -->
+<div class="sp">
+ <footer class="shita">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">Eurekaについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="">プライバシーポリシー</a>
+               <a class="footer-word1"  href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 Eureka
+        </p>
+      </div>
+  
+  
+ </footer>
+</div>
+
+<!-- footer 携帯用 -->
+<div class="sp1">
+ <footer class="shita">
+      <div class="category-footer goto">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">Eurekaについて</h3>
+               <a class="footer-word1" href="/about">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+
+      </div>
+      <!--  -->
+      <div class="category-footer gotonext">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  style="width: 177px;" href="">プライバシーポリシー</a>
+               <a class="footer-word1"  style="width: 177px;" href="/guiders/:id/accepted">ユリイカ利用規約</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <div style="margin-top: 40px;"></div>
+              <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+              <a class="footer-word1"  href="">特定商取引に関する表記</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="category-footer nextgo">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: left;" >国</h3>
+              <a class="footer-word1" style="text-align: left;" href="">日本</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 Eureka
+        </p>
+      </div>
+  
+  
+ </footer>
+</div>
+</body>
+
+</html>
 

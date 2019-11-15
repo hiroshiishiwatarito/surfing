@@ -1,3 +1,298 @@
+ <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Goodle Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8830310600171711",
+    enable_page_level_ads: true
+     });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130237144-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-130237144-1');
+    </script>
+    <title>ユリイカ - <%= @plan.title %> (¥<%= @plan.price %>) 中古や未使用のフリマ</title>
+    <style type="text/css">
+    <!--
+    button.stripe-button-el,
+    button.stripe-button-el>span {
+      background-color: #E47911 !important;
+      background-image: none;
+    }
+    -->
+    </style>
+    <meta name="description" content="「ユリイカ」は、手数料が安く、PC/スマホサイトから誰でも簡単に売り買いが楽しめるサイトです。">
+    <meta name="keywords" content="ユリイカ, Eureka, 大学, 資格・体験談, テスト対策">
+    <meta name="viewport" content="width=devise-width,initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags  %>
+    <!-- Google Console Search -->
+    <meta name="google-site-verification" content="uh4J6YQwgfL0Q9XnjCyjTV2xB16q7eXGFCHfdq2UNLQ" />
+    
+  </head>  
+
+ <!-- header pc -->
+<body class="photo">
+   <div class="pc">
+   
+    <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; padding-top: 4px; text-align: left;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+             
+           </div>
+           
+
+          </div>
+         <div>
+
+        </li>
+       
+        <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+          
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+             
+             <li class="first"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="second"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+             
+          
+        <% end %>
+
+        <div class="sp">
+          <% if ! (guider_signed_in? or tourist_signed_in?) %>
+           <div class="grid-6">
+            <div class="user_nav grid-6">
+              <span class="samurai" style=" 
+                width: 300px;
+                height: 0px;
+                bottom: 5px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-left: 0px;
+                padding-right: 11px;">
+                <ul class="user__info">
+                 <li>
+                  <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
+                  <%= link_to "guider", new_guider_session_path, class: 'post' %>
+                 </li>
+                </ul>
+              </span>
+            </div>
+           </div>
+          <% end %>
+        </div>
+       
+
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/plans" >フリマ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/tests">スキルアップ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/professions/:id/category">テスト対策</a>
+        
+        </div>
+
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- タブレット用 -->
+<div class="sp">
+   <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+           </div>
+          </div>
+         <div>
+        </li>
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <div class="getgo_nav">
+           
+           <span class="fas fa-rule" style="display: inline-block;" >サービス
+              <ul>
+                  <li class="category">
+                     <a class="guider-category" href="/plans" >フリマ</a>
+                    <a class="guider-category" href="/tests">スキルアップ</a>
+                    <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                  </li>
+              </ul>
+            </span>
+          </div>
+
+          <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+            <div style="display: inline-block; width: 443px; text-align: right;">
+             <li class="category-id"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="category-id"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+            </div>
+             
+        <% end %>
+        </div>
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- 携帯用 -->
+<div class="sp1">
+  <header>
+    <div class="head-container">
+       <nav class="headed">
+         <li class="left">
+           <div class="fine">
+
+            <div class="full_max">
+              <div class="full">
+                 <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+                 <% if ! (guider_signed_in? or tourist_signed_in?) %>
+                 <div style="display: inline-block; width: 443px; text-align: right;">
+                    <li class="category-id up "><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+                    <li class="category-id loss"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+                 </div>
+                 <% end %>
+                 <% if guider_signed_in? %>
+                  <div class="guider_nav sp1">
+                   
+                    <span style="margin-top: 0px; top: -5px; width: 215px;">
+                      <a href="/guiders/:id/top_assistant" style="color: #E47911;">
+                        <%= current_guider.nickname %>
+                      </a>
+                    </span>
+                   
+                  </div>
+                 <% end %>
+              </div>
+            </div>
+           <div>
+         </li>
+        </nav>
+        <div class="sp1">
+        <nav class="headed">
+          <li class="left">
+            <div class="fine">
+
+              <div class="full_max">
+                <div class="full1">
+                <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+                <% end %>
+                </div>
+              </div>
+            <div>
+          </li>
+       </nav>
+       </div>
+       <div class="all-star sp1" style="margin-bottom: 10px;">
+          <div style="text-align: center; display: inline-block; width: 200px;">
+            <i class="fas fa-bars"></i>
+            <a class="category-id" href="/categorys">カテゴリー<br /></a>
+          </div>
+          <div style="text-align: center; display: inline-block; width: 200px; ">
+              <i class="fas fa-book" style="margin-left: 15px;"></i>
+              <div class="getgo_nav">
+           
+                 <span class="fas fa-rule" style="display: inline-block;" >サービス
+                    <ul>
+                      <li class="category">
+                         <a class="guider-category" href="/plans" >フリマ</a>
+                         <a class="guider-category" href="/tests">スキルアップ</a>
+                         <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                      </li>
+                    </ul>
+                 </span>
+              </div>
+          </div>
+       </div>
+        
+
+       <div class="mbar sp1">
+       </div>
+    </div>
+  </header>
+  <%= yield %>
+</div>
+    
+    
+<!-- 中身 pc -->
+<div class="pc">
 <div class= "headquarter">
  <div class= "image-all">
   <div class="image-five ">
@@ -9,7 +304,7 @@
     </div>
     <div class="king">
       <ul class="example" id="thumb_img">
-        <li class="current"><img class="active" onclick="changeimg('<%= @plan.image %>',this);" src="<%= @plan.image %>"></li>
+        <li class="current"><img class="active" onclick="changeimg('<%= @plan.image %>',this);" src="<%= @plan.image %>" style="height: 220px;"></li>
         <li><img onclick="changeimg('<%= @plan.copy_image %>',this);" style="width: 150px; height: 220px;" src="<%= @plan.copy_image %>"></li>
         <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.third_image %>',this);" src="<%= @plan.third_image %>"></li>
         <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.fourth_image %>',this);" src="<%= @plan.fourth_image %>"></li>
@@ -31,7 +326,7 @@
   </div>
  </div>
 
- <div class= "macro">
+ <div class= "macro" style="height: 900px;">
   <div class="detail">
    <div class="micro">
     <div class="contents free">
@@ -59,43 +354,43 @@
            <div class="arasuji2">
         
 
-             <div style="margin-top:16px;">
+             <div >
              <div class="shashin">
-               <div class="bg"><span class="bg1"><i class="fas fa-user-edit"></i></span></div>
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">カテゴリー</span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.transport %></div>
+               
+             </div>
+             </div>
+
+             <div >
+             <div class="shashin">
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">著者名</span></div>
              </div>
              <div class="place">
                <div class="dg"><%= @plan.place %></div>
-               <div class="dg1">JINJINJINJIN</div>
+               
              </div>
              </div>
 
-             <div style="margin-top:16px;">
+             <div >
              <div class="shashin">
-               <div class="bg"><span class="bg1"><i class="fas fa-school"></i></span></div>
-             </div>
-             <div class="place">
-               <div class="dg"><%= @plan.times %></div>
-               <div class="dg1">JINJINJINJIN</div>
-             </div>
-             </div>
-
-             <div style="margin-top:16px;">
-             <div class="shashin">
-               <div class="bg"><span class="bg1"><i class="far fa-comment-alt"></i></span></div>
-             </div>
-             <div class="place">
-               <div class="dg"><%= @plan.category %></div>
-               <div class="dg1">GoGo</div>
-             </div>
-             </div>
-
-             <div style="margin-top:16px;">
-             <div class="shashin">
-               <div class="bg"><span class="bg1"><i class="fas fa-eye"></i></span></div>
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">状態</span></div>
              </div>
              <div class="place">
                <div class="dg"><%= @plan.datetimes %></div>
-               <div class="dg1">GoGo</div>
+               
+             </div>
+             </div>
+
+             <div >
+             <div class="shashin">
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">一言</span></div>
+             </div>
+             <div class="place" style="height: 50px;">
+               <div class="dg"><%= @plan.meetingplace %></div>
+               
              </div>
              </div>
 
@@ -148,22 +443,9 @@
 
         <% if guider_signed_in? %>
           <div style="width: 328px; height: 48px; text-align: center; margin-top: 20px;">
-           <%= form_tag("/plans/#{@plan.id}/purchase") do %>
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                 data-amount="<%= @plan.price %>"
-                 data-currency="jpy"
-                 data-description="クレジット決済"
-                 data-name=<%= "#{@plan.title}を購入" %>
-                 data-email=<%= "#{current_guider.email}" %>
-                 data-label="購入する"
-                 data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                 data-locale="auto"
-                 data-allow-remember-me="false">
-              </script>
-           <% end %>
+           
           </div>
-         </form>
+         
 
         <% else %>
          <div class="sign">
@@ -181,3 +463,427 @@
   </div>
  </div>
 </div>
+</div>
+</div>
+
+<!-- 内容 sp -->
+<div class="sp">
+<div class= "headquarter">
+ <div class= "image-all">
+  <div class="image-five ">
+   <div class="image-parts" style="display: block; margin-left: 0px;">
+    <div class="main">
+       <i class="fas fa-chevron-circle-left" aria-hidden="true" id="prev"></i>
+       <%= image_tag(@plan.image.thumb.url , :id=> "img", :class => "contain") %>
+       <i class="fas fa-chevron-circle-right" aria-hidden="true" id="next"></i>
+    </div>
+    <div class="king">
+      <ul class="example" id="thumb_img">
+        <li class="current"><img class="active" onclick="changeimg('<%= @plan.image %>',this);" src="<%= @plan.image %>" style="height: 220px;"></li>
+        <li><img onclick="changeimg('<%= @plan.copy_image %>',this);" style="width: 150px; height: 220px;" src="<%= @plan.copy_image %>"></li>
+        <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.third_image %>',this);" src="<%= @plan.third_image %>"></li>
+        <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.fourth_image %>',this);" src="<%= @plan.fourth_image %>"></li>
+        <li><img style="width: 150px; height: 220px;" onclick="changeimg('<%= @plan.five_image %>',this);" src="<%= @plan.five_image %>"></li>
+      </ul>
+    </div>
+    <script src="javascripts/main.js"></script>
+    <script>
+      var files = [
+      '<%= @plan.image %>',
+      '<%= @plan.copy_image %>',
+      '<%= @plan.third_image %>',
+      '<%= @plan.fourth_image %>',
+      '<%= @plan.five_image %>'
+      ];
+　  </script>
+    
+   </div>
+  </div>
+ </div>
+
+ <div class= "macro" style="height: 900px;">
+  <div class="detail">
+   <div class="micro">
+    <div class="contents free">
+     <div class="specific">
+
+      <div class="airbnb1">
+        <div class="airbnb-plus">
+          <div style="margin-top: 24px; width: 610px;">
+          <div class="minus">
+           <div class="kataho" style="height: 10px;">
+            <div class="airbnb1-1">
+              <div class="airbnb2-2"><span class="nini"><%= @plan.title %></span></div>
+            
+            </div>
+           </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arasuji">
+
+        <div class="arasuji1">
+           <div class="arasuji2">
+        
+
+             <div >
+             <div class="shashin">
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">カテゴリー</span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.transport %></div>
+               
+             </div>
+             </div>
+
+             <div >
+             <div class="shashin">
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">著者名</span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.place %></div>
+               
+             </div>
+             </div>
+
+             <div >
+             <div class="shashin">
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">状態</span></div>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.datetimes %></div>
+               
+             </div>
+             </div>
+
+             <div >
+             <div class="shashin">
+               <div class="bg" style="padding-top: 4px; padding-left: 5px;"><span class="bg1">一言</span></div>
+             </div>
+             <div class="place" style="height: 50px;">
+               <div class="dg"><%= @plan.meetingplace %></div>
+               
+             </div>
+             </div>
+
+             <div style="margin-top: 24px; margin-bottom: 24px;">
+                <div class="shashin-bar"></div>
+             </div>
+           </div>
+
+        </div>
+
+      </div>
+
+      <div class="shosai">
+        <div class="shosai1">
+          <div class="shosai2">
+            <p class="shosai3"><span class="shosai4">商品の説明</span></p>
+          </div>
+        </div>
+        <div style="margin-top: 16px; width: 594px; height: 638px;">
+          <div class="shosai5" style="line-height: 30px;">
+            <p><span ><%= simple_format(@plan.contents, class: "goster") %></span></p>
+          </div>
+        </div>
+      </div>
+     </div>
+　  </div>
+    <div class="contents info">
+     <div style="margin-top: 24px;">
+     <div class="payment">
+      <div class="payment-1">
+       <form class="kenichiro">
+         <table>
+           <tr><td>
+              <span class="guide">購入代金</span><hr class="line">
+           </td></tr>
+           <tr><td>
+
+             <span class="dates" style="height: 48px;">配送方法</span>
+
+             <p class="date" >郵便配送</p>
+
+           </td></tr>
+           
+          
+         </table>
+         <span class="price" style="height: 48px;">価格</span>
+         <p class="date" ><%= @plan.price %>円</p>
+
+                
+
+        <% if guider_signed_in? %>
+          <div style="width: 328px; height: 48px; text-align: center; margin-top: 20px;">
+           
+          </div>
+         
+
+        <% else %>
+         <div class="sign">
+           <%= link_to "Can you Sign up before payment? ", new_guider_registration_path, class: 'finish' %>
+         </div>
+        <% end %>
+
+
+       </form>
+      </div>
+      
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- 中身 sp1 -->
+<div class="sp1">
+    <div class="show-sp1">
+      <div class="airbnb2-2"><span class="nini"><%= @plan.title %></span></div>
+      <div class="shosai5" style="line-height: 30px;">
+            <p><span ><%= simple_format(@plan.contents, class: "goster") %></span></p>
+      </div>
+    </div>
+    <div class="five-sense">
+       <div class="main">
+           <%= image_tag(@plan.image.thumb.url , :id=> "img", :class => "contain") %>
+       </div>
+       <div class="king">
+         <ul class="example" id="thumb_img">
+           <li class="current image-go""><img class="active image-go" onclick="changeimg('<%= @plan.image %>',this);" src="<%= @plan.image %>"></li>
+           <li class="image-go"><img onclick="changeimg('<%= @plan.copy_image %>',this);" class="image-go" src="<%= @plan.copy_image %>"></li>
+           <li class="image-go"><img class="image-go" onclick="changeimg('<%= @plan.third_image %>',this);" src="<%= @plan.third_image %>"></li>
+           <li class="image-go"><img class="image-go" onclick="changeimg('<%= @plan.fourth_image %>',this);" src="<%= @plan.fourth_image %>"></li>
+           <li class="image-go"><img class="image-go" onclick="changeimg('<%= @plan.five_image %>',this);" src="<%= @plan.five_image %>"></li>
+         </ul>
+       </div>
+    </div>
+    <script src="javascripts/main.js"></script>
+    <script>
+      var files = [
+      '<%= @plan.image %>',
+      '<%= @plan.copy_image %>',
+      '<%= @plan.third_image %>',
+      '<%= @plan.fourth_image %>',
+      '<%= @plan.five_image %>'
+      ];
+　  </script>
+    <div class="price">
+       <p class="date" >¥<%= @plan.price %>円</p>
+    </div>
+    <div class="category-shasin">
+     <div class="kakko">
+      <div class="shashin">
+               
+             <div class="bg" style="padding-top: 14px; padding-left: 5px;">
+                 <span class="bg1">カテゴリー</span>
+             </div>
+
+             <div class="place">
+               <div class="dg"><%= @plan.transport %></div>
+               
+             </div>
+      </div>
+      <div class="shashin">
+             <div class="bg" style="padding-top: 14px; padding-left: 5px;">
+                 <span class="bg1">著者名</span>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.place %></div>
+             </div>
+      </div>
+      <div class="shashin">
+             <div class="bg" style="padding-top: 14px; padding-left: 5px;">
+                <span class="bg1">状態</span>
+             </div>
+             <div class="place">
+               <div class="dg"><%= @plan.datetimes %></div>
+             </div>
+      </div>
+      <div class="shashin" style="height: 70px;">
+             <div class="bg" style="height: 70px; padding-top: 25px; padding-left: 5px;">
+                 <span class="bg1">コメント</span>
+             </div>
+             <div class="place" style="height: 70px;">
+               <div class="dg"><%= @plan.meetingplace %></div>
+             </div>
+      </div>
+     </div>
+    </div>
+    <div class="payment-che">
+     <% if guider_signed_in? %>
+      <%= form_tag plan_path(@plan), class: "payment-check" do %>
+         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+       data-amount="<%= @plan.price %>"
+       data-currency="jpy"
+       data-description="クレジット決済"
+       data-name=<%= "#{@plan.title}を購入" %>
+       data-email=<%= "#{current_guider.email}" %>
+       data-label="購入する"
+       data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+       data-locale="auto"
+       data-allow-remember-me="false">
+         </script>
+      <% end %>
+     <% end %>
+    </div>
+</div>
+
+<!-- footer pc -->
+<div class="pc">
+ <footer class="shita" style="padding-top: 0px;">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">Eurekaについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="/plans/:id/tos">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="/plans/:id/compliance">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="/plans/:id/tokutei">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center; height: 50px; background-color: #131A22; padding-top: 14px; margin-top: 0px;">
+         © 2018 Eureka
+        </p>
+      </div>
+  
+ </footer>
+</div>
+
+<!-- footer sp -->
+<div class="sp">
+ <footer class="shita" style="padding-top: 0px;">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">Eurekaについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/plans/:id/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="/guiders/:id/accepted">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center; height: 50px; background-color: #131A22; padding-top: 14px; margin-top: 0px;">
+         © 2018 Eureka
+        </p>
+      </div>
+  
+ </footer>
+</div>
+
+<!-- footer sp1 -->
+<div class="sp1">
+ <footer class="shita">
+      <!--  -->
+      <div class="category-footer goto">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">Eurekaについて</h3>
+               <a class="footer-word1" href="/plans/:id/eureka">Eurekaについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/help">ヘルプ</a>
+            </div>
+           </div>
+
+      </div>
+      <!--  -->
+      <div class="category-footer gotonext">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  style="width: 177px;" href="/tos">ユリイカ利用規約</a>
+               <a class="footer-word1"  style="width: 177px;" href="/compliance">コンプライアンスポリシー</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <div style="margin-top: 40px;"></div>
+              <a class="footer-word1"  href="/tokutei">特定商取引に関する表記</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="category-footer nextgo">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: left;" >国</h3>
+              <a class="footer-word1" style="text-align: left;" href="">日本</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center; ">
+         © 2018 Eureka
+        </p>
+      </div>
+  
+ </footer>
+</div>
+
+</body>
+</html>

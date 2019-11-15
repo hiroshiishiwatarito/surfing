@@ -1,8 +1,9 @@
-class InquirysController < ApplicationController
+class InquiryController < ApplicationController
 	def index
     # 入力画面を表示
     @inquiry = Inquiry.new
-    render :action => 'index'
+    
+    render layout: false
   end
  
   def confirm
@@ -10,11 +11,12 @@ class InquirysController < ApplicationController
     @inquiry = Inquiry.new(params[:inquiry])
     if @inquiry.valid?
       # OK。確認画面を表示
-      render :action => 'confirm'
+      render layout: false
     else
       # NG。入力画面を再表示
-      render :action => 'index'
+      render layout: false
     end
+    
   end
  
   def thanks
@@ -23,6 +25,6 @@ class InquirysController < ApplicationController
     InquiryMailer.received_email(@inquiry).deliver_now
  
     # 完了画面を表示
-    
+    render layout: false
   end
 end

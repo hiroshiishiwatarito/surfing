@@ -5,7 +5,7 @@ class Guiders::PasswordsController < Devise::PasswordsController
   # def new
   #   super
   # end
-
+  layout false
   # POST /resource/password
   # def create
   #   super

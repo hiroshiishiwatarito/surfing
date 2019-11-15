@@ -1,5 +1,289 @@
+ <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Goodle Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8830310600171711",
+    enable_page_level_ads: true
+     });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130237144-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
 
-<% if ! Test.find_by(fourthword: params[:fourthword]).blank? %> 
+     gtag('config', 'UA-130237144-1');
+    </script>
+    <title>ユリイカ - <%= @test.title %></title>
+    <meta name="description" content="ユリイカ」は、資格・留学・就職・奨学金・ボランティア・IT・起業・アルバイトなど、幅広い情報を提供しています。">
+    <meta name="keywords" content="ユリイカ, Eureka, 大学, 資格・体験談, テスト対策">
+    <meta name="viewport" content="width=devise-width,initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags  %>
+    <!-- Google Console Search -->
+    <meta name="google-site-verification" content="uh4J6YQwgfL0Q9XnjCyjTV2xB16q7eXGFCHfdq2UNLQ" />
+    
+  </head>  
+
+   <!-- header pc -->
+<body class="photo">
+   <div class="pc">
+   
+    <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; padding-top: 4px; text-align: left;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+             
+           </div>
+           
+
+          </div>
+         <div>
+
+        </li>
+       
+        <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+          
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+             
+             <li class="first"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="second"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+             
+          
+        <% end %>
+
+        <div class="sp">
+          <% if ! (guider_signed_in? or tourist_signed_in?) %>
+           <div class="grid-6">
+            <div class="user_nav grid-6">
+              <span class="samurai" style=" 
+                width: 300px;
+                height: 0px;
+                bottom: 5px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-left: 0px;
+                padding-right: 11px;">
+                <ul class="user__info">
+                 <li>
+                  <%= link_to "traveller", new_tourist_session_path, class: 'post' %>
+                  <%= link_to "guider", new_guider_session_path, class: 'post' %>
+                 </li>
+                </ul>
+              </span>
+            </div>
+           </div>
+          <% end %>
+        </div>
+       
+
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/category">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/plans" >フリマ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/tests">スキルアップ</a>
+          <i class="fas fa-file-alt" style="margin-left: 15px;"></i>
+          <a class="category-id" href="/professions/:id/category">テスト対策</a>
+        
+        </div>
+
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- タブレット用 -->
+<div class="sp">
+   <header>
+     <div>
+      <div class="head-container">
+       <nav class="headed">
+        <li class="left">
+         <div class="fine">
+          <div class="full_max">
+           <div class="full">
+            <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+            <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+             <% end %>
+           </div>
+          </div>
+         <div>
+        </li>
+       </nav>
+        <div class="all-star" style="margin-bottom: 10px;">
+         
+          <i class="fas fa-bars"></i>
+          <a class="category-id" href="/category">カテゴリー<br /></a>
+          <i class="fas fa-book" style="margin-left: 15px;"></i>
+          <div class="getgo_nav">
+           
+           <span class="fas fa-rule" style="display: inline-block;" >サービス
+              <ul>
+                  <li class="category">
+                     <a class="guider-category" href="/plans" >フリマ</a>
+                    <a class="guider-category" href="/tests">スキルアップ</a>
+                    <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                  </li>
+              </ul>
+            </span>
+          </div>
+
+          <% if guider_signed_in? %>
+          <div class="guider_nav">
+            <span style="top: 18px; margin-top: 0px;"><%= current_guider.nickname %>
+              <ul>
+                  <li class="category">
+                    <a class="guider-category", href="/guiders/<%= current_guider.id%>/edit ">マイページ</a>
+                    <a class="guider-category", href="/guiders/<%= current_guider.id %>/go">問い合わせ</a>
+                    <%= link_to "ログアウト", destroy_guider_session_path, method: :delete, class: 'guider-category' %>
+                  </li>
+              </ul>
+            </span>
+            <a class="plan" href="/guiders/:id/post">投稿</a>
+          </div>
+        <% end %>
+
+        <% if ! (guider_signed_in? or tourist_signed_in?) %>
+         
+            <div style="display: inline-block; width: 443px; text-align: right;">
+             <li class="category-id"><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+             <li class="category-id"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+            </div>
+             
+        <% end %>
+        </div>
+       <div class="mbar">
+      </div>
+     </div>
+    </header>
+
+    <%= yield %>
+</div>
+
+<!-- 携帯用 -->
+<div class="sp1">
+  <header>
+    <div class="head-container">
+       <nav class="headed">
+         <li class="left">
+           <div class="fine">
+
+            <div class="full_max">
+              <div class="full">
+                 <h1 class="eureka"><a style="color: #E47911; width: 130px; text-align: left; padding-top: 4px;" href="/plans/:id/top">ユリイカ</a></h1>
+                 <% if ! (guider_signed_in? or tourist_signed_in?) %>
+                 <div style="display: inline-block; width: 443px; text-align: right;">
+                    <li class="category-id up "><%= link_to "新規登録", new_guider_registration_path, class: 'post' %></li>
+                    <li class="category-id loss"><%= link_to "ログイン", new_guider_session_path, class: 'post' %></li>
+                 </div>
+                 <% end %>
+                 <% if guider_signed_in? %>
+                  <div class="guider_nav sp1">
+                   
+                    <span style="margin-top: 0px; top: -5px; width: 215px;">
+                      <a href="/guiders/:id/top_assistant" style="color: #E47911;">
+                        <%= current_guider.nickname %>
+                      </a>
+                    </span>
+                   
+                  </div>
+                 <% end %>
+              </div>
+            </div>
+           <div>
+         </li>
+        </nav>
+        <div class="sp1">
+        <nav class="headed">
+          <li class="left">
+            <div class="fine">
+
+              <div class="full_max">
+                <div class="full1">
+                <%= form_tag plans_path, :method => 'get', :class => 'gopro' do %>
+                   <div class="question_answer"><%= text_field_tag :search, params[:search], class: "fun_interview", placeholder: '' %></div>
+                   <div class="interview_answer"><%= submit_tag "", :name => nil, class: "interview" %></div>
+                <% end %>
+                </div>
+              </div>
+            <div>
+          </li>
+       </nav>
+       </div>
+       <div class="all-star sp1" style="margin-bottom: 10px;">
+          <div style="text-align: center; display: inline-block; width: 200px;">
+            <i class="fas fa-bars"></i>
+            <a class="category-id" href="/category">カテゴリー<br /></a>
+          </div>
+          <div style="text-align: center; display: inline-block; width: 200px; ">
+              <i class="fas fa-book" style="margin-left: 15px;"></i>
+              <div class="getgo_nav">
+           
+                 <span class="fas fa-rule" style="display: inline-block;" >サービス
+                    <ul>
+                      <li class="category">
+                         <a class="guider-category" href="/plans" >フリマ</a>
+                         <a class="guider-category" href="/tests">スキルアップ</a>
+                         <a class="guider-category" href="/professions/:id/category">テスト対策</a>
+                      </li>
+                    </ul>
+                 </span>
+              </div>
+          </div>
+       </div>
+        
+
+       <div class="mbar sp1">
+       </div>
+    </div>
+  </header>
+  <%= yield %>
+</div>
+
+<!-- 中身 pc -->
+<div class="pc">
+<% if ! @test.fourthword.present? %> 
 <div class="mainpage" style="height: 2560px;">
 <div class = "line1" style="margin-top: 30px;">
  <div class = "line2">
@@ -197,19 +481,18 @@
 </div>
 <% end %>
 
-
 <!-- ２つ以上 -->
 
 
-<% if Test.find_by(fourthword: params[:fourthword]).blank? %> 
-<div class="mainpage" style="height: 2560px;">
+<% if @test.fourthword.present? %> 
+<div class="mainpage" style="height: 3800px;">
 <div class = "line1" style="margin-top: 30px;">
- <div class = "line2">
+ <div class = "line2" style="width: 414px;">
   <div class="line3">
 
      <div class="line4" style="display: block; height: 2550px;">
       
-      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 2450px; padding: 50px;">   
+      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 3600px; padding: 50px;">   
         <div class="line6" style="display: block; width: 630px;">
           <div class="race" style="display: block;" >
               <!-- タイトル -->
@@ -470,6 +753,182 @@
       </div>
       
      </div>
+    
+
+  </div>
+ </div>
+</div>
+</div>
+<% end %>
+</div>
+
+<!-- 中身 sp -->
+<div class="sp">
+<% if ! @test.fourthword.present? %> 
+<div class="mainpage" style="height: 2560px;">
+<div class = "line1" style="margin-top: 30px;">
+ <div class = "line2">
+  <div class="line3">
+
+     <div class="line4" style="display: block; height: 2550px;">
+      
+      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 2450px; padding: 50px;">   
+        <div class="line6" style="display: block; width: 630px;">
+          <div class="race" style="display: block;" >
+              <!-- タイトル -->
+             <h1 class="line_pay" style="width: 630px;"><%= @test.title %></h1>
+               <!-- 日付 -->
+             <span style="float: right; margin-top: 15px; font-size: 13px; color: #524e4d;
+    font-family: 'Noto Sans Japanese',sans-serif;"><%= @test.created_at.strftime('%Y/%m/%d') %></span>
+           
+          </div>
+          <!-- 画像 -->
+          <div class="race1">
+           <%= image_tag(@test.book.thumb.url , :class => "creativity") %>
+          
+          </div>
+           <!-- なんで書こうと思ったのか -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <span><%= simple_format(@test.purpose, class: "gostar") %></span>
+          </div>
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.secondword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.thirdword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.description %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 250px;">
+               <%= simple_format(@test.body, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 250px; height: 240px; padding: 70px 0px; text-align: center;">
+               <h4 class="bookname"><%= @test.bookname %></h4>
+               <span class="author"><%= @test.author %>(著)</span>
+             </div>
+
+          </div>
+          
+          <!-- Google Adsense -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+              関連
+             </span>
+            
+          </div>
+
+          <div style="margin-bottom: 20px;  width: 675px; height: 268px;">
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <ins class="adsbygoogle"
+                    style="display:block;, width: 180px; height: 238px;"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-6t+ed+2i-1n-4w"
+                    data-ad-client="ca-pub-8830310600171711"
+                    data-ad-slot="4388826059"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block;, width: 180px; height: 238px;"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-8830310600171711"
+                     data-ad-slot="2393218107"></ins>
+             <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <ins class="adsbygoogle"
+                        style="display:block;, width: 180px; height: 238px;"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-8830310600171711"
+                        data-ad-slot="5813588369"></ins>
+             <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+          </div>
+         
+
+          <!-- 最新の投稿 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" class="far fa-folder-open"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               最新の投稿
+             </span>
+            
+          </div>
+          <div class="recent_post">
+            <% @tests.each do |test| %> 
+             <div class="posts" style="width: 205px; height: 250px; position: relative;">
+               <%= image_tag(test.book.thumb.url, :class => "create") %>
+               <%= link_to "", test_path(test.id), class: "hat" %>
+               <div class="mix-change">
+                  <h2 class="line_go" style="width: 180px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
+               </div>
+             </div>
+            <% end %>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+     </div>
      <div class="line5" >
       <div class="advertise" style="border: 2px solid #FAEEBE; border-bottom: none; padding: 20px; font-size: 2.0rem; line-height: 2.3rem; font-weight: 500; letter-spacing: 1px; color: #524e4d; font-family: 'Noto Sans Japanese',sans-serif; height: 290px;" >
          <p style="font-size: 20px; margin-top: 38px;">About me</p>
@@ -502,3 +961,881 @@
 </div>
 </div>
 <% end %>
+
+<!-- ２つ以上 -->
+
+
+<% if @test.fourthword.present? %> 
+<div class="mainpage" style="height: 3800px;">
+<div class = "line1" style="margin-top: 30px;">
+ <div class = "line2" style="width: 414px;">
+  <div class="line3">
+
+     <div class="line4" style="display: block; height: 2550px;">
+      
+      <div style="border: 2px solid #FAEEBE; margin-top: 20px; height: 3600px; padding: 50px;">   
+        <div class="line6" style="display: block; width: 630px;">
+          <div class="race" style="display: block;" >
+              <!-- タイトル -->
+             <h1 class="line_pay" style="width: 630px;"><%= @test.title %></h1>
+               <!-- 日付 -->
+             <span style="float: right; margin-top: 15px; font-size: 13px; color: #524e4d;
+    font-family: 'Noto Sans Japanese',sans-serif;"><%= @test.created_at.strftime('%Y/%m/%d') %></span>
+           
+          </div>
+          <!-- 画像 -->
+          <div class="race1">
+           <%= image_tag(@test.book.thumb.url , :class => "creativity") %>
+          
+          </div>
+           <!-- なんで書こうと思ったのか -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <span><%= simple_format(@test.purpose, class: "gostar") %></span>
+          </div>
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.secondword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.thirdword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.description %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 250px;">
+               <%= simple_format(@test.body, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 250px; height: 240px; padding: 70px 0px; text-align: center;">
+               <h4 class="bookname"><%= @test.bookname %></h4>
+               <span class="author"><%= @test.author %>(著)</span>
+             </div>
+
+          </div>
+          
+          <!-- Google Adsense -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+              関連
+             </span>
+            
+          </div>
+
+          <div style="margin-bottom: 20px;  width: 675px; height: 268px;">
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <ins class="adsbygoogle"
+                    style="display:block;, width: 180px; height: 238px;"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-6t+ed+2i-1n-4w"
+                    data-ad-client="ca-pub-8830310600171711"
+                    data-ad-slot="4388826059"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block;, width: 180px; height: 238px;"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-8830310600171711"
+                     data-ad-slot="2393218107"></ins>
+             <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <ins class="adsbygoogle"
+                        style="display:block;, width: 180px; height: 238px;"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-8830310600171711"
+                        data-ad-slot="5813588369"></ins>
+             <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+          </div>
+          <!-- Google Adsense -->
+
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.fourthword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.fiveword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.detail %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 250px;">
+               <%= simple_format(@test.advertise, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 250px; height: 240px; padding: 70px 0px; text-align: center;">
+               <h4 class="bookname"><%= @test.material %></h4>
+               <span class="author"><%= @test.people %>(著)</span>
+             </div>
+
+          </div>
+          
+          <!-- Google Adsense -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+              関連
+             </span>
+            
+          </div>
+
+          <div style="margin-bottom: 20px;  width: 675px; height: 268px;">
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <ins class="adsbygoogle"
+                    style="display:block;, width: 180px; height: 238px;"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-6t+ed+2i-1n-4w"
+                    data-ad-client="ca-pub-8830310600171711"
+                    data-ad-slot="4388826059"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block;, width: 180px; height: 238px;"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-8830310600171711"
+                     data-ad-slot="2393218107"></ins>
+             <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <ins class="adsbygoogle"
+                        style="display:block;, width: 180px; height: 238px;"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-8830310600171711"
+                        data-ad-slot="5813588369"></ins>
+             <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+          </div>
+          <!-- Google Adsense -->
+
+          <!-- 最新の投稿 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" class="far fa-folder-open"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               最新の投稿
+             </span>
+            
+          </div>
+          <div class="recent_post">
+            <% @tests.each do |test| %> 
+             <div class="posts" style="width: 205px; height: 250px; position: relative;">
+               <%= image_tag(test.book.thumb.url, :class => "create") %>
+               <%= link_to "", test_path(test.id), class: "hat" %>
+               <div class="mix-change">
+                  <h2 class="line_go" style="width: 180px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
+               </div>
+             </div>
+            <% end %>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+     </div>
+    
+
+  </div>
+ </div>
+</div>
+</div>
+<% end %>
+</div>
+
+<!-- 中身 sp1 -->
+<div class="sp1">
+<% if ! @test.fourthword.present? %> 
+<div class="mainpage" style="height: 2560px;">
+
+     <div class="line4" style="display: block; height: 2550px;">
+      
+      <div style="margin-top: 20px; height: 2450px;">   
+        <div class="line6" style="display: block;">
+          <div class="race" style="display: block;" >
+              <!-- タイトル -->
+             <h1 class="line_pay"><%= @test.title %></h1>
+               <!-- 日付 -->
+             <span style="float: right; margin-top: 15px; font-size: 13px; color: #524e4d;
+    font-family: 'Noto Sans Japanese',sans-serif;"><%= @test.created_at.strftime('%Y/%m/%d') %></span>
+           
+          </div>
+          <!-- 画像 -->
+          <div class="race1">
+           <%= image_tag(@test.book.thumb.url , :class => "creativity") %>
+          
+          </div>
+           <!-- なんで書こうと思ったのか -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <span><%= simple_format(@test.purpose, class: "gostar") %></span>
+          </div>
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.secondword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.thirdword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.description %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 200px;">
+               <%= simple_format(@test.body, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 200px; height: 240px; text-align: center;">
+               <h4 class="bookname"><%= @test.bookname %></h4>
+               <span class="author"><%= @test.author %>(著)</span>
+             </div>
+
+          </div>
+          
+          <!-- Google Adsense -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+              関連
+             </span>
+            
+          </div>
+
+          <div style="margin-bottom: 20px;  width: 675px; height: 268px;">
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <ins class="adsbygoogle"
+                    style="display:block;, width: 180px; height: 238px;"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-6t+ed+2i-1n-4w"
+                    data-ad-client="ca-pub-8830310600171711"
+                    data-ad-slot="4388826059"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block;, width: 180px; height: 238px;"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-8830310600171711"
+                     data-ad-slot="2393218107"></ins>
+             <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <ins class="adsbygoogle"
+                        style="display:block;, width: 180px; height: 238px;"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-8830310600171711"
+                        data-ad-slot="5813588369"></ins>
+             <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+          </div>
+         
+
+          <!-- 最新の投稿 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" class="far fa-folder-open"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               最新の投稿
+             </span>
+            
+          </div>
+          <div class="recent_post" style="width: 360px;">
+            <% @tests.each do |test| %> 
+             <div class="posts" style="width: 180px; height: 250px; position: relative;">
+               <%= image_tag(test.book.thumb.url, :class => "create") %>
+               <%= link_to "", test_path(test.id), class: "hat" %>
+               <div class="mix-change">
+                  <h2 class="line_go" style="width: 180px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
+               </div>
+             </div>
+            <% end %>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+     </div>
+
+</div>
+<% end %>
+
+<!-- ２つ以上 -->
+
+
+<% if @test.fourthword.present? %> 
+<div class="mainpage" style="height: 3800px;">
+
+     <div class="line4" style="display: block; height: 2550px;">
+      
+      <div style="height: 3600px; padding: 50px;">   
+        <div class="line6" style="display: block; width: 630px;">
+          <div class="race" style="display: block;" >
+              <!-- タイトル -->
+             <h1 class="line_pay" style="width: 630px;"><%= @test.title %></h1>
+               <!-- 日付 -->
+             <span style="float: right; margin-top: 15px; font-size: 13px; color: #524e4d;
+    font-family: 'Noto Sans Japanese',sans-serif;"><%= @test.created_at.strftime('%Y/%m/%d') %></span>
+           
+          </div>
+          <!-- 画像 -->
+          <div class="race1">
+           <%= image_tag(@test.book.thumb.url , :class => "creativity") %>
+          
+          </div>
+           <!-- なんで書こうと思ったのか -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <span><%= simple_format(@test.purpose, class: "gostar") %></span>
+          </div>
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.secondword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.thirdword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.description %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 200px;">
+               <%= simple_format(@test.body, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 200px; height: 260px; text-align: center;">
+               <h4 class="bookname"><%= @test.bookname %></h4>
+               <span class="author"><%= @test.author %>(著)</span>
+             </div>
+
+          </div>
+          
+          <!-- Google Adsense -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+              関連
+             </span>
+            
+          </div>
+
+          <div style="margin-bottom: 20px;  width: 675px; height: 268px;">
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <ins class="adsbygoogle"
+                    style="display:block;, width: 180px; height: 238px;"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-6t+ed+2i-1n-4w"
+                    data-ad-client="ca-pub-8830310600171711"
+                    data-ad-slot="4388826059"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block;, width: 180px; height: 238px;"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-8830310600171711"
+                     data-ad-slot="2393218107"></ins>
+             <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <ins class="adsbygoogle"
+                        style="display:block;, width: 180px; height: 238px;"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-8830310600171711"
+                        data-ad-slot="5813588369"></ins>
+             <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+          </div>
+          <!-- Google Adsense -->
+
+          <!-- 大見出し -->
+          <div class="faster" style="display: block; margin-top: 40px;">
+             <h2 class="good_d"><%= @test.fourthword %></h2>
+          </div>
+          <!-- 小見出し -->
+          <div class="gostraight" style="display: block; position: relative; margin-top: 40px;">
+             <span class="h3-style02"></span>
+             <h3 class="good_e">
+               <%= @test.fiveword %>
+             </h3>
+             <span class="h3-style01"></span>
+          </div>
+          <!-- 内容 -->
+          <div class="faster" style="display: block; margin-top: 20px; margin-bottom: 40px;">
+             <%= @test.detail %>
+          </div>
+          
+           <!-- 広告 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               オススメの本
+             </span>
+            
+          </div>
+         
+          <div class="advertising" style="">
+             <div style="display: inline-block; width: 200px;">
+               <%= simple_format(@test.advertise, {}, wrapper_tag: "div") %>
+             </div>
+             <div style="display: inline-block; width: 200px; height: 260px; text-align: center;">
+               <h4 class="bookname"><%= @test.material %></h4>
+               <span class="author"><%= @test.people %>(著)</span>
+             </div>
+
+          </div>
+          
+          <!-- Google Adsense -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i class="fas fa-book" style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" style="margin-left: 15px;"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+              関連
+             </span>
+            
+          </div>
+
+          <div style="margin-bottom: 20px;  width: 675px; height: 268px;">
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <ins class="adsbygoogle"
+                    style="display:block;, width: 180px; height: 238px;"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-6t+ed+2i-1n-4w"
+                    data-ad-client="ca-pub-8830310600171711"
+                    data-ad-slot="4388826059"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block;, width: 180px; height: 238px;"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-6t+ed+2i-1n-4w"
+                     data-ad-client="ca-pub-8830310600171711"
+                     data-ad-slot="2393218107"></ins>
+             <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+           <div style="display: inline-block; width: 205px; height: 250px;">
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <ins class="adsbygoogle"
+                        style="display:block;, width: 180px; height: 238px;"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-8830310600171711"
+                        data-ad-slot="5813588369"></ins>
+             <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+           </div>
+          </div>
+          <!-- Google Adsense -->
+
+          <!-- 最新の投稿 -->
+          <div class="gostraight" style="display: inline-block; position: relative; margin-top: 0px; ">
+             <span  class="power" ><i style="margin-left: 8px; margin-top: 8px; color: #fff; font-size: 1.25rem;" class="far fa-folder-open"></i>
+             </span>
+             
+             <span style="font-size: 1.15rem;
+                          padding: 20px 14px;
+                         font-weight: 400;
+                         display: inline-block;
+                         letter-spacing: 1px; 
+                         margin-left: 40px;
+                         font-family: 'Quicksand','ヒラギノ角ゴ ProN W3',Hiragino Sans,'ヒラギノ角ゴ ProN W3',Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+                         color: #524e4d; ">
+               最新の投稿
+             </span>
+            
+          </div>
+          <div class="recent_post">
+            <% @tests.each do |test| %> 
+             <div class="posts" style="width: 190px; height: 250px; position: relative;">
+               <%= image_tag(test.book.thumb.url, :class => "create") %>
+               <%= link_to "", test_path(test.id), class: "hat" %>
+               <div class="mix-change">
+                  <h2 class="line_go" style="width: 180px; margin-bottom: 30px; text-align: center;"><%= simple_format(test.title) %></h2>
+               </div>
+             </div>
+            <% end %>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+     </div>
+  </div>
+<% end %>
+</div>
+
+<!-- footer pc -->
+<div class="pc">
+ <footer class="shita">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ユリイカについて</h3>
+               <a class="footer-word1" href="/about">ユリイカについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="/tos">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="/compliance">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="/tokutei">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 ユリイカ
+        </p>
+      </div>
+  
+  </div>
+ </footer>
+</div>
+
+<!-- footer タブレット用 -->
+<div class="sp">
+ <footer class="shita">
+      
+      <div class="category-footer">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ユリイカについて</h3>
+               <a class="footer-word1" href="/about">ユリイカについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/inquirys">ヘルプ</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  href="/tos">ユリイカ利用規約</a>
+               <a class="footer-word1"  href="/compliance">コンプライアンスポリシー</a>
+               <a class="footer-word1"  href="/tokutei">特定商取引に関する表記</a>
+               
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: center;" >国</h3>
+              <a class="footer-word1" style="margin-left: 10px; text-align: center;" href="">日本</a>
+            </div>
+           </div>
+        
+
+      </div>
+
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 ユリイカ
+        </p>
+      </div>
+  
+  </div>
+ </footer>
+</div>
+
+<!-- footer 携帯用 -->
+<div class="sp1">
+ <footer class="shita">
+      <div class="category-footer goto">
+        
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ユリイカについて</h3>
+               <a class="footer-word1" href="/about">ユリイカについて</a>
+              
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">ヘルプ＆ガイド</h3>
+               <a class="footer-word1" href="/inquirys">ヘルプ</a>
+            </div>
+           </div>
+
+      </div>
+      <!--  -->
+      <div class="category-footer gotonext">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+               <h3 class="footer-word next">プライバシーと利用規約</h3>
+               <a class="footer-word1"  style="width: 177px;" href="/tos">ユリイカ利用規約</a>
+               <a class="footer-word1"  style="width: 177px;" href="/compliance">コンプライアンスポリシー</a>
+            </div>
+           </div>
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <div style="margin-top: 40px;"></div>
+              <a class="footer-word1"  href="/tokutei">特定商取引に関する表記</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="category-footer nextgo">
+           <div class="category-footer2">
+            <div class="hashiru" style="display: block;">
+              <h3 class="footer-word next" style="text-align: left;" >国</h3>
+              <a class="footer-word1" style="text-align: left;" href="">日本</a>
+            </div>
+           </div>
+      </div>
+      <!--  -->
+      <div class="shita1">
+        <p style="font-size: 14px; color: inherit; text-align: center;">
+         © 2018 ユリイカ
+        </p>
+      </div>
+  
+  
+ </footer>
+</div>
+</body>
+
+</html>
+
