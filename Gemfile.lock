@@ -982,7 +982,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (13.0.0)
     rdoc (4.3.0)
-    redcarpet (2.3.0)
+    redcarpet (3.5.1)
     redis (4.1.3)
     redis-objects (1.5.0)
       redis (~> 4.0)
@@ -1082,7 +1082,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.11)
   rails_12factor
-  redcarpet (~> 2.3.0)
+  redcarpet (~> 3.5.1)
   rmagick
   roboto
   sass-rails (~> 4.0.2)
