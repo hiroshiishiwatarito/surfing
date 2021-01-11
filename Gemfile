@@ -69,7 +69,7 @@ gem 'fog-aws'
 gem 'mini_magick'
 
 gem 'stripe'
-gem 'redcarpet', '~> 2.3.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'coderay'
 #円グラフ
 gem "chartkick"
